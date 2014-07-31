@@ -12,6 +12,6 @@ GitHub では 2 段階認証が推奨されるため、Git クライアントで
 ### SourceTree にアクセス トークンを設定する
 * SourceTree の [ホストされたリポジトリ] で [アカウントを編集] をクリックする
 * GitHub を選択して、ユーザー名を入力する
-* [Password] には、アクセス トークンを設定する
-  ![Access Tokens-1](Access%20Tokens-1.png)
+* [Password] には、アクセス トークンを設定する  
+  ![Access Tokens-1](Access%20Tokens-1.png)  
   ![Access Tokens-2](Access%20Tokens-2.png)
