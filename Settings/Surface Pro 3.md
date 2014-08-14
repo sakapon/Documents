@@ -1,8 +1,10 @@
-### Platforms
+﻿### Platforms
 * Google Chrome
 * Mozilla Firefox
 * Adobe Reader
 * [Dropbox](https://www.dropbox.com/)
+* [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
+  * [FeliCa ランチャー] のチェックをオンにする
 
 ### Infrastructure
 * Web Platform Installer 5.0
@@ -37,3 +39,4 @@
 * OpenCV
 * Intel RealSense
 * CeVIO
+* Office Remote
