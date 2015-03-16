@@ -6,3 +6,6 @@
 
 ### Create icons
 * [XAML to Image](https://github.com/sakapon/XAML-to-Image)
+
+### Convert to .ico files
+* [Favicon Converter](http://favicon.qfor.info/c/)
