@@ -1,0 +1,12 @@
+﻿- Members, Passwords
+Abc Root CA: 0000
+Abc Test: 1111
+
+- Commands
+makecert -n "CN=Abc Root CA,O=Abc Company,C=JP" -a sha256 -b 01/01/2000 -e 01/01/2100 -r -sv abc-root.pvk abc-root.cer
+pvk2pfx -pvk abc-root.pvk -spc abc-root.cer -pfx abc-root.pfx -f -pi 0000
+
+makecert -n "CN=Abc Test,O=Abc Company,C=JP" -a sha256 -b 01/01/2000 -e 01/01/2100 -iv abc-root.pvk -ic abc-root.cer -sv abc-test.pvk abc-test.cer
+pvk2pfx -pvk abc-test.pvk -spc abc-test.cer -pfx abc-test.pfx -f -pi 1111
+
+certmgr -add -c abc-root.cer -s root

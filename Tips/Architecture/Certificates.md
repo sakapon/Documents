@@ -1,12 +1,12 @@
 ## How to Make Certificates
 
-次の 2 種類の証明書を作成します。
+次の 2 種類の証明書を作成する方法を示します。
 
 * 自己署名証明書 (ルート証明書)
   * 証明書ストアの [信頼されたルート証明機関] に配置します。
   * いわゆる「オレオレ証明書」です。
-* ルート証明書で署名された証明書
-  * 証明書ストアの [個人]、[信頼された発行元] などに配置します。
+* 証明書で署名された証明書
+  * 証明書ストアの [個人]、[信頼された発行元]、[中間証明機関] などに配置します。
 
 各コマンドライン ツールを利用するため、Visual Studio 開発者コマンド プロンプトを使用すると便利です。
 
@@ -30,7 +30,8 @@ makecert -n "CN=Abc Root CA,O=Abc Company,C=JP" -a sha256 -b 01/01/2000 -e 01/01
 
 * **-r** 自己署名であることを示します。  
   -r も親の証明書も指定されない場合、"Root Agency" というルート証明機関の下に証明書が作成されます。
-* **-n** サブジェクト名を指定します。CN (Common Name) には "." を使用できますが、"," を使用できません。
+* **-n** サブジェクト名を指定します。  
+  CN (Common Name) には "." を使用できますが、"," を使用できません。
 
 .pfx を作成するには、次のコマンドを実行します。  
 P@ssw0rd の部分には、先ほど設定したパスワードが入ります。
@@ -39,10 +40,10 @@ P@ssw0rd の部分には、先ほど設定したパスワードが入ります�
 pvk2pfx -pvk abc-root.pvk -spc abc-root.cer -pfx abc-root.pfx -f -pi P@ssw0rd
 ```
 
-### ルート証明書で署名された証明書を作成する
+### 証明書で署名された証明書を作成する
 
--iv, -ic にルート証明書を指定します。  
-表示されるダイアログで、作成する証明書のパスワード (Subject Key) を指定するほか、ルート証明書のパスワード (Issuer Signature) も入力します。
+-iv, -ic に親となる証明書を指定します。  
+表示されるダイアログで、作成する証明書のパスワード (Subject Key) を指定するほか、親の証明書のパスワード (Issuer Signature) も入力します。
 
 ```
 makecert -n "CN=Abc Test,O=Abc Company,C=JP" -a sha256 -b 01/01/2000 -e 01/01/2100 -iv abc-root.pvk -ic abc-root.cer -sv abc-test.pvk abc-test.cer
@@ -54,11 +55,16 @@ makecert -n "CN=Abc Test,O=Abc Company,C=JP" -a sha256 -b 01/01/2000 -e 01/01/21
 pvk2pfx -pvk abc-test.pvk -spc abc-test.cer -pfx abc-test.pfx -f -pi P@ssw0rd
 ```
 
-### 証明書を実行してインストールする
+### 証明書マネージャー
+
+#### 証明書の一覧を表示する
+Certmgr.exe を実行します。  
+
+#### 証明書を実行してインストールする
 ストアを指定しない場合、.pfx は [個人] に、.cer は [ほかの人] にインストールされます。  
 .pfx をインストールするには、パスワードを入力します。
 
-### 証明書をコマンドでインストールする
+#### 証明書をコマンドでインストールする
 Certmgr.exe を使います。  
 (.pfx には使えない？)
 
@@ -67,9 +73,6 @@ certmgr -add -c abc-root.cer -s root
 certmgr -add -c abc-test.cer -s my  
 certmgr -add -c abc-test.cer -s trustedpublisher
 ```
-
-### 証明書の一覧を表示する
-Certmgr.exe を実行します。  
 
 ### 参照
 [Makecert.exe (証明書作成ツール)](https://msdn.microsoft.com/library/bfsktky3.aspx)  
