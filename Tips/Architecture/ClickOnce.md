@@ -49,7 +49,8 @@ msbuild WpfApp1.csproj /p:Configuration=Release /t:Publish
 (例えば、GitHub Pages でホストする場合など。)
 
 Git は既定で、コミット時にテキスト ファイルの改行コードを LF に変換します。  
-しかし、ClickOnce はインストール時にファイルのハッシュを検証するため、ファイルが変更されてしまうとエラーが発生します。
+しかし、ClickOnce はインストール時にファイルのハッシュを検証するため、  
+ファイルが変更されてしまうとエラーが発生します。
 
 #### config
 core.autoCRLF を false に設定します。
@@ -77,7 +78,7 @@ text=false
 
 [Windowsでgitを使う場合の改行コード自動変換がうざい](http://www.seeds-std.co.jp/seedsblog/2551.html)  
 [git での改行コード](http://qiita.com/shuhei/items/2da839de8803cb335f86)  
-[Gitのcore.autocrlfについて](http://hack.aipo.com/archives/5841/)
+[Gitのcore.autocrlfについて](http://hack.aipo.com/archives/5841/)  
 [WindowsのGitクライアントSourceTreeのインストールと初期設定](http://www.karakaram.com/windows-git-source-tree)
 
 ### その他
