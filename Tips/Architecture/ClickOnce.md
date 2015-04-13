@@ -72,9 +72,9 @@ $ git config --list
 ### その他
 
 #### Mage.exe
-手動で発行するには、Mage.exe を利用します。
+手動で発行するには、Mage.exe または MageUI.exe を利用します。
 
-[Mage.exe](https://msdn.microsoft.com/ja-jp/library/acz3y3te.aspx)  
+[Mage.exe (マニフェストの生成および編集ツール)](https://msdn.microsoft.com/ja-jp/library/acz3y3te.aspx)  
 [チュートリアル : ClickOnce アプリケーションを手動で配置する](https://msdn.microsoft.com/ja-jp/library/xc3tc5xx.aspx)  
 [アプリケーションの発行後に、アプリケーション設定ファイルの内容を編集するには](http://blogs.msdn.com/b/jpvsblog/archive/2011/05/26/clickonce-tips.aspx)  
 [ClickOnceの配布手順がよくわからなかったのでメモ](http://d.hatena.ne.jp/masakitk/20110111/1294751018)  
