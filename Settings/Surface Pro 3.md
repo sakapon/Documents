@@ -21,17 +21,17 @@
 * Visual Studio 2013 Ultimate (x86)
 
 ### Development Tools 2
-* [SourceTree 1.5.2](http://www.sourcetreeapp.com/)
+* [SourceTree 1.5.2 → 1.6](http://www.sourcetreeapp.com/)
 * [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
-* [Azure Storage Explorer 4](http://azurestorageexplorer.codeplex.com/)
+* [Azure Storage Explorer 4 → 6](http://azurestorageexplorer.codeplex.com/)
 * [Windows Phone の画面出力アプリ](http://www.microsoft.com/ja-jp/download/details.aspx?id=42648)
 * [Fiddler](http://www.telerik.com/fiddler)
 
 ### SDKs
-* Kinect for Windows SDK 1.8
+* Kinect for Windows SDK 1.8, 2.0
 * Kinect for Windows Developer Toolkit 1.8
-* Leap Motion Software Installer 1.2.1
-* Leap Motion SDK 1.2.0
+* Leap Motion Software Installer 1.2.1 → 2.3.1
+* Leap Motion SDK 1.2.0 → 2.3.1
 
 ### Future
 * WebMatrix
