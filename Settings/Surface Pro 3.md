@@ -13,13 +13,14 @@
   * .NET Framework 4.5
 * Office Home and Business 2013 (x86)
 * Skype
-* Windows Essentials
+* [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
 
 ### Development Tools 1
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
 * Expression Encoder 4 SP2
 * SQL Server 2014 Express (x64)
 * SQL Server 2014 Developer (x64)
+* SQL Server Data Tools 2013
 * Visual Studio 2013 Ultimate (x86)
 
 ### Development Tools 2
@@ -42,6 +43,9 @@
 * honto
 * [TeamViewer 10](https://www.teamviewer.com/ja/)
 * KAGURA
+
+### One-time
+* [Windows 10](https://www.microsoft.com/ja-jp/software-download/windows10)
 
 ### Future
 * WebMatrix
