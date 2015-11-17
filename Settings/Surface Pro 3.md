@@ -12,7 +12,7 @@
 * Internet Information Services 8.5
   * .NET Framework 4.5
 * Office Home and Business 2013 (x86)
-* Skype
+* [Skype](http://www.skype.com/)
 * [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
 
 ### Development Tools 1
@@ -41,11 +41,11 @@
 ### Others
 * Kindle
 * honto
-* [TeamViewer 10](https://www.teamviewer.com/ja/)
+* [TeamViewer 10](https://www.teamviewer.com/)
 * KAGURA
 
 ### One-time
-* [Windows 10](https://www.microsoft.com/ja-jp/software-download/windows10)
+* [Windows 10 メディア作成ツール](https://www.microsoft.com/ja-jp/software-download/windows10)
 
 ### Future
 * WebMatrix
