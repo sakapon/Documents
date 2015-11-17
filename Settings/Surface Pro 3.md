@@ -3,6 +3,7 @@
 * Mozilla Firefox
 * Adobe Reader
 * [Dropbox](https://www.dropbox.com/)
+* TeraPad
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
   * [FeliCa ランチャー] のチェックをオンにする
 
@@ -11,6 +12,7 @@
 * Internet Information Services 8.5
   * .NET Framework 4.5
 * Office Home and Business 2013 (x86)
+* Skype
 * Windows Essentials
 
 ### Development Tools 1
@@ -26,17 +28,24 @@
 * [Azure Storage Explorer 4 → 6](http://azurestorageexplorer.codeplex.com/)
 * [Windows Phone の画面出力アプリ](http://www.microsoft.com/ja-jp/download/details.aspx?id=42648)
 * [Fiddler](http://www.telerik.com/fiddler)
+* [ILSpy 2.3](http://ilspy.net/)
 
 ### SDKs
 * Kinect for Windows SDK 1.8, 2.0
 * Kinect for Windows Developer Toolkit 1.8
 * Leap Motion Software Installer 1.2.1 → 2.3.1
 * Leap Motion SDK 1.2.0 → 2.3.1
+* [Intel RealSense SDK (2014 Gold)](https://software.intel.com/en-us/intel-realsense-sdk)
+
+### Others
+* Kindle
+* honto
+* [TeamViewer 10](https://www.teamviewer.com/ja/)
+* KAGURA
 
 ### Future
 * WebMatrix
 * .NET Gadgeteer
 * OpenCV
-* Intel RealSense
 * CeVIO
 * Office Remote
