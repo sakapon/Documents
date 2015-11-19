@@ -1,9 +1,10 @@
 ﻿### Platforms
 * Google Chrome
 * Mozilla Firefox
+* TeraPad
+* かざぐるマウス
 * Adobe Reader
 * [Dropbox](https://www.dropbox.com/)
-* TeraPad
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
   * [FeliCa ランチャー] のチェックをオンにする
 
