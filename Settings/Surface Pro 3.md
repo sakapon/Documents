@@ -7,6 +7,8 @@
 * [Dropbox](https://www.dropbox.com/)
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
   * [FeliCa ランチャー] のチェックをオンにする
+* GX-HDMI/U2 ユーティリティ
+* IME 辞書登録
 
 ### Infrastructure
 * Web Platform Installer 5.0
