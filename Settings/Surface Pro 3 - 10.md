@@ -1,19 +1,18 @@
-﻿### Platforms
+### Platforms
 * Google Chrome
-* Mozilla Firefox
+* // Mozilla Firefox
 * TeraPad
-* かざぐるマウス
+* // かざぐるマウス
 * Adobe Reader
 * [Dropbox](https://www.dropbox.com/)
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
-  * [FeliCa ランチャー] のチェックをオンにする
-* GX-HDMI/U2 ユーティリティ
+* GX-HDMI/U2 ユーティリティ 1.5
 * IME 辞書登録
 
 ### Infrastructure
 * Web Platform Installer 5.0
+  * もう不要？
 * Internet Information Services 8.5
-  * .NET Framework 4.5
 * Office Home and Business 2013 (x86)
 * [Skype](http://www.skype.com/)
 * [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
