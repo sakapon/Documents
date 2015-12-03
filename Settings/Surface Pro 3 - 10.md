@@ -13,6 +13,7 @@
 * Web Platform Installer 5.0
   * もう不要？
 * Internet Information Services 8.5
+  * .NET Framework 4.5
 * Office Home and Business 2013 (x86)
 * [Skype](http://www.skype.com/)
 * [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
@@ -20,10 +21,9 @@
 ### Development Tools 1
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
 * Expression Encoder 4 SP2
-* SQL Server 2014 Express (x64)
-* SQL Server 2014 Developer (x64)
-* SQL Server Data Tools 2013
-* Visual Studio 2013 Ultimate (x86)
+* [SQL Server 2014 Express with Advanced Services with SP1 (x64)](https://www.microsoft.com/ja-jp/download/details.aspx?id=46697)
+* // SQL Server Data Tools 2013
+* Visual Studio Enterprise 2015 with Update 1
 
 ### Development Tools 2
 * [SourceTree 1.5.2 → 1.6](http://www.sourcetreeapp.com/)
