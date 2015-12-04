@@ -13,7 +13,7 @@
 * Web Platform Installer 5.0
   * もう不要？
 * Internet Information Services 8.5
-  * .NET Framework 4.5
+  * .NET Framework 4.6
 * Office Home and Business 2013 (x86)
 * [Skype](http://www.skype.com/)
 * [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
@@ -22,15 +22,14 @@
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
 * Expression Encoder 4 SP2
 * [SQL Server 2014 Express with Advanced Services with SP1 (x64)](https://www.microsoft.com/ja-jp/download/details.aspx?id=46697)
-* // SQL Server Data Tools 2013
 * Visual Studio Enterprise 2015 with Update 1
 
 ### Development Tools 2
-* [SourceTree 1.5.2 → 1.6](http://www.sourcetreeapp.com/)
+* [SourceTree 1.6](http://www.sourcetreeapp.com/)
 * [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
-* [Azure Storage Explorer 4 → 6](http://azurestorageexplorer.codeplex.com/)
-* [Windows Phone の画面出力アプリ](http://www.microsoft.com/ja-jp/download/details.aspx?id=42648)
-* [Fiddler](http://www.telerik.com/fiddler)
+* [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
+* // [Windows Phone の画面出力アプリ](http://www.microsoft.com/ja-jp/download/details.aspx?id=42648)
+* [Fiddler 4](http://www.telerik.com/fiddler)
 * [ILSpy 2.3](http://ilspy.net/)
 
 ### SDKs
