@@ -35,14 +35,13 @@
 ### SDKs
 * Kinect for Windows SDK 1.8, 2.0
 * Kinect for Windows Developer Toolkit 1.8
-* Leap Motion Software Installer 1.2.1 → 2.3.1
-* Leap Motion SDK 1.2.0 → 2.3.1
-* [Intel RealSense SDK (2014 Gold)](https://software.intel.com/en-us/intel-realsense-sdk)
+* [Leap Motion SDK 2.3.1](https://developer.leapmotion.com/)
+* [Intel RealSense SDK R5 HF1](https://software.intel.com/en-us/intel-realsense-sdk)
 
 ### Others
 * Kindle
 * honto
-* [TeamViewer 10](https://www.teamviewer.com/)
+* [TeamViewer 11](https://www.teamviewer.com/)
 * KAGURA
 
 ### One-time
