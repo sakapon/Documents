@@ -13,8 +13,8 @@
 * Create the .zip file, and save it to [Downloads] folder.
 
 ### Pull Request
-* **Title** 「vX.Y.Z request」と入力する
-* **Comment** Release notes の内容を転記する
+* **Title** 「vX.Y.Z」と入力する
+* **Comment** Release Notes の内容を転記する
 
 ### Merge
 * そのまま [Merge pull request] をクリックする
@@ -22,7 +22,7 @@
 ### Release
 * **Tag** 「vX.Y.Z」と入力する
 * **Title** 「vX.Y.Z」と入力する
-* **Description** Release notes の内容を転記する
+* **Description** Release Notes の内容を転記する
 
 ### Upload NuGet Package
 * Upload the created NuGet package to [NuGet Gallery](https://www.nuget.org/).
