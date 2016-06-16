@@ -9,4 +9,4 @@ GitHub の Web ページで作成すると、設定をいろいろ追加でき�
 * 各プラットフォーム向けの .gitignore
 * ライセンス
 
-![Create Repository.png](Create%20Repository.png)
+![Create Repository](Create-Repository.png)
