@@ -20,7 +20,7 @@
 ### Development Tools 1
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
 * Expression Encoder 4 SP2
-* [SQL Server 2014 Express with Advanced Services with SP1 (x64)](https://www.microsoft.com/ja-jp/download/details.aspx?id=46697)
+* [SQL Server 2016 Express (x64)](https://www.microsoft.com/ja-JP/download/details.aspx?id=52679)
 * Visual Studio Enterprise 2015 with Update 1
 
 ### Development Tools 2
