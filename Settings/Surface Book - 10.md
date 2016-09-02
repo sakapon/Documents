@@ -21,7 +21,10 @@
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
 * Expression Encoder 4 SP2
 * [SQL Server 2016 Express (x64)](https://www.microsoft.com/ja-JP/download/details.aspx?id=52679)
+  * 新規スタンドアロン インストール
+* [SQL Server Management Studio](https://msdn.microsoft.com/ja-jp/library/mt238290.aspx)
 * Visual Studio Enterprise 2015 with Update 1
+* [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
 
 ### Development Tools 2
 * [SourceTree 1.6](http://www.sourcetreeapp.com/)
