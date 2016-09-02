@@ -3,7 +3,7 @@
 * // Mozilla Firefox
 * TeraPad
 * // かざぐるマウス
-* Adobe Reader
+* [Adobe Reader](https://get.adobe.com/jp/reader/)
 * [Dropbox](https://www.dropbox.com/)
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
 * GX-HDMI/U2 ユーティリティ 1.5
