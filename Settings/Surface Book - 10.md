@@ -23,16 +23,17 @@
 * [SQL Server 2016 Express (x64)](https://www.microsoft.com/ja-JP/download/details.aspx?id=52679)
   * 新規スタンドアロン インストール
 * Visual Studio Enterprise 2015 with Update 1
+  * [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
 * [SQL Server Management Studio](https://msdn.microsoft.com/ja-jp/library/mt238290.aspx)
-* [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
 
 ### Development Tools 2
-* [SourceTree 1.6](http://www.sourcetreeapp.com/)
-* [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
+* [SourceTree 1.9](http://www.sourcetreeapp.com/)
+* // [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
 * [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
 * // [Windows Phone の画面出力アプリ](http://www.microsoft.com/ja-jp/download/details.aspx?id=42648)
 * [Fiddler 4](http://www.telerik.com/fiddler)
 * [ILSpy 2.3](http://ilspy.net/)
+* LINQPad
 
 ### SDKs
 * Kinect for Windows SDK 1.8, 2.0
@@ -45,6 +46,7 @@
 * honto
 * [TeamViewer 11](https://www.teamviewer.com/)
 * KAGURA
+* Epson プリンター ドライバー
 
 ### One-time
 * [Windows 10 メディア作成ツール](https://www.microsoft.com/ja-jp/software-download/windows10)
