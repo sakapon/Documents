@@ -10,7 +10,7 @@
 * IME 辞書登録
 
 ### Infrastructure
-* // Web Platform Installer 5.0
+* Web Platform Installer 5.0
 * Internet Information Services 8.5
   * .NET Framework 4.6
 * Office Professional Plus 2016 (x86)
@@ -24,6 +24,8 @@
   * 新規スタンドアロン インストール
 * Visual Studio Enterprise 2015 with Update 1
   * [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
+  * Productivity Power Tools
+  * Azure SDK
 * [SQL Server Management Studio](https://msdn.microsoft.com/ja-jp/library/mt238290.aspx)
 
 ### Development Tools 2
