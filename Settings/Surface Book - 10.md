@@ -25,6 +25,7 @@
 * Visual Studio Enterprise 2015 with Update 1
   * Productivity Power Tools
   * Web Essentials
+  * Web Extension Pack
   * Azure SDK
   * [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
 * [SQL Server Management Studio](https://msdn.microsoft.com/ja-jp/library/mt238290.aspx)
