@@ -23,9 +23,10 @@
 * [SQL Server 2016 Express (x64)](https://www.microsoft.com/ja-JP/download/details.aspx?id=52679)
   * 新規スタンドアロン インストール
 * Visual Studio Enterprise 2015 with Update 1
-  * [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
   * Productivity Power Tools
+  * Web Essentials
   * Azure SDK
+  * [SQL Server Data Tools](https://msdn.microsoft.com/ja-JP/library/mt204009.aspx)
 * [SQL Server Management Studio](https://msdn.microsoft.com/ja-jp/library/mt238290.aspx)
 
 ### Development Tools 2
