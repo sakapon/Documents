@@ -46,10 +46,11 @@
 また、現在では多くの企業が[博物館をはじめとする展示施設](https://t.co/AsKUX8m4mt)を運営しており、そこからそれぞれのテーマに関する新たな知見を得ていることでしょう。
 
 ### 参照
-展覧会
+これまでの展覧会
 - [SEMI-SENSELESS DRAWING MODULES #2 - Letters](https://vimeo.com/138557097)
   - [21_21 DESIGN SIGHT「動きのカガク展」](http://www.2121designsight.jp/program/motion_science/)
   - 第 1 回高松メディアアート祭
+  - [The 21st ifva Awards](http://www.ifva.com/?p=11590&lang=en)
   - [TDC 展 2016](http://tdctokyo.org/jpn/?award=2016_rgb) など
 - [Asemic Languages](https://vimeo.com/181188289)
   - [あいちトリエンナーレ 2016](http://aichitriennale.jp/artist/kannosoyang.html)
