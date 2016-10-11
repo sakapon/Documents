@@ -47,12 +47,11 @@
 
 次回: [アートのプロセスについて](Artistic-Process.md)
 
-### 参照
-これまでの展覧会
+#### これまでの展覧会
 - [SEMI-SENSELESS DRAWING MODULES #2 - Letters](https://vimeo.com/138557097)
   - [21_21 DESIGN SIGHT「動きのカガク展」](http://www.2121designsight.jp/program/motion_science/)
   - 第 1 回高松メディアアート祭
   - [The 21st ifva Awards](http://www.ifva.com/?p=11590&lang=en)
-  - [TDC 展 2016](http://tdctokyo.org/jpn/?award=2016_rgb) など
+  - [TDC 展 2016](http://tdctokyo.org/jpn/?award=2016_rgb)
 - [Asemic Languages](https://vimeo.com/181188289)
   - [あいちトリエンナーレ 2016](http://aichitriennale.jp/artist/kannosoyang.html)
