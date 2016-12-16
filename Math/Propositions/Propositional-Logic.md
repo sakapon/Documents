@@ -32,13 +32,22 @@ p または q のうち、少なくとも一方が真のときに真です。
 - 論理式 (formula): 命題変数、命題定数、論理結合子により構成される式。
 
 ここで以上の内容をもとに、論理式を実装します。
-論理結合子は、否定のみ単項式で、他は二項式です。
+論理結合子は、否定のみが単項で、他はすべて二項です。
 
-[Formula.cs](https://gist.github.com/sakapon/fa4a0bf84a702e6b066b093be055b201)
+[Formula classes](https://gist.github.com/sakapon/fa4a0bf84a702e6b066b093be055b201)
 
 式を簡単に記述できるようにするため、静的メソッドを用意します。
 
-[Formula.cs](https://gist.github.com/sakapon/f32b48c1aea3357ae3d37460552043da)
+[Formula facade](https://gist.github.com/sakapon/f32b48c1aea3357ae3d37460552043da)
+
+### 恒真式
+論理式のうち、含まれる命題変数がどのような真偽値の組合せになっても真であるものを恒真式 (tautology) と呼びます。
+逆に、含まれる命題変数がどのような真偽値の組合せになっても偽であるものを矛盾論理式または矛盾 (contradiction) と呼びます。
+簡単な例を挙げると、p ∨ ～p は恒真式で、p ∧ ～p は矛盾です。
+
+次のコードで、論理式が恒真式あるいは矛盾であるかどうかを判定できます。
+
+[Tautology](https://gist.github.com/sakapon/769cbcfa1fbb4bf89dc6432e8ac57699)
 
 次回は、このライブラリを利用してもう少し高度な問題を解いてみます。
 
