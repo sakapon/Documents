@@ -11,7 +11,7 @@
 
 [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)
 
-### 論理結合子、論理式
+### 論理結合子
 任意の命題 p は、真偽値 (truth value) を持ちます。真偽値とは、真 (T) または偽 (F) です。
 そして、「かつ」「または」「ならば」などを一般化した概念を論理結合子 (logical connective) と呼び、次のものがあります。
 
@@ -26,6 +26,7 @@ p または q のうち、少なくとも一方が真のときに真です。
 1. 同値 (p ≡ q)  
 (p ⇒ q) ∧ (q ⇒ p) と同義です。計算機においては、XOR 演算の否定と同義です。
 
+### 論理式
 さらに、論理式を次のように定義します。
 
 - 命題変数 (propositional variable): 命題を表す変数。値は、真または偽となりうる。
@@ -41,7 +42,7 @@ p または q のうち、少なくとも一方が真のときに真です。
 
 [Formula facade](https://gist.github.com/sakapon/f32b48c1aea3357ae3d37460552043da)
 
-### 恒真式
+### 恒真式および矛盾
 論理式のうち、含まれる命題変数がどのような真偽値の組合せになっても真であるものを恒真式 (tautology) と呼びます。
 逆に、含まれる命題変数がどのような真偽値の組合せになっても偽であるものを矛盾論理式または矛盾 (contradiction) と呼びます。
 簡単な例を挙げると、p ∨ ～p は恒真式で、p ∧ ～p は矛盾です。
@@ -60,7 +61,8 @@ Visual Studio で新規のコンソール アプリケーション プロジェ�
 
 [PropositionsConsole](https://gist.github.com/sakapon/7d1a9b3ec24c442e2b161dfb6da3d1ad)
 
-これを実行することで、三段論法、背理法、対偶などを証明できました。
+恒真式であるということは、その論理式がつねに成り立つということです。
+このコードを実行することで、三段論法、背理法、対偶などを証明できます。
 
 ![PropositionsConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/PropositionsConsole.png)
 
