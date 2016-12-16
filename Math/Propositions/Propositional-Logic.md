@@ -10,6 +10,7 @@
 
 [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)
 
+### 論理結合子、論理式
 任意の命題 p は、真偽値 (truth value) を持ちます。真偽値とは、真 (T) または偽 (F) です。
 そして、「かつ」「または」「ならば」などを一般化した概念を論理結合子 (logical connective) と呼び、次のものがあります。
 
@@ -35,6 +36,9 @@ p または q のうち、少なくとも一方が真のときに真です。
 
 [Formula.cs](https://gist.github.com/sakapon/fa4a0bf84a702e6b066b093be055b201)
 
+式を簡単に記述できるようにするため、静的メソッドを用意します。
+
+[Formula.cs](https://gist.github.com/sakapon/f32b48c1aea3357ae3d37460552043da)
 
 次回は、このライブラリを利用してもう少し高度な問題を解いてみます。
 
