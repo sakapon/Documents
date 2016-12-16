@@ -51,7 +51,18 @@ p または q のうち、少なくとも一方が真のときに真です。
 [Tautology](https://gist.github.com/sakapon/769cbcfa1fbb4bf89dc6432e8ac57699)
 
 以上のコードをまとめて、[Blaze (GitHub)](https://github.com/sakapon/Blaze) というライブラリとして公開しています。
-[NuGet](https://www.nuget.org/packages/Blaze/) でインストールできます。
+NuGet でインストールできます。
+
+さて、このライブラリを利用すると、命題論理に関する定理を証明できるようになります。
+実際にいくつかやってみましょう。
+Visual Studio で新規のコンソール アプリケーション プロジェクトを作成して、NuGet で [Blaze](https://www.nuget.org/packages/Blaze/) をインストールします。
+そして次のようなコードを記述します。
+
+[PropositionsConsole](https://gist.github.com/sakapon/7d1a9b3ec24c442e2b161dfb6da3d1ad)
+
+これを実行することで、三段論法、背理法、対偶などを証明できました。
+
+![PropositionsConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/PropositionsConsole.png)
 
 次回は、このライブラリを利用してもう少し高度な問題を解いてみます。
 
