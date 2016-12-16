@@ -2,8 +2,9 @@
 
 // この投稿は [数学 Advent Calendar 2016](http://qiita.com/advent-calendar/2016/math) の 16 日目の記事です。
 
-命題といえば高校数学で「かつ」「または」「ならば」などを学習することと思いますが、
+命題といえば高校数学で「かつ」「または」「ならば」などを学習すると思いますが、
 この投稿では、これらを一般化、形式化した命題論理をプログラミングで表現することを目指します。
+プログラミングをしない方も、適宜飛ばせばなんとか読めると思います。
 
 用語や定義については、主に [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)の第 7 章「命題論理入門」に記載されているものを使い、解説と実装をしていきます。
 プログラミング言語としては C# (.NET) を利用します。
@@ -49,12 +50,16 @@ p または q のうち、少なくとも一方が真のときに真です。
 
 [Tautology](https://gist.github.com/sakapon/769cbcfa1fbb4bf89dc6432e8ac57699)
 
+以上のコードをまとめて、[Blaze (GitHub)](https://github.com/sakapon/Blaze) というライブラリとして公開しています。
+[NuGet](https://www.nuget.org/packages/Blaze/) でインストールできます。
+
 次回は、このライブラリを利用してもう少し高度な問題を解いてみます。
 
 次回: 12/23 (予定)
 
 **作成したライブラリ**  
-[Blaze (GitHub)](https://github.com/sakapon/Blaze)
+[Blaze (GitHub)](https://github.com/sakapon/Blaze)  
+[Blaze (NuGet Gallery)](https://www.nuget.org/packages/Blaze/)
 
 **作成したサンプル**  
 [PropositionsConsole (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/MathSample/PropositionsConsole)
