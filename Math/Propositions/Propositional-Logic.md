@@ -9,7 +9,7 @@
 用語や定義については、主に [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)の第 7 章「命題論理入門」に記載されているものを使い、解説と実装をしていきます。
 プログラミング言語としては C# (.NET) を利用します。
 
-[Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)
+[「記号論理学: 一般化と記号化」高橋 昌一郎, Raymond Smullyan, 川辺 治之](https://www.amazon.co.jp/dp/4621085727)
 
 ### 論理結合子
 任意の命題 p は、真偽値 (truth value) を持ちます。真偽値とは、真 (T) または偽 (F) です。
