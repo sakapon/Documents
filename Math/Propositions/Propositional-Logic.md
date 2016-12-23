@@ -69,7 +69,7 @@ Visual Studio で新規のコンソール アプリケーション プロジェ�
 
 次回は、このライブラリを利用してもう少し高度な問題を解いてみます。
 
-次回: 12/23 (予定)
+次回: [命題論理の複雑な問題を解く (C#)](Solve-Propositions.md)
 
 **作成したライブラリ**  
 [Blaze (GitHub)](https://github.com/sakapon/Blaze)  
