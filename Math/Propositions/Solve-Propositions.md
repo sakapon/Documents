@@ -25,7 +25,8 @@ A, B はそれぞれ騎士か悪漢か？
 [PropositionsConsole Knights](https://gist.github.com/sakapon/82ab1ad2b5c2834d01c7076442fd7727)
 
 実行すると、問題 1.3 では A が悪漢、B が騎士と確定します。  
-問題 1.5 では B が騎士と確定しますが、A は確定できません。  
+問題 1.5 では B が騎士と確定しますが、A は確定できません。
+
 ![Knights](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/PropositionsConsole-Knights.png)
 
 次に、[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)という書籍から、数当てゲームを紹介します。
@@ -66,10 +67,12 @@ n=2 の場合、
 この方針でプログラミングしたものが [NumberGuessConsole (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/MathSample/NumberGuessConsole) です (コードが長いため、ここには記載しません)。
 このプログラムを A=8, B=9 で実行した結果です。A が 8 ターン目に当てました。
 (「X @ n」は X が n ターン目に当てることを表します。)
+
 ![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9.png)
 
 A の Knowledge には ((B = 7)≢(B = 9))∧((B = 7)⇒(B @ 7))∧((B = 9)⇒～(B @ 7)) と入っています。
 B が 7 ターン目に静観したため、A は B=9 だとわかりました。
+
 ![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9-Debug.png)
 
 結果として、小さいほうの数字 n を持つプレイヤーが n ターン目に相手の数 n+1 を当てることになります。  
