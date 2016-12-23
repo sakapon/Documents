@@ -42,6 +42,34 @@ A, B はそれぞれ騎士か悪漢か？
 
 ![人型ロボットと数当てゲームをする人のイラスト](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuess-8-9-dark.jpg)
 
+自分の数が 9 だとすると、与えられた条件から相手の数は 8 または 10 の 2 通りに絞られます。
+ここまではすぐにわかるのですが、いずれかを確定するには相手の将来の行動あるいは実際の行動の原因を推測する必要があります。
+
+小さい数字でいくつか試してみましょう。
+2 人のプレイヤーには対称性がありますが、ここでは大小関係を固定して、プレイヤー A が n、プレイヤー B が n+1 を持つとします。
+以下では、各プレイヤーの心理状況を書くことにします。
+
+n=1 の場合、
+
+- A「B=2 しかありえない。」
+- B「A=1 または A=3。A=1 ならば、A は 1 ターン目に当てるはず。A=3 ならば、A は 1 ターン目に静観するはず。」
+
+したがって、A が 1 ターン目で当てて終了します。  
+n=2 の場合、
+
+- A「B=1 または B=3。B=1 ならば、B は 1 ターン目に当てるはず。B=3 ならば、B は 1 ターン目に静観するはず。」
+- B「A=2 または A=4。A=2 ならば、A は 2 ターン目に当てるはず (B が 1 ターン目に静観するため)。A=4 ならば、A は 2 ターン目まで静観するはず。」
+
+したがって、1 ターン目は両方静観し、A が 2 ターン目で当てて終了します。  
+このように、相手がどのように行動してくるかをあらかじめシミュレートしておけば、実際の行動に応じて相手の数を確定できることになります。
+
+この方針でプログラミングしたものが [NumberGuessConsole (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/MathSample/NumberGuessConsole) です (コードが長いため、ここには記載しません)。
+このプログラムを A=8, B=9 で実行した結果です。A が 8 ターン目に当てました。
+![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9.png)
+
+結果として、n を持つプレイヤーが n ターン目に相手の数を当てることになります。  
+(プログラミングをしなくても、同様の方針により数学的帰納法で証明できます。)
+
 **作成したライブラリ**  
 [Blaze (GitHub)](https://github.com/sakapon/Blaze)  
 [Blaze (NuGet Gallery)](https://www.nuget.org/packages/Blaze/)
