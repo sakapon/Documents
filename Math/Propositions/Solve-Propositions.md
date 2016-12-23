@@ -17,6 +17,13 @@ A, B はそれぞれ騎士か悪漢か？
 A, B はそれぞれ騎士か悪漢か？
 ```
 
+普通に考えて解くこともできますが、この状況を記号で表すことを考えます。  
+住民 X が騎士であるという命題を `k_X` とし、X が命題 p を主張したとすると、`k_X` と p の真偽性は等しいということになり、`k_X ≡ p` が成り立ちます。
+したがって、問題 1.3 では `k_A ≡ (～k_A ∧ ～k_B)` が、問題 1.5 では `k_A ≡ (k_A ≡ k_B)` が成り立ちます。
+
+前回作成したライブラリを使って、次のように解くことができます。  
+[PropositionsConsole Knights](https://gist.github.com/sakapon/82ab1ad2b5c2834d01c7076442fd7727)
+
 [David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)
 
 ![人型ロボットと数当てゲームをする人のイラスト](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuess-8-9-dark.jpg)
