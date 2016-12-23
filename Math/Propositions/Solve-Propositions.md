@@ -29,7 +29,7 @@ A, B はそれぞれ騎士か悪漢か？
 
 ![Knights](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/PropositionsConsole-Knights.png)
 
-次に、[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)という書籍から、数当てゲームを紹介します。
+さて次に、[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)という書籍から、数当てゲームを紹介します。
 
 ```
 ・プレイヤーは 2 人
@@ -44,7 +44,7 @@ A, B はそれぞれ騎士か悪漢か？
 ![人型ロボットと数当てゲームをする人のイラスト](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuess-8-9-dark.jpg)
 
 自分の数が 9 だとすると、与えられた条件から相手の数は 8 または 10 の 2 通りに絞られます。
-ここまではすぐにわかるのですが、いずれかを確定するには相手の将来の行動あるいは実際の行動の原因を推測する必要があります。
+ここまではすぐにわかるのですが、いずれかを確定させるには相手の将来の行動あるいは実際の行動の原因を推測する必要があります。
 
 小さい数値でいくつか試してみましょう。
 2 人のプレイヤーには対称性がありますが、ここでは大小関係を固定して、プレイヤー A が n、プレイヤー B が n+1 を持つとします。
