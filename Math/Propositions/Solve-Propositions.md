@@ -67,7 +67,11 @@ n=2 の場合、
 このプログラムを A=8, B=9 で実行した結果です。A が 8 ターン目に当てました。
 ![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9.png)
 
-結果として、n を持つプレイヤーが n ターン目に相手の数を当てることになります。  
+A の Knowledge には ((B = 7)≢(B = 9))∧((B = 7)⇒(B @ 7))∧((B = 9)⇒～(B @ 7)) と入っています。
+B が 7 ターン目に静観したため、A は B=9 だとわかりました。
+![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9-Debug.png)
+
+結果として、小さいほうの数字 n を持つプレイヤーが n ターン目に相手の数 n+1 を当てることになります。  
 (プログラミングをしなくても、同様の方針により数学的帰納法で証明できます。)
 
 **作成したライブラリ**  
