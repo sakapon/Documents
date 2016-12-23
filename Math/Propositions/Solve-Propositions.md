@@ -28,7 +28,17 @@ A, B はそれぞれ騎士か悪漢か？
 問題 1.5 では B が騎士と確定しますが、A は確定できません。  
 ![Knights](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/PropositionsConsole-Knights.png)
 
-[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)
+次に、[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)という書籍から、数当てゲームを紹介します。
+
+```
+・プレイヤーは 2 人
+・それぞれのプレイヤーに数が割り当てられており、自身の数を知っているが、相手の数は知らない
+・2 人の持つ数は、連続する 2 つの自然数 (つまり、差は 1)
+・ターン制で、相手の数を当てれば終了 (わかったら宣言し、わからなければ発声しない)
+・先攻・後攻の区別はなく、いずれが宣言してもよい
+
+どちらのプレイヤーが何ターン目に相手の数を当てることができるか？
+```
 
 ![人型ロボットと数当てゲームをする人のイラスト](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuess-8-9-dark.jpg)
 
