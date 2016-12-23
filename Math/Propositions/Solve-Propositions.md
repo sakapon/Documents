@@ -65,6 +65,7 @@ n=2 の場合、
 
 この方針でプログラミングしたものが [NumberGuessConsole (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/MathSample/NumberGuessConsole) です (コードが長いため、ここには記載しません)。
 このプログラムを A=8, B=9 で実行した結果です。A が 8 ターン目に当てました。
+(「X @ n」は X が n ターン目に当てることを表します。)
 ![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9.png)
 
 A の Knowledge には ((B = 7)≢(B = 9))∧((B = 7)⇒(B @ 7))∧((B = 9)⇒～(B @ 7)) と入っています。
