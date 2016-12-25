@@ -1,5 +1,8 @@
 ## 数当てゲーム
 
+[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)  
+p.9, p113
+
 ```
 ・プレイヤーは 2 人
 ・それぞれのプレイヤーに数が割り当てられており、自身の数を知っているが、相手の数は知らない
@@ -9,3 +12,6 @@
 
 どちらのプレイヤーが何ターン目に相手の数を当てることができるか？
 ```
+
+### Proof
+a
