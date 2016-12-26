@@ -5,6 +5,7 @@
 前回の[命題論理を実装する (C#)](Propositional-Logic.md) では命題論理を扱うためのライブラリを作成しました。
 今回は、このライブラリを利用して複雑な問題をいくつか解いてみます。
 
+### 騎士と悪漢
 まず、前回でも紹介した書籍 [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)から、問題を 2 つ引用します。
 
 ```
@@ -31,6 +32,7 @@ A, B はそれぞれ騎士か悪漢か？
 
 ![Knights](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/PropositionsConsole-Knights.png)
 
+### 数当てゲーム
 さて次に、[David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)という書籍から、数当てゲームを紹介します。
 
 ```
@@ -47,6 +49,7 @@ A, B はそれぞれ騎士か悪漢か？
 
 自分の数が 9 だとすると、与えられた条件から相手の数は 8 または 10 の 2 通りに絞られます。  
 ここまではすぐにわかるのですが、いずれかを確定させるには相手の将来の行動あるいは実際の行動の原因を推測する必要があります。
+相手がどう考えているかを考える、という日常生活でも重要な能力を問われているようでもあります。
 
 小さい数値でいくつか試してみましょう。  
 2 人のプレイヤーには対称性がありますが、ここでは大小関係を固定して、プレイヤー A が n、プレイヤー B が n+1 を持つとします。
@@ -73,7 +76,7 @@ n=2 の場合、
 ![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9.png)
 
 各プレイヤーの脳内であらかじめシミュレーターを実行することで、値を確定させるための条件を得ます。  
-A の Knowledge には ((B = 7)≢(B = 9))∧((B = 7)⇒(B @ 7))∧((B = 9)⇒～(B @ 7)) と入っています。  
+A の Knowledge には `((B = 7)≢(B = 9))∧((B = 7)⇒(B @ 7))∧((B = 9)⇒～(B @ 7))` と入っています。  
 B が 7 ターン目に静観したため、A は B=9 だとわかりました。
 
 ![NumberGuessConsole](https://github.com/sakapon/Samples-2016/raw/master/Images/MathSample/NumberGuessConsole-8-9-Debug.png)
