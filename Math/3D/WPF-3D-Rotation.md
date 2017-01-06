@@ -25,7 +25,7 @@ Click イベントハンドラーの中で、[Matrix3D.Rotate メソッド](http
 引数には、回転軸と回転角度を表す [Quaternion](https://msdn.microsoft.com/ja-jp/library/system.windows.media.media3d.quaternion.aspx) (四元数) を指定します。  
 このように、回転軸と回転角度がわかっている場合は比較的簡単に実装ができます。
 
-下図は、最初の状態から x 軸の負の方向に 60° 回転させたところです。  
+下図は、最初の状態から x 軸のまわりに -60° 回転させたところです。  
 ![Dice Rotation](https://github.com/sakapon/Samples-2016/raw/master/Images/Wpf3DSample/DiceRotationWpf-x-60.png)
 
 全体のソースコードは [DiceRotationWpf (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/DiceRotationWpf) にあります。  
