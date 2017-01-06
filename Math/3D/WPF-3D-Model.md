@@ -1,4 +1,4 @@
-WPF の 3D グラフィックスの機能を使って、3D オブジェクトを表示してみます。
+WPF の 3D グラフィックスの機能を使って、3D オブジェクトを表示してみます。  
 ここでは、XAML でさいころのような立方体を描画することを目指します。
 
 ![Dice (XAML)](https://github.com/sakapon/Samples-2016/raw/master/Images/Wpf3DSample/DiceXamlWpf.png)
@@ -36,7 +36,7 @@ GeometryModel3D.Material プロパティで、何を表示するかを指定し�
 裏面には表面を反転したものが表示されます。つまり、「3」の裏面は「ε」のようになります。
 
 ### ジオメトリ
-GeometryModel3D.Geometry プロパティで、どこに表示するかを指定します。
+GeometryModel3D.Geometry プロパティで、どこに表示するかを指定します。  
 具体的には、MeshGeometry3D を利用して、次のものを指定します。
 
 **点の集合 (Positions プロパティ)**  
@@ -64,11 +64,17 @@ P0 が左下、P1 が右下、P2 が右上、P3 が左上となるようにテ�
 ### アフィン変換 (移動、スケール、回転など) について
 3D オブジェクトのアフィン変換は、ModelVisual3D.Transform プロパティで指定します。
 
-XAML はそのまま C# などの .NET のコードに変換することもできます。
+### コードでの記述について
+XAML の代わりに C# などの .NET のコードで記述することもできます。  
 同一の処理が繰り返される場合には、コードで生成したほうが簡単に表現できることもあります。
+
+次回: [WPF で 3D オブジェクトを回転させる](WPF-3D-Rotation.md)
 
 **作成したサンプル**  
 [Wpf3DSample (GitHub)](https://github.com/sakapon/Samples-2016/tree/wpf-3d/Wpf3DSample): コードで描画した例もあります。
+
+**バージョン情報**  
+.NET Framework 4.5
 
 **参照**  
 [3-D グラフィックスの概要](https://msdn.microsoft.com/ja-jp/library/ms747437.aspx)  
