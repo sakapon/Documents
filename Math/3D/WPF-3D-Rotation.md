@@ -7,11 +7,11 @@
 
 次のようにコードを追加・変更します。
 
-[gist 635dca42214a603f0f014d876e38eed9]
+[DiceRotationWpf](https://gist.github.com/sakapon/635dca42214a603f0f014d876e38eed9)
 
 ボタンとして、RepeatButton を配置します。  
 RepeatButton は、押したままにしておけば断続的に Click イベントが発生します。  
-また今回は、回転の状態を表すために、ModelVisual3D.Transform の中で [MatrixTransform3D](https://msdn.microsoft.com/ja-jp/library/system.windows.media.media3d.matrixtransform3d.aspx) を使います。
+また回転の状態を表すために、ModelVisual3D.Transform の中で [MatrixTransform3D](https://msdn.microsoft.com/ja-jp/library/system.windows.media.media3d.matrixtransform3d.aspx) を使います。
 
 回転には、回転軸と回転角度が必要です。  
 - 回転軸は、ベクトルで表されます。  
@@ -32,8 +32,13 @@ Click イベントハンドラーの中で、[Matrix3D.Rotate メソッド](http
 マウスまたはタッチのドラッグ操作でも回転できるようになっています。  
 ![Dice Rotation](https://github.com/sakapon/Samples-2016/raw/master/Images/Wpf3DSample/DiceRotationWpf-Play.gif)
 
+前回: [WPF で 3D オブジェクトを表示する](WPF-3D-Model.md)
+
 **作成したサンプル**  
 [DiceRotationWpf (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/DiceRotationWpf)
+
+**バージョン情報**  
+.NET Framework 4.5
 
 **参照**  
 [3-D グラフィックスの概要](https://msdn.microsoft.com/ja-jp/library/ms747437.aspx)  
