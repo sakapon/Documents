@@ -1,13 +1,16 @@
-WPF の 3D グラフィックスの機能を使って、3D オブジェクトを表示してみます。  
-ここでは、XAML でさいころのような立方体を描画することを目指します。
+## WPF で 3D オブジェクトを表示する
+
+WPF の 3D グラフィックスの機能を使って、3D オブジェクトを表示する方法を示します。  
+XAML でさいころのような立方体を描画することを目指します。
 
 ![Dice (XAML)](https://github.com/sakapon/Samples-2016/raw/master/Images/Wpf3DSample/DiceXamlWpf.png)
 
 先に XAML を示します。この後に簡単な説明が続きます。
 
-[gist bdec458e3e528ef85ae37aed68d3cd31]
+[DiceXamlWpf](https://gist.github.com/sakapon/bdec458e3e528ef85ae37aed68d3cd31)
 
-3D オブジェクトを描画するには、まず Viewport3D を配置し、その中に次のものを配置します。
+まず、Viewport3D を配置します。  
+3D オブジェクトを描画するには次の 3 種類のものが必要で、これらを Viewport3D に設定します。
 
 **カメラ**  
 Viewport3D.Camera プロパティに指定します。
