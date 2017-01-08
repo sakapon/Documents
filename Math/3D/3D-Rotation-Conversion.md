@@ -47,10 +47,12 @@ WPF での実際の演算では四元数を使うと簡単でしょう。
 ### 2 点 → オイラー角
 T.B.D.
 
+arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com/ja-jp/library/system.math.atan2.aspx)を使うとよいでしょう。
+
 以上により、行列 → 2 点 → オイラー角 → 四元数 → 行列と変換する方法が与えられたので、回転の表現を相互に変換できるようになります。
 
 では、これらを実装してみます。  
-ベクトル、行列、四元数を扱うための [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/) という、WPF のライブラリよりも高機能なライブラリがありますが、今回は WPF のライブラリのみを利用して実装したいと思います。
+ベクトル、行列、四元数を扱うための [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/) という、WPF のライブラリよりも高機能なライブラリもありますが、今回は WPF のライブラリのみを利用して実装したいと思います。
 
 [gist]
 
