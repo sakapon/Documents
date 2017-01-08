@@ -18,6 +18,35 @@
 
 以下では、これらの表現を互いに変換する方法について考えます。
 
+### 行列 → 2 点
+任意のベクトルに対して行列を作用させれば回転後のベクトルが求められます。  
+WPF では[演算子 *](https://msdn.microsoft.com/ja-jp/library/ms603921.aspx) が用意されています。
+
+### 四元数 → 行列
+四元数の成分から行列の各成分を計算できます (詳細は[四元数による回転行列の表現](http://physmath.main.jp/src/quaternion-rotation.html)を参照)。  
+WPF では [Matrix3D.Rotate メソッド](https://msdn.microsoft.com/ja-jp/library/system.windows.media.media3d.matrix3d.rotate.aspx)として用意されています。
+
+### オイラー角 → 行列または四元数
+ここでは、ヨーは y 軸、ピッチは x 軸、ロールは z 軸のまわりの回転を表し、この順に適用されるとします。  
+(元の座標系における) ヨー、ピッチ、ロールを表す回転行列をそれぞれ `R_y, R_p, R_r` とし、それぞれの回転角度を `\theta_y, \theta_p, \theta_r` とします。
+すなわち、`T.B.D.`
+
+このとき、座標系ごとヨー、ピッチ、ロールの順に適用した回転は、元の座標系で `R_y R_p R_r` で表されます (適用の順序が逆になる)。
+証明は次のようにできますが、実際の回転をイメージするとわかりやすいと思います。
+
+#### 証明
+ベクトル `\bm{x}` にヨーを作用させると、`R_y \bm{x}`。  
+次に、これにピッチを作用させるには、いったん座標系を戻して `R_p` を作用させるから、  
+`R_y R_p R_y^{-1} \cdot R_y \bm{x} = R_y R_p \bm{x}`  
+同様に、これにロールを作用させると、  
+`(R_y R_p) R_r (R_y R_p)^{-1} \cdot R_y R_p \bm{x} = R_y R_p R_r \bm{x}`  
+(証明終)
+
+WPF では四元数を使うと簡単でしょう。
+
+### 2 点 → オイラー角
+T.B.D.
+
 #### 参照
 - [四元数と三次元空間における回転](http://mathtrain.jp/quaternion)
 - [四元数による回転行列の表現](http://physmath.main.jp/src/quaternion-rotation.html)
