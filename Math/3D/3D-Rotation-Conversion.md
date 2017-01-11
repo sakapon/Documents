@@ -35,11 +35,11 @@ WPF では [Matrix3D.Rotate メソッド](https://msdn.microsoft.com/ja-jp/libra
 証明は次のようにできますが、実際の回転をイメージするとわかりやすいと思います。
 
 #### 証明
-ベクトル `\bm{x}` にヨーを作用させると、`R_y \bm{x}`。  
+ベクトル `{\bf x}` にヨーを作用させると、`R_y {\bf x}`。  
 次に、これにピッチを作用させるには、いったん座標系を戻して `R_p` を作用させるから、  
-`R_y R_p R_y^{-1} \cdot R_y \bm{x} = R_y R_p \bm{x}`  
+`R_y R_p R_y^{-1} \cdot R_y {\bf x} = R_y R_p {\bf x}`  
 同様に、これにロールを作用させると、  
-`(R_y R_p) R_r (R_y R_p)^{-1} \cdot R_y R_p \bm{x} = R_y R_p R_r \bm{x}`  
+`(R_y R_p) R_r (R_y R_p)^{-1} \cdot R_y R_p {\bf x} = R_y R_p R_r {\bf x}`  
 (証明終)
 
 WPF での実際の演算では四元数を使うと簡単でしょう。
