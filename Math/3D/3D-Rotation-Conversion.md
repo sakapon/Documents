@@ -29,7 +29,13 @@ WPF では [Matrix3D.Rotate メソッド](https://msdn.microsoft.com/ja-jp/libra
 ### オイラー角 → 行列または四元数
 ここでは、ヨーは y 軸、ピッチは x 軸、ロールは z 軸のまわりの回転を表し、この順に適用されるとします。  
 (元の座標系における) ヨー、ピッチ、ロールを表す回転行列をそれぞれ `R_y, R_p, R_r` とし、それぞれの回転角度を `\theta_y, \theta_p, \theta_r` とします。
-すなわち、`T.B.D.`
+すなわち、
+
+```
+R_y = \left( \begin{array}{ccc} \cos \theta_y & 0 & \sin \theta_y \\ 0 & 1 & 0 \\ -\sin \theta_y & 0 & \cos \theta_y \end{array} \right), 
+R_p = \left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & \cos \theta_p & -\sin \theta_p \\ 0 & \sin \theta_p & \cos \theta_p \end{array} \right), 
+R_r = \left( \begin{array}{ccc} \cos \theta_r & -\sin \theta_r & 0 \\ \sin \theta_r & \cos \theta_r & 0 \\ 0 & 0 & 1 \end{array} \right)
+```
 
 このとき、座標系ごとヨー、ピッチ、ロールの順に適用した回転は、元の座標系で `R_y R_p R_r` で表されます (適用の順序が逆になる)。
 証明は次のようにできますが、実際の回転をイメージするとわかりやすいと思います。
