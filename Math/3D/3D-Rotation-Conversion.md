@@ -51,8 +51,8 @@ R_r = \left( \begin{array}{ccc} \cos \theta_r & -\sin \theta_r & 0 \\ \sin \thet
 WPF での実際の演算では四元数を使うとよいでしょう。
 
 ### 2 点の座標 → オイラー角
-ここでは、2 点として `{\bf e}_z = (0, 0, 1), {\bf e}_y = (0, 1, 0)` を選びます。  
-回転後のベクトルがそれぞれ `{\bf u}, {\bf t}` で与えられたとすると、オイラー角は以下の手続きにより求められます。
+ここでは、2 点として `{\bf e}_z = (0, 0, 1), {\bf e}_y = (0, 1, 0)` を選びます。  
+これらの回転後のベクトルがそれぞれ `{\bf u}, {\bf t}` で与えられたとすると、オイラー角は以下の手続きにより求められます。
 
 #### 解
 まず、`{\bf u}` の x 要素と z 要素の比はピッチおよびロールの影響を受けないから、  
@@ -81,9 +81,11 @@ arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com
 以上により、行列 → 2 点の座標 → オイラー角 → 四元数 → 行列と変換する方法が与えられたので、回転の表現を相互に変換できるようになります。
 
 では、これらを実装してみます。  
-ベクトル、行列、四元数を扱うための [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/) という、WPF のライブラリよりも高機能なライブラリもありますが、今回は WPF のライブラリのみを利用して実装したいと思います。
+ベクトル、行列、四元数を扱うための [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/) という、WPF のライブラリよりも高機能なライブラリもあるのですが、今回は WPF のライブラリのみを利用して実装したいと思います。
 
 [Rotation3DHelper](https://gist.github.com/sakapon/9ab43c8b90fd266ae61d764c307a3f86)
+
+全体のソースコードは [RotationTest (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/RotationTest) にあります。
 
 #### 参照
 - [四元数と三次元空間における回転](http://mathtrain.jp/quaternion)
