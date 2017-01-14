@@ -18,7 +18,7 @@
 
 以下では、これらの表現を互いに変換する方法について考えます。
 
-### 行列 → 2 点
+### 行列 → 2 点の座標
 任意のベクトルに対して行列を作用させれば回転後のベクトルが求められます。  
 WPF では[演算子 *](https://msdn.microsoft.com/ja-jp/library/ms603921.aspx) が用意されています。
 
@@ -48,14 +48,14 @@ R_r = \left( \begin{array}{ccc} \cos \theta_r & -\sin \theta_r & 0 \\ \sin \thet
 `(R_y R_p) R_r (R_y R_p)^{-1} \cdot R_y R_p {\bf x} = R_y R_p R_r {\bf x}`  
 (証明終)
 
-WPF での実際の演算では四元数を使うと簡単でしょう。
+WPF での実際の演算では四元数を使うとよいでしょう。
 
-### 2 点 → オイラー角
+### 2 点の座標 → オイラー角
 T.B.D.
 
 arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com/ja-jp/library/system.math.atan2.aspx)を使うとよいでしょう。
 
-以上により、行列 → 2 点 → オイラー角 → 四元数 → 行列と変換する方法が与えられたので、回転の表現を相互に変換できるようになります。
+以上により、行列 → 2 点の座標 → オイラー角 → 四元数 → 行列と変換する方法が与えられたので、回転の表現を相互に変換できるようになります。
 
 では、これらを実装してみます。  
 ベクトル、行列、四元数を扱うための [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/) という、WPF のライブラリよりも高機能なライブラリもありますが、今回は WPF のライブラリのみを利用して実装したいと思います。
