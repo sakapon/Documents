@@ -32,7 +32,8 @@ Click イベントハンドラーの中で、[Matrix3D.Rotate メソッド](http
 マウスまたはタッチのドラッグ操作でも回転できるようになっています。  
 ![Dice Rotation](https://github.com/sakapon/Samples-2016/raw/master/Images/Wpf3DSample/DiceRotationWpf-Play.gif)
 
-前回: [WPF で 3D オブジェクトを表示する](WPF-3D-Model.md)
+前回: [WPF で 3D オブジェクトを表示する](WPF-3D-Model.md)  
+次回: [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)
 
 **作成したサンプル**  
 [DiceRotationWpf (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/DiceRotationWpf)
