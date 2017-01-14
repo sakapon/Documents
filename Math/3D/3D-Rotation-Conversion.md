@@ -16,6 +16,7 @@
 1. 特定の 2 点の回転前後の座標
   - とくに、直交する 2 つのベクトルを用いるとよい
 
+3D のプログラミングをしていると、API によってどの表現を利用するかが異なることがあります。  
 以下では、これらの表現を互いに変換する方法について考えます。
 
 ### 行列 → 2 点の座標
@@ -86,6 +87,11 @@ arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com
 [Rotation3DHelper](https://gist.github.com/sakapon/9ab43c8b90fd266ae61d764c307a3f86)
 
 全体のソースコードは [RotationTest (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/RotationTest) にあります。
+
+前回: [WPF で 3D オブジェクトを回転させる](WPF-3D-Rotation.md)
+
+**バージョン情報**  
+.NET Framework 4.5
 
 #### 参照
 - [四元数と三次元空間における回転](http://mathtrain.jp/quaternion)
