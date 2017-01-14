@@ -83,7 +83,7 @@ arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com
 では、これらを実装してみます。  
 ベクトル、行列、四元数を扱うための [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/) という、WPF のライブラリよりも高機能なライブラリもありますが、今回は WPF のライブラリのみを利用して実装したいと思います。
 
-[gist]
+[Rotation3DHelper](https://gist.github.com/sakapon/9ab43c8b90fd266ae61d764c307a3f86)
 
 #### 参照
 - [四元数と三次元空間における回転](http://mathtrain.jp/quaternion)
