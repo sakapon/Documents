@@ -30,7 +30,7 @@ WPF では [Matrix3D.Rotate メソッド](https://msdn.microsoft.com/ja-jp/libra
 
 ### オイラー角 → 行列または四元数
 ここでは、ヨーは y 軸、ピッチは x 軸、ロールは z 軸のまわりの回転を表し、この順に適用されるとします。  
-(元の座標系における) ヨー、ピッチ、ロールを表す回転行列をそれぞれ `R_y, R_p, R_r` とし、それぞれの回転角度を `\theta_y, \theta_p, \theta_r` とします。
+(元の座標系における) ヨー、ピッチ、ロールを表す回転行列をそれぞれ `R_y, R_p, R_r` とし、それぞれの回転角度を `\theta_y, \theta_p, \theta_r` とします。  
 すなわち、
 
 ```
@@ -39,11 +39,12 @@ R_p = \left( \begin{array}{ccc} 1 & 0 & 0 \\ 0 & \cos \theta_p & -\sin \theta_p 
 R_r = \left( \begin{array}{ccc} \cos \theta_r & -\sin \theta_r & 0 \\ \sin \theta_r & \cos \theta_r & 0 \\ 0 & 0 & 1 \end{array} \right)
 ```
 
-このとき、座標系ごとヨー、ピッチ、ロールの順に適用した回転は、**元の座標系で** `R_y R_p R_r` で表されます (適用の順序が逆になる)。
+このとき、**座標系ごと**ヨー、ピッチ、ロールの順に適用した回転は、**元の座標系で** `R_y R_p R_r` で表されます (適用の順序が逆になる)。  
 証明は次のようにできますが、実際の回転をイメージするとわかりやすいと思います。
 
 #### 証明
-ベクトル `{\bf x}` にヨーを作用させると、`R_y {\bf x}`。  
+ベクトル `{\bf x}` にヨーを作用させると、  
+`R_y {\bf x}`  
 次に、これにピッチを作用させるには、いったん座標系を戻して `R_p` を作用させるから、  
 `R_y R_p R_y^{-1} \cdot R_y {\bf x} = R_y R_p {\bf x}`  
 同様に、これにロールを作用させると、  
@@ -87,7 +88,8 @@ arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com
 
 [Rotation3DHelper](https://gist.github.com/sakapon/9ab43c8b90fd266ae61d764c307a3f86)
 
-全体のソースコードは [RotationTest (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/RotationTest) にあります。
+全体のソースコードは [RotationTest (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/RotationTest) にあります。  
+これらのメソッドを呼び出すテストが付いています。
 
 前回: [WPF で 3D オブジェクトを回転させる](WPF-3D-Rotation.md)
 
