@@ -58,12 +58,12 @@ WPF での実際の演算では四元数を使うとよいでしょう。
 
 #### 解
 まず、`{\bf u}` の x 要素と z 要素の比はピッチおよびロールの影響を受けないから、  
-`\tan \theta_y = \frac{{\bf u}_x}{{\bf u}_z}`
+`\tan \theta_y = \dfrac{{\bf u}_x}{{\bf u}_z}`
 により、`\theta_y, R_y` が決まる。
 
 ピッチおよびロールの決め方から、  
-`\tan \theta_p = \frac{- (R_p {\bf e}_z)_y}{(R_p {\bf e}_z)_z}`
-`\tan \theta_r = \frac{- (R_r {\bf e}_y)_x}{(R_r {\bf e}_y)_y}`
+`\tan \theta_p = \dfrac{- (R_p {\bf e}_z)_y}{(R_p {\bf e}_z)_z}`
+`\tan \theta_r = \dfrac{- (R_r {\bf e}_y)_x}{(R_r {\bf e}_y)_y}`
 
 また、前項と同様に考えて、  
 `{\bf u} = R_y R_p {\bf e}_z`
