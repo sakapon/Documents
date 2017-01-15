@@ -54,7 +54,7 @@ R_r = \left( \begin{array}{ccc} \cos \theta_r & -\sin \theta_r & 0 \\ \sin \thet
 WPF での実際の演算では四元数を使うとよいでしょう。
 
 ### 2 点の座標 → オイラー角
-ここでは、2 点として `{\bf e}_z = (0, 0, 1), {\bf e}_y = (0, 1, 0)` を選びます。  
+ここでは、2 点として `{\bf e}_z = (0, 0, 1), {\bf e}_y = (0, 1, 0)` を選びます。  
 これらの回転後のベクトルがそれぞれ `{\bf u}, {\bf t}` で与えられたとすると、オイラー角は以下の手続きにより求められます。
 
 #### 解
@@ -66,7 +66,7 @@ WPF での実際の演算では四元数を使うとよいでしょう。
 `\tan \theta_p = \dfrac{- (R_p {\bf e}_z)_y}{(R_p {\bf e}_z)_z}`
 `\tan \theta_r = \dfrac{- (R_r {\bf e}_y)_x}{(R_r {\bf e}_y)_y}`
 
-また、前項と同様に考えて、  
+また、前項と同様に考えて、
 `{\bf u} = R_y R_p {\bf e}_z`
 `{\bf t} = R_y R_p R_r {\bf e}_y`
 であるから、  
@@ -75,7 +75,7 @@ WPF での実際の演算では四元数を使うとよいでしょう。
 
 したがって、`\theta_p, \theta_r` も順に決まる。  
 なお、この決め方の場合、回転角度の範囲は、  
-`- \pi < \theta_y \le \pi, - \pi / 2 \le \theta_p \le \pi / 2, - \pi < \theta_r \le \pi`  
+`- \pi < \theta_y \le \pi, - \dfrac{\pi}{2} \le \theta_p \le \dfrac{\pi}{2}, - \pi < \theta_r \le \pi`  
 となる。  
 (終)
 
