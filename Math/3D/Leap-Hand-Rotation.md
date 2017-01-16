@@ -18,6 +18,8 @@ Hand.Direction と Hand.PalmNormal はともに長さ 1 で直交しているた
 
 [HandRotationLeap](https://gist.github.com/sakapon/97659608cd8e63f27277451fec2b3a8c)
 
+全体のソースコードは [HandRotationLeap (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/LeapSample/HandRotationLeap) にあります。
+
 前回: [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)
 
 **バージョン情報**  
