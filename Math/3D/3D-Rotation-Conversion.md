@@ -91,7 +91,8 @@ arctan を求めるには、[Math.Atan2 メソッド](https://msdn.microsoft.com
 全体のソースコードは [RotationTest (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/Wpf3DSample/RotationTest) にあります。  
 これらのメソッドを呼び出すテストが付いています。
 
-前回: [WPF で 3D オブジェクトを回転させる](WPF-3D-Rotation.md)
+前回: [WPF で 3D オブジェクトを回転させる](WPF-3D-Rotation.md)  
+次回: [Leap Motion で手の回転状態を取得する](Leap-Hand-Rotation.md)
 
 **バージョン情報**  
 .NET Framework 4.5
