@@ -21,6 +21,8 @@ Hand.Direction と Hand.PalmNormal はともに長さ 1 で直交しているた
 全体のソースコードは [HandRotationLeap (GitHub)](https://github.com/sakapon/Samples-2016/tree/master/LeapSample/HandRotationLeap) にあります。  
 手とさいころの回転の状態を同期させています。
 
+[Hand Rotation by Leap Motion Controller](https://www.youtube.com/watch?v=ZRBKAvi7-MA)
+
 前回: [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)
 
 **バージョン情報**  
