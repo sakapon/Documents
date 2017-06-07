@@ -10,12 +10,13 @@
 * IME 辞書登録
 
 ### Infrastructure
-* Web Platform Installer 5.0
+* [Web Platform Installer 5.0](https://www.microsoft.com/web/downloads/platform.aspx)
 * Internet Information Services 8.5
   * .NET Framework 4.6
 * Office Professional Plus 2016 (x86)
 * [Skype](http://www.skype.com/)
-* [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
+* [Open Live Writer](https://www.microsoft.com/ja-jp/store/p/open-live-writer/9nblggh5279m)
+  * Old: [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
 
 ### Development Tools 1
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
