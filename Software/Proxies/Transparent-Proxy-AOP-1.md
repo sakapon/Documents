@@ -32,7 +32,7 @@ https://gist.github.com/sakapon/54ef60b0d084e0f259a973fc119f5425
 ![CrossCuttingConsole](https://github.com/sakapon/Samples-2017/blob/master/Images/ProxySample/CrossCuttingConsole.png)
 
 前回：[インターフェイスに対する透過プロキシ](Transparent-Proxy-Interface.md)  
-次回：[透過プロキシでアスペクト指向プログラミング (1)](Transparent-Proxy-AOP-1.md)
+次回：[透過プロキシでアスペクト指向プログラミング (2)](Transparent-Proxy-AOP-2.md)
 
 **作成したサンプル**  
 [CrossCuttingConsole (GitHub)](https://github.com/sakapon/Samples-2017/tree/master/ProxySample/CrossCuttingConsole)
