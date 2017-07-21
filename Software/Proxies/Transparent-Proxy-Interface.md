@@ -24,3 +24,17 @@ RealProxy はプロキシの実体となるものであり、
 WCF における契約プログラミングでは、クライアント側とサーバー側で同一のインターフェイスを利用し、  
 クライアント側からのアクセスを上記のように透過プロキシで実装する方法があります。  
 [方法 : ChannelFactory を使用する](https://msdn.microsoft.com/ja-jp/library/ms734681.aspx) にある通り、ChannelFactory.CreateChannel メソッドで透過プロキシを生成します。
+
+前回：[DLR で名前付き引数を使う](Dynamic-Named-Arguments.md)  
+次回：[透過プロキシでアスペクト指向プログラミング (1)](Transparent-Proxy-AOP-1.md)
+
+**作成したサンプル**  
+[TransparentHttpConsole (GitHub)](https://github.com/sakapon/Samples-2017/tree/master/ProxySample/TransparentHttpConsole)
+
+**バージョン情報**  
+C# 7.0  
+.NET Framework 4.5
+
+#### 参照
+- [RealProxy クラス](https://msdn.microsoft.com/ja-jp/library/system.runtime.remoting.proxies.realproxy.aspx)
+- [方法 : ChannelFactory を使用する](https://msdn.microsoft.com/ja-jp/library/ms734681.aspx)
