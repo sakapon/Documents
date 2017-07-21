@@ -22,3 +22,16 @@ var nw = new NorthwindBusiness();
 と記述できるようになりました。  
 なお、上記のコードには現れていませんが、  
 コンストラクターが呼び出されたときに、CrossCuttingProxy クラスの Invoke メソッドが呼び出されます。
+
+前回：[透過プロキシでアスペクト指向プログラミング (1)](Transparent-Proxy-AOP-1.md)
+
+**作成したサンプル**  
+[CrossCuttingConsole (GitHub)](https://github.com/sakapon/Samples-2017/tree/master/ProxySample/CrossCuttingConsole)
+
+**バージョン情報**  
+C# 7.0  
+.NET Framework 4.5
+
+#### 参照
+- [RealProxy クラス](https://msdn.microsoft.com/ja-jp/library/system.runtime.remoting.proxies.realproxy.aspx)
+- [アスペクト指向プログラミング](https://t.co/K3PluHqMbh)
