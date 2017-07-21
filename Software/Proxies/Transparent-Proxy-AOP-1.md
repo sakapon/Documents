@@ -30,3 +30,17 @@ https://gist.github.com/sakapon/54ef60b0d084e0f259a973fc119f5425
 実行結果です。ログが出力されています：
 
 ![CrossCuttingConsole](https://github.com/sakapon/Samples-2017/blob/master/Images/ProxySample/CrossCuttingConsole.png)
+
+前回：[インターフェイスに対する透過プロキシ](Transparent-Proxy-Interface.md)  
+次回：[透過プロキシでアスペクト指向プログラミング (1)](Transparent-Proxy-AOP-1.md)
+
+**作成したサンプル**  
+[CrossCuttingConsole (GitHub)](https://github.com/sakapon/Samples-2017/tree/master/ProxySample/CrossCuttingConsole)
+
+**バージョン情報**  
+C# 7.0  
+.NET Framework 4.5
+
+#### 参照
+- [RealProxy クラス](https://msdn.microsoft.com/ja-jp/library/system.runtime.remoting.proxies.realproxy.aspx)
+- [アスペクト指向プログラミング](https://t.co/K3PluHqMbh)
