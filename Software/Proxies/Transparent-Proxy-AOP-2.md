@@ -24,6 +24,7 @@ var nw = new NorthwindBusiness();
 コンストラクターが呼び出されたときに、CrossCuttingProxy クラスの Invoke メソッドが呼び出されます。
 
 前回：[透過プロキシでアスペクト指向プログラミング (1)](Transparent-Proxy-AOP-1.md)
+次回：[メソッドチェーンでアスペクト指向プログラミング](Method-Chain-AOP.md)
 
 **作成したサンプル**  
 [CrossCuttingConsole (GitHub)](https://github.com/sakapon/Samples-2017/tree/master/ProxySample/CrossCuttingConsole)
