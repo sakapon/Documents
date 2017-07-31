@@ -29,7 +29,7 @@ Body
 After
 ```
 
-次に、戻り値を持たない (`Action` に相当する) 処理を表す `IProxyable` インターフェイスを、
+次に、戻り値を持たない (`Action` に相当する) 処理を表す `IProxyable` インターフェイスを、  
 `IProxyable<TResult>` インターフェイスの特別な場合とみなして継承させます。
 
 https://gist.github.com/sakapon/7235fb5310caa0437efe1d8c12572c40
@@ -41,9 +41,11 @@ https://gist.github.com/sakapon/608a817c849bd5a2cf3cba473aa52cef
 実行結果です：  
 (図)
 
+使い道としては、
 - .NET で透過プロキシを使いたくない (処理速度を上げたいなど)
 - .NET の属性のような仕組みを持たない別のプラットフォーム
-などの場合に使うとよいでしょう。
+
+などの場合が考えられるでしょう。
 
 前回：[透過プロキシでアスペクト指向プログラミング (2)](Transparent-Proxy-AOP-2.md)
 
