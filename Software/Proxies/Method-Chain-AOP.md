@@ -39,7 +39,7 @@ https://gist.github.com/sakapon/7235fb5310caa0437efe1d8c12572c40
 https://gist.github.com/sakapon/608a817c849bd5a2cf3cba473aa52cef
 
 実行結果です：  
-(図)
+![ProxyableConsole](https://github.com/sakapon/Samples-2017/blob/master/Images/ProxySample/ProxyableConsole.png)
 
 使い道としては、
 - .NET で透過プロキシを使いたくないとき (処理速度を上げたい、など)
