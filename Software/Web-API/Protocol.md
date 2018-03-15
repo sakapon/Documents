@@ -1,5 +1,9 @@
 ## Web API Protocol
 
+### 応答
+- Content-Type: application/json; charset=utf-8
+- Content-Type: application/xml; charset=utf-8
+
 ### 実装方法
 
 #### クライアント側
