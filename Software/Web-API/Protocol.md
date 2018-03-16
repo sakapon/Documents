@@ -26,6 +26,10 @@ POST, PUT, DELETE の場合、送信するエンティティ データの中に 
   - サービス側の状態を変える操作
 
 ## 要求
+ヘッダー
+- Accept: application/json
+- Accept: application/xml
+
 HTTP メソッドおよび引数の渡し方により場合分けする。
 URL のパス (ルーティング) と組み合わせてもよい。
 
@@ -56,6 +60,7 @@ Content-Type: application/json; charset=utf-8
 ```
 
 ## 応答
+ヘッダー
 - Content-Type: application/json; charset=utf-8
 - Content-Type: application/xml; charset=utf-8
 
