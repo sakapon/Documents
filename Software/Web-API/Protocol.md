@@ -65,14 +65,13 @@ Content-Type: application/json; charset=utf-8
 - Content-Type: application/xml; charset=utf-8
 
 ## 実装方法
+### サーバー側
+- (ASP.NET Web サービス)
+- WCF サービス
+- (ASP.NET MVC)
+- [ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/)
 
 ### クライアント側
 - Ajax
 - WCF プロキシ
 - [HttpClient](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client)
-
-### サーバー側
-- (ASP.NET Web サービス)
-- WCF サービス
-- (ASP.NET MVC)
-- ASP.NET Web API
