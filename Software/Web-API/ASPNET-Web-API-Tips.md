@@ -14,6 +14,54 @@ WebApiConfig.cs にルーティングの設定が記述されています。
 - 主に REST スタイルの場合、Get、Post などのメソッド名で解決される (CoC)。この場合、[HttpGet] などの属性を指定する必要はない
 - 主に RPC スタイルで任意のアクション名を利用するには、[HttpGet] などの属性を指定する
 
+## 引数
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace SampleWebApi.Controllers
+{
+    [RoutePrefix("api/Random")]
+    [Route("{action}")]
+    public class RandomController : ApiController
+    {
+        static readonly Random random = new Random();
+
+        [HttpGet]
+        [Route("Echo/{i:int?}")]
+        public int Echo(int i = 123) => i;
+
+        [HttpGet]
+        [Route("NewDoubles/{count:int:range(0,64)}")]
+        public double[] NewDoubles(int count)
+        {
+            return Enumerable.Range(0, count)
+                .Select(i => random.NextDouble())
+                .ToArray();
+        }
+
+        [HttpGet]
+        [Route(@"NewDateTime/{date:datetime:regex(\d{4}-\d{2}-\d{2})}")]
+        [Route(@"NewDateTime/{*date:datetime:regex(\d{4}/\d{2}/\d{2})}")]
+        public DateTime NewDateTime(DateTime date)
+        {
+            return date + TimeSpan.FromHours(24 * random.NextDouble());
+        }
+
+        [HttpGet]
+        public Guid NewUuid()
+        {
+            return Guid.NewGuid();
+        }
+    }
+}
+```
+
 ### 作成したサンプル
 - [AspNetWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/AspNetWebApiSample)
 
