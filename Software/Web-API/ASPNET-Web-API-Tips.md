@@ -26,6 +26,21 @@ WebApiConfig.cs にルーティングの設定が記述されています。
 
 https://gist.github.com/sakapon/1e5d10ca0b5b7a5435ba2a8c52072348
 
+## 戻り値
+戻り値として、通常のデータ型以外に次のものを指定できます。
+- HttpResponseMessage
+  - 生の応答データ
+- IHttpActionResult
+  - HttpResponseMessage をラップしたインターフェイス
+
+これらを利用することにより、応答データを柔軟に設定できます。
+- JSON や XML に限らず、テキストや画像などの任意の形式のコンテンツを返せる
+- 主な IHttpActionResult の実装は [System.Web.Http.Results 名前空間](https://msdn.microsoft.com/library/system.web.http.results.aspx)で定義されている
+
+以下は、テキスト (Content-Type: text/plain) を返す例です。
+
+https://gist.github.com/sakapon/8d0b561449af2d8103b1ee374b44376a
+
 ### 作成したサンプル
 - [AspNetWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/AspNetWebApiSample)
 
