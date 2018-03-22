@@ -23,6 +23,8 @@ https://gist.github.com/sakapon/7641318950b9e61a4537ecc9feff397b
 ### バージョン情報
 - .NET Framework 4.5
 - ASP.NET Web API 5.2.3
+- ASP.NET Web API Help Page 5.2.3
+- ASP.NET Web API CORS 5.2.3
 
 ### 参照
 - [ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/)
