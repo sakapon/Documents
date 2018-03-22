@@ -15,52 +15,16 @@ WebApiConfig.cs にルーティングの設定が記述されています。
 - 主に RPC スタイルで任意のアクション名を利用するには、[HttpGet] などの属性を指定する
 
 ## 引数
+- DateTime, Guid などの型も扱える
+- 引数の [FromBody] は、エンティティ型なら付ける必要はない
+- ルーティングで `{i:int:range(0,100)}` のような制約を追加できる
+- 引数に既定値を指定すると、URL のパラメーターを省略可能
+  - ルーティングで指定する場合は `{i:int?}` のようにする
+  - range などを使う場合、省略可能にできない
+    - int? と range は同時に指定できない
+- 引数で / を使う場合、引数名の前に * を指定する (下の DateTime 型の例)
 
-```c#
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-namespace SampleWebApi.Controllers
-{
-    [RoutePrefix("api/Random")]
-    [Route("{action}")]
-    public class RandomController : ApiController
-    {
-        static readonly Random random = new Random();
-
-        [HttpGet]
-        [Route("Echo/{i:int?}")]
-        public int Echo(int i = 123) => i;
-
-        [HttpGet]
-        [Route("NewDoubles/{count:int:range(0,64)}")]
-        public double[] NewDoubles(int count)
-        {
-            return Enumerable.Range(0, count)
-                .Select(i => random.NextDouble())
-                .ToArray();
-        }
-
-        [HttpGet]
-        [Route(@"NewDateTime/{date:datetime:regex(\d{4}-\d{2}-\d{2})}")]
-        [Route(@"NewDateTime/{*date:datetime:regex(\d{4}/\d{2}/\d{2})}")]
-        public DateTime NewDateTime(DateTime date)
-        {
-            return date + TimeSpan.FromHours(24 * random.NextDouble());
-        }
-
-        [HttpGet]
-        public Guid NewUuid()
-        {
-            return Guid.NewGuid();
-        }
-    }
-}
-```
+https://gist.github.com/sakapon/1e5d10ca0b5b7a5435ba2a8c52072348
 
 ### 作成したサンプル
 - [AspNetWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/AspNetWebApiSample)
