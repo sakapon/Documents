@@ -1,4 +1,4 @@
-# ASP.NET Web API の Tips 集
+# ASP.NET Web API の Tips (1)
 ASP.NET Web API を利用する際の注意点や備忘録です。ほぼ箇条書きです。  
 基本的な説明は省略しています。
 
@@ -40,6 +40,8 @@ https://gist.github.com/sakapon/1e5d10ca0b5b7a5435ba2a8c52072348
 以下は、テキスト (Content-Type: text/plain) を返す例です。
 
 https://gist.github.com/sakapon/8d0b561449af2d8103b1ee374b44376a
+
+次回: [ASP.NET Web API の Tips (2)](ASPNET-WebAPI-Tips-2.md)
 
 ### 作成したサンプル
 - [AspNetWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/AspNetWebApiSample)
