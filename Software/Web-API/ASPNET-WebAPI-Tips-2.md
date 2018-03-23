@@ -9,6 +9,8 @@ ASP.NET Web API を利用する際の注意点や備忘録です。ほぼ箇条�
 
 https://gist.github.com/sakapon/7641318950b9e61a4537ecc9feff397b
 
+公式解説: [Exception Handling in ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/error-handling/exception-handling)
+
 ## Help Page
 コードの XML ドキュメントから、ユーザー向けのヘルプ ページを自動的に生成する機能です。  
 Visual Studio でプロジェクトを作成するときに Web API を選択すると、Help Page もインストールされます。
@@ -19,7 +21,7 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
   - プロジェクトのプロパティで、XML ドキュメントの出力を有効にする
   - HelpPageConfig.cs のコメントアウトを解除する ( // を取る)
 
-(画像)
+![SetDocumentationProvider](https://github.com/sakapon/Samples-2018/blob/master/Images/AspNetWebApiSample/SetDocumentationProvider.png)
 
 - アクション メソッドの戻り値が HttpResponseMessage や IHttpActionResult の場合、[ResponseType(typeof(string))] のようにデータの型を指定する
 - Areas/HelpPage にソースコードがあるため、カスタマイズ可能
@@ -27,14 +29,20 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 - ASP.NET Core Web API では、Help Page を使えない
   - Swashbuckle (Swagger の .NET 向け実装) を使う
 
+公式解説: [Creating Help Pages for ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages)
+
 ## Web API の呼び出し
 .NET アプリケーションから Web API を呼び出すには、HttpClient クラスを利用するとよいでしょう。  
 また、サービス側で実装されたカスタム データ型も、サービス コントラクトとして利用できます。
 すなわち、応答メッセージに対して `response.Content.ReadAsAsync<T>()` を呼び出せば T 型としてデシリアライズできます。
 
+公式解説: [Call a Web API From a .NET Client (C#)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client)
+
 ## CORS
 未検証。
 - ASP.NET Web API CORS を利用する
+
+公式解説: [Enabling Cross-Origin Requests in ASP.NET Web API 2](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
 
 ## JSONP
 未検証。
@@ -43,6 +51,8 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 
 ## Entity Framework, OData
 未検証。
+
+公式解説: [Using Web API 2 with Entity Framework 6](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/)
 
 ## 認証
 未検証。
