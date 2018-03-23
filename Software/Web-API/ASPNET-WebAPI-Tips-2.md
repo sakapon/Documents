@@ -27,6 +27,15 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 - ASP.NET Core Web API では、Help Page を使えない
   - Swashbuckle (Swagger の .NET 向け実装) を使う
 
+## CORS
+未検証。
+- ASP.NET Web API CORS を利用する
+
+## JSONP
+未検証。
+- MediaTypeFormatter を利用する
+  - WebApiContrib.Formatting.Jsonp など
+
 ## Entity Framework, OData
 未検証。
 
@@ -41,6 +50,7 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 ### バージョン情報
 - .NET Framework 4.5
 - ASP.NET Web API 5.2.3
+- ASP.NET MVC 5.2.3
 - ASP.NET Web API Help Page 5.2.3
 - ASP.NET Web API CORS 5.2.3
 
