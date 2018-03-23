@@ -27,6 +27,11 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 - ASP.NET Core Web API では、Help Page を使えない
   - Swashbuckle (Swagger の .NET 向け実装) を使う
 
+## Web API の呼び出し
+.NET アプリケーションから Web API を呼び出すには、HttpClient クラスを利用するとよいでしょう。  
+また、サービス側で実装されたカスタム データ型も、サービス コントラクトとして利用できます。
+すなわち、応答メッセージに対して `response.Content.ReadAsAsync<T>()` を呼び出せば T 型としてデシリアライズできます。
+
 ## CORS
 未検証。
 - ASP.NET Web API CORS を利用する
