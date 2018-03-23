@@ -10,6 +10,8 @@ WebApiConfig.cs にルーティングの設定が記述されています。
 - [RoutePrefix], [Route], [ActionName] などの属性を利用することで柔軟に構成できる
 - [Route] を複数設定できる
 
+公式解説: [Web API Routing](https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/)
+
 ## HTTP メソッド
 - 主に REST スタイルの場合、Get、Post などのメソッド名で解決される (CoC)。この場合、[HttpGet] などの属性を指定する必要はない
 - 主に RPC スタイルで任意のアクション名を利用するには、[HttpGet] などの属性を指定する
@@ -26,6 +28,8 @@ WebApiConfig.cs にルーティングの設定が記述されています。
 
 https://gist.github.com/sakapon/1e5d10ca0b5b7a5435ba2a8c52072348
 
+公式解説: [Attribute Routing in ASP.NET Web API 2](https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2)
+
 ## 戻り値
 戻り値として、通常のデータ型以外に次のものを指定できます。
 - HttpResponseMessage
@@ -40,6 +44,8 @@ https://gist.github.com/sakapon/1e5d10ca0b5b7a5435ba2a8c52072348
 以下は、テキスト (Content-Type: text/plain) を返す例です。
 
 https://gist.github.com/sakapon/8d0b561449af2d8103b1ee374b44376a
+
+公式解説: [Action Results in Web API 2](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/action-results)
 
 次回: [ASP.NET Web API の Tips (2)](ASPNET-WebAPI-Tips-2.md)
 
