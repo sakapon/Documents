@@ -4,8 +4,8 @@ ASP.NET Web API を利用する際の注意点や備忘録です。ほぼ箇条�
 
 ## ルーティング
 WebApiConfig.cs にルーティングの設定が記述されています。  
-既定のテンプレートは "api/{controller}/{id}" となっており、REST スタイルを想定したものとなっています。  
-ただし、ASP.NET MVC と同様に {action} も利用可能であり、RPC スタイルの API も構成できます。
+既定のテンプレートは `api/{controller}/{id}` となっており、REST スタイルを想定したものとなっています。  
+ただし、ASP.NET MVC と同様に `{action}` も利用可能であり、RPC スタイルの API も構成できます。
 
 - [RoutePrefix], [Route], [ActionName] などの属性を利用することで柔軟に構成できる
 - [Route] を複数設定できる
