@@ -9,6 +9,24 @@ ASP.NET Web API を利用する際の注意点や備忘録です。ほぼ箇条�
 
 https://gist.github.com/sakapon/7641318950b9e61a4537ecc9feff397b
 
+## Help Page
+コードの XML ドキュメントから、ユーザー向けのヘルプ ページを自動的に生成する機能です。  
+Visual Studio でプロジェクトを作成するときに Web API を選択すると、Help Page もインストールされます。
+あとから追加するには、NuGet で [Microsoft.AspNet.WebApi.HelpPage](https://www.nuget.org/packages/Microsoft.AspNet.WebApi.HelpPage/) をインストールします。
+
+ただし、既定では機能が有効になっていません。
+- 有効にする手順：
+  - プロジェクトのプロパティで、XML ドキュメントの出力を有効にする
+  - HelpPageConfig.cs のコメントアウトを解除する ( // を取る)
+
+(画像)
+
+- アクション メソッドの戻り値が HttpResponseMessage や IHttpActionResult の場合、[ResponseType(typeof(string))] のようにデータの型を指定する
+- Areas/HelpPage にソースコードがあるため、カスタマイズ可能
+- ヘルプ ページ (Help/Index) を既定のページに設定するには、HelpPageAreaRegistration.cs でルーティングの設定を追加するとよい
+- ASP.NET Core Web API では、Help Page を使えない
+  - Swashbuckle (Swagger の .NET 向け実装) を使う
+
 ## Entity Framework, OData
 未検証。
 
