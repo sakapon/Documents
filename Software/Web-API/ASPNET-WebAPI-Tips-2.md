@@ -23,7 +23,7 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 
 ![SetDocumentationProvider](https://github.com/sakapon/Samples-2018/blob/master/Images/AspNetWebApiSample/SetDocumentationProvider.png)
 
-- アクション メソッドの戻り値が HttpResponseMessage や IHttpActionResult の場合、[ResponseType(typeof(string))] のように属性でデータの型を指定する
+- アクション メソッドの戻り値が HttpResponseMessage または IHttpActionResult の場合、[ResponseType(typeof(string))] のように属性でデータの型を指定する
 - Areas\HelpPage にソースコードがあるため、カスタマイズ可能
 - ヘルプ ページ (Help/Index) を既定のページに設定するには、HelpPageAreaRegistration.cs でルーティングの設定を追加するとよい
 - ASP.NET Core Web API では、Help Page を使えない
@@ -38,9 +38,9 @@ Visual Studio でプロジェクトを作成するときに Web API を選択す
 また、サービス側で実装されたカスタム データ型も、サービス コントラクトとして利用できます。
 すなわち、応答メッセージに対して `response.Content.ReadAsAsync<T>()` を呼び出せば T 型としてデシリアライズできます。
 
-公式解説: [Call a Web API From a .NET Client (C#)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client)
-
 https://gist.github.com/sakapon/7c81d432b2a886fbcf1dd4a6c3dbe108
+
+公式解説: [Call a Web API From a .NET Client (C#)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client)
 
 ## CORS
 未検証。
