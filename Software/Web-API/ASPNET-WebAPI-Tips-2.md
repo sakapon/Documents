@@ -43,8 +43,10 @@ https://gist.github.com/sakapon/7c81d432b2a886fbcf1dd4a6c3dbe108
 公式解説: [Call a Web API From a .NET Client (C#)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client)
 
 ## CORS
-未検証。
-- ASP.NET Web API CORS を利用する
+- NuGet で [Microsoft.AspNet.WebApi.Cors](https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Cors/) をインストールする
+- WebApiConfig.cs で config.EnableCors メソッドを呼び出すことで機能を有効にする
+  - 引数に EnableCorsAttribute を渡すとグローバルに設定できる
+  - コントローラー、アクションのレベルでは [EnableCors] を指定する
 
 公式解説: [Enabling Cross-Origin Requests in ASP.NET Web API 2](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
 
