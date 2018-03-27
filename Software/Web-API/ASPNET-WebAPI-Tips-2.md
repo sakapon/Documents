@@ -58,9 +58,9 @@ https://gist.github.com/sakapon/7c81d432b2a886fbcf1dd4a6c3dbe108
 ## フォーマット
 ASP.NET Web API は、既定で JSON と XML をサポートします。
 要求の Accept ヘッダーに何が指定されているかで結果のフォーマットが変わります。  
-Google Chrome 上で Web API を呼び出して結果を確認しようとすると XML で表示されます。
+Google Chrome 上で Web API を直接呼び出すと結果が XML 形式で返ってきます。
 これは、要求の Accept ヘッダーに application/xml が含まれているためと考えられます。  
-これを JSON 形式にするには、text/html が含まれている場合は JSON を返す設定や XML 形式を無効にする設定が考えられます。
+これを JSON 形式にするには、text/html が含まれている場合に JSON を返す設定や XML 形式を無効にする設定が考えられます。
 
 https://gist.github.com/sakapon/672c985198737adf48f0b5aa03636779
 
