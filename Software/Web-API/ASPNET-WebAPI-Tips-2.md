@@ -55,6 +55,17 @@ https://gist.github.com/sakapon/7c81d432b2a886fbcf1dd4a6c3dbe108
 - MediaTypeFormatter を利用する
   - WebApiContrib.Formatting.Jsonp など
 
+## フォーマット
+ASP.NET Web API は、既定で JSON と XML をサポートします。
+要求の Accept ヘッダーに何が指定されているかで結果のフォーマットが変わります。  
+Google Chrome 上で Web API を呼び出して結果を確認しようとすると XML で表示されます。
+これは、要求の Accept ヘッダーに application/xml が含まれているためと考えられます。  
+これを JSON 形式にするには、text/html が含まれている場合は JSON を返す設定や XML 形式を無効にする設定が考えられます。
+
+https://gist.github.com/sakapon/672c985198737adf48f0b5aa03636779
+
+解説: [How do I get ASP.NET Web API to return JSON instead of XML using Chrome?](https://stackoverflow.com/a/26068063)
+
 ## Entity Framework, OData
 未検証。
 
