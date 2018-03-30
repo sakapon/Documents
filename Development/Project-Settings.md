@@ -7,9 +7,9 @@
 - ビルド
   - 条件付きコンパイル シンボル: SILVERLIGHT (Silverlight の場合)
   - 条件付きコンパイル シンボル: SILVERLIGHT;WINDOWS_PHONE (Windows Phone の場合)
-  - [詳細設定] → [デバッグ情報]: none (Release のみ)
-  - [出力パス]: ..\Release\Current\ (Release のみ)
-  - [XML ドキュメント ファイル] : ..\Release\Current\Project1.xml (Release のみ)
+  - [詳細設定] → [デバッグ情報] : none (Release のみ)
+  - [出力パス] : `..\Release\Current\` (Release のみ)
+  - [XML ドキュメント ファイル] : `..\Release\Current\Project1.xml` (Release のみ)
 - デバッグ
   - [Visual Studio ホスティング プロセスを有効にする] : オフ (Release のみ)
 
