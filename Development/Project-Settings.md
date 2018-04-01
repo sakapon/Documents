@@ -24,6 +24,9 @@
   - AssemblyFileVersion: 1.0.0
   - `[assembly: CLSCompliant(true)]` を追加
 
+### ツール
+- [ZIP Release](https://www.nuget.org/packages/KTools.ZipRelease/) または [Version Increment](https://www.nuget.org/packages/KTools.VersionIncrement/) をインストール
+
 ### Local.testsettings
 - [データと診断] → [コード カバレッジ]: 有効
 - [構成] をクリックし、テスト対象のアセンブリを選択
