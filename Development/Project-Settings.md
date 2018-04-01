@@ -17,7 +17,12 @@
 - (SharedAssemblyInfo.cs)
   - プロジェクトにリンクとして追加
 - AssemblyInfo.cs
-  - [assembly: CLSCompliant(true)] を追加
+  - AssemblyTitle
+  - AssemblyCompany
+  - AssemblyProduct
+  - AssemblyCopyright
+  - AssemblyFileVersion: 1.0.0
+  - `[assembly: CLSCompliant(true)]` を追加
 
 ### Local.testsettings
 - [データと診断] → [コード カバレッジ]: 有効
