@@ -3,6 +3,8 @@ Microsoft Expression Encoder 4
 
 ## 準備
 - デスクトップの解像度
+  - 変更したら再サインイン
+  - 開発作業を記録するなら 1500 x 1000, 1440 x 900 など
 - タスク バーを自動的に隠す
 - 音量
 - Visual Studio のフォント サイズ
@@ -10,6 +12,7 @@ Microsoft Expression Encoder 4
 ## Screen Capture
 - フレーム レート
 - マウス カーソルのキャプチャ (既定でオン)
+  - セカンド ディスプレイは不可？
 - オーディオ
   - マイク
   - PC の音源の出力先 (ヘッドフォンなど)
