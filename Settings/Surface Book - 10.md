@@ -7,6 +7,7 @@
 * [Dropbox](https://www.dropbox.com/)
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
 * // GX-HDMI/U2 ユーティリティ 1.5
+* [DisplayLink USB Graphics Software for Windows](http://www.displaylink.com/downloads/windows)
 * IME 辞書登録
 
 ### Infrastructure
