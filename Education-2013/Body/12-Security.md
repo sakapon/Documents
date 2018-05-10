@@ -57,10 +57,10 @@ aspnet_regsql -E -S .\SQLExpress -d Test1 -A mr
 - クロスサイト スクリプティング (XSS)
   - セッション ハイジャックを招く
   - 対策：表示時にサニタイジング (エスケープ)
-  - フレームワークで解決 (MVC 3 Razor)
+  - フレームワークで解決 (ASP.NET MVC 3 Razor)
 - クロスサイト リクエスト フォージェリ (CSRF)
   - 対策：フォームにワンタイムトークンを設定する
-  - AntiForgery ヘルパー (MVC 3 Razor)
+  - AntiForgery ヘルパー (ASP.NET MVC 3 Razor)
 
 ### インジェクション
 - SQL インジェクション
@@ -80,7 +80,7 @@ aspnet_regsql -E -S .\SQLExpress -d Test1 -A mr
 - 固定の禁則文字・禁則ワード
   - sys, delete, ...
   - 記号も一般のユーザーが利用する文字である
-  - 禁則ワードを含む会社名が存在する
+  - 禁則ワードを含む会社名が存在する
 
 ### 記事
 - [モテるセキュ女子力を磨くための4つの心得「SQLインジェクションができない女をアピールせよ」等](http://d.hatena.ne.jp/ockeghem/20110518/p1)
