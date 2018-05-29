@@ -18,12 +18,13 @@
 - ハッシュ関数 (不可逆)
   - ソルト (鍵付きハッシュ)
   - HMAC-SHA-256
+  - RFC 2898
 - 共通鍵 (対称) 暗号方式
   - AES-256
 - 公開鍵 (非対称) 暗号方式
   - RSA-2048
 - ハイブリッド暗号方式
-  - TLS/SSL
+  - TLS/SSL で利用される
   - [SSLの基本を押さえる](http://thinkit.co.jp/free/article/0706/3/6/)
 
 ### 記事
@@ -55,6 +56,8 @@ aspnet_regsql -E -S .\SQLExpress -d Test1 -A mr
 - 認証 Cookie
   - ユーザー名や有効期限など (FormsAuthenticationTicket) を暗号化したもの
   - SSL で通信することが望ましい (つまり、実質すべてのページで SSL)
+  - Cookie に Secure 属性を付ける
+    - ASP.NET では、Web.config で `<httpCookies requireSSL="true" />`
 
 ### OAuth
 - [RFCとなった「OAuth 2.0」――その要点は？](http://www.atmarkit.co.jp/ait/articles/1209/10/news105.html)
