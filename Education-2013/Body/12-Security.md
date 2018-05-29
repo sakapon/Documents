@@ -1,6 +1,11 @@
 # セキュリティ
 
+## パスワード管理
+### ツール
+- [KeePass](https://keepass.info/)
+
 ### 記事
+セキュリティとユーザビリティのトレードオフがある
 - [My docomoはパスワードのコピペを禁止するな](http://sho.tdiary.net/20121111.html)
 - [IE10にはパスワード表示ボタンが付いている](http://tumblr.tokumaru.org/post/35538308213/ie10)
 - [「Googleグループ」問題から考える“シャドーIT”の潜在的リスク](http://japan.zdnet.com/communication/analysis/35034735/)
@@ -9,18 +14,20 @@
 - [パスワード認証を脆弱にする10の方法とアンチパターン](http://causeless.seesaa.net/article/388566941.html)
 
 ## 暗号化アルゴリズム
-- ハッシュ (不可逆)
+- ハッシュ関数 (不可逆)
   - ソルト (鍵付きハッシュ)
-  - HMAC-SHA 256
-- 共通鍵 (対称) 暗号化
-  - AES 256
-- 公開鍵 (非対称) 暗号化
-  - RSA 2048
+  - HMAC-SHA-256
+- 共通鍵 (対称) 暗号方式
+  - AES-256
+- 公開鍵 (非対称) 暗号方式
+  - RSA-2048
 - ハイブリッド暗号方式
-  - SSL
+  - TLS/SSL
   - [SSLの基本を押さえる](http://thinkit.co.jp/free/article/0706/3/6/)
 
 ### 記事
+- [小悪魔女子大生のサーバエンジニア日記](http://co-akuma.directorz.jp/blog/)
+  - ECDSA (ECC)
 - [「パスワードでの保護は限界」と結論したGoogleが評価するセキュリティ技術](http://itpro.nikkeibp.co.jp/article/COLUMN/20130502/474661/)
 - [YubiKey](http://331arc.net/2012/01/28/002101/)
 - [“日本の標準暗号”が10年ぶり大改定](http://itpro.nikkeibp.co.jp/article/Watcher/20130426/474102/)
@@ -32,9 +39,11 @@
 ## アプリケーションにおける実装
 ### ユーザー管理
 - 認証 (Authentication)
+  - 本人かどうか
 - 承認 (Authorization)
+  - 権限を持っているかどうか
 
-ASP.NET では、それぞれ Membership、Role として抽象化されており、具象クラス (Provider) を差し替えられる
+ASP.NET では、それぞれ Membership および Role として抽象化されており、具象クラス (Provider) を差し替えられる
 - [ASP.NET SQL Server 登録ツール (Aspnet_regsql.exe)](http://msdn.microsoft.com/ja-jp/library/ms229862.aspx)
   - ソルトも組み込まれている
 
