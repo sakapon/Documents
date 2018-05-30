@@ -30,6 +30,7 @@
 ### 記事
 - [小悪魔女子大生のサーバエンジニア日記](http://co-akuma.directorz.jp/blog/)
   - ECDSA (ECC)
+- [Xorshift](https://ja.wikipedia.org/wiki/Xorshift) (擬似乱数)
 - [「パスワードでの保護は限界」と結論したGoogleが評価するセキュリティ技術](http://itpro.nikkeibp.co.jp/article/COLUMN/20130502/474661/)
 - [YubiKey](http://331arc.net/2012/01/28/002101/)
 - [“日本の標準暗号”が10年ぶり大改定](http://itpro.nikkeibp.co.jp/article/Watcher/20130426/474102/)
@@ -99,6 +100,8 @@ aspnet_regsql -E -S .\SQLExpress -d Test1 -A mr
 - [モテるセキュ女子力を磨くための4つの心得「SQLインジェクションができない女をアピールせよ」等](http://d.hatena.ne.jp/ockeghem/20110518/p1)
 - [HTML5時代のWeb開発者が知らないとガチヤバな3つの未来予測と6つの脆弱性対策 (1/2)](http://www.atmarkit.co.jp/ait/articles/1309/05/news042.html)
 - [ASP.NET のセキュリティ対策について考える](http://shiba-yan.hatenablog.jp/entry/20120526/1338001863)
+- [混合コンテンツとは](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ja)
+  - ブラウザー上で HTTPS のサイトから HTTP のサイトを呼び出す場合
 
 ## その他
 ### ネットワーク キャプチャ ツール
