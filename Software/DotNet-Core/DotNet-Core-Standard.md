@@ -22,19 +22,24 @@
 - NuGet パッケージを簡単に作成できる
   - ビルド時に作成する設定もできる
 
-クラス ライブラリの .csproj ファイルを開くと、
+クラス ライブラリの .csproj ファイルの内容は次のようになっています。
 ```xml
-<TargetFramework>netstandard2.0</TargetFramework> 
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
 ```
 
-のようになっています。  
 `TargetFramework` を `TargetFrameworks` に変更すれば、セミコロン区切りで対象のフレームワークを複数指定できます。
 ここで指定する `netstandard2.0` や `net40` は、Target Framework Moniker と呼ばれます。
 ```xml
 <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
 ```
 
-このように指定することで、複数のフレームワークを対象にしたアセンブリを一度にビルドできます。
+これで複数のフレームワークを対象にしたアセンブリを一度にビルドできます。
 
 ![TargetFrameworks](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/TargetFrameworks.png)
 
@@ -46,7 +51,7 @@
 <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
 ```
 
-コンソール アプリのビルドでは、.NET Framework では .exe が生成されますが、.NET Core では .dll となります。
+コンソール アプリをビルドすると、.NET Framework 向けでは .exe が生成されますが、.NET Core 向けでは .dll となります。
 
 ![NetCoreConsole](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/NetCoreConsole.png)
 
@@ -57,7 +62,7 @@ dotnet ConsoleApp1.dll
 
 #### その他の注意点
 - 例えば System.Security.Cryptography 名前空間は .NET Standard で利用可能ですが、.NET Framework と .NET Core ではクラス構成に差があります。
-ビルドできても実行時にエラーとなることもあります。
+ビルドできても実行時にエラーとなることもあります (例えば `HashAlgorithm.Create` メソッド)。
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
@@ -65,3 +70,9 @@ dotnet ConsoleApp1.dll
 ### バージョン情報
 - Visual Studio 2017
 - .NET Core 2.0
+
+### 参照
+- [クロス プラットフォーム ツールによるライブラリの開発](https://docs.microsoft.com/ja-jp/dotnet/core/tutorials/libraries)
+- [ターゲット フレームワーク](https://docs.microsoft.com/ja-jp/dotnet/standard/frameworks)
+- [.NET Standardなライブラリプロジェクトを作成して参照する](https://www.buildinsider.net/language/dotnetcore/05)
+- [dotnet run](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-run)
