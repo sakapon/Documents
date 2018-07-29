@@ -36,7 +36,7 @@
 `TargetFramework` を `TargetFrameworks` に変更すれば、セミコロン区切りで対象のフレームワークを複数指定できます。
 ここで指定する `netstandard2.0` や `net40` は、Target Framework Moniker と呼ばれます。
 ```xml
-<TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
 ```
 
 これで複数のフレームワークを対象にしたアセンブリを一度にビルドできます。
@@ -45,10 +45,10 @@
 
 .NET Framework 向けのみのアセンブリを作成したい場合であっても、.NET Core 向けのテンプレートから作成して `TargetFramework` を変更する方法が有効です。
 
-また、`OutputType` に `Exe` を指定すればコンソール アプリになります。何も指定がなければクラス ライブラリです。
+また、`OutputType` に `Exe` を指定すればコンソール アプリになります (指定がなければクラス ライブラリ)。
 ```xml
-<OutputType>Exe</OutputType>
-<TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
 ```
 
 コンソール アプリをビルドすると、.NET Framework 向けでは .exe が生成されますが、.NET Core 向けでは .dll となります。
@@ -62,7 +62,7 @@ dotnet ConsoleApp1.dll
 
 #### その他の注意点
 - 例えば System.Security.Cryptography 名前空間は .NET Standard で利用可能ですが、.NET Framework と .NET Core ではクラス構成に差があります。
-ビルドできても実行時にエラーとなることもあります (例えば `HashAlgorithm.Create` メソッド)。
+ビルドできても実行時にエラーとなることもあります (`HashAlgorithm.Create` メソッドなど)。
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
