@@ -1,7 +1,7 @@
 # .NET Core と .NET Standard
-.NET Core が登場したことにより、Visual Studio で新しいプロジェクトを作成しようとすると、従来の .NET Framework のほかに .NET Core と .NET Standard 向けのプロジェクト テンプレートが現れます。
+.NET Core の登場以降、Visual Studio で新しいプロジェクトを作成しようとすると、従来の .NET Framework のほかに .NET Core と .NET Standard 向けのプロジェクト テンプレートが現れます。
 
-(図)
+![NewProject](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/NewProject.png)
 
 それぞれのプロジェクトにおけるアセンブリの参照可否をまとめると次のようになります。
 - .NET Framework 向けプロジェクト
@@ -18,8 +18,8 @@
 
 .NET Core および .NET Standard のプロジェクト テンプレートには、次の特徴があります。
 - .csproj ファイルの記述が簡略化されている
-- アセンブリ情報は .csproj ファイルに含まれ、AssemblyInfo.cs は不要
-- NuGet パッケージを簡単な設定で作成できる
+  - アセンブリ情報は .csproj ファイルに含まれ、AssemblyInfo.cs は不要
+- NuGet パッケージを簡単に作成できる
   - ビルド時に作成する設定もできる
 
 クラス ライブラリの .csproj ファイルを開くと、
@@ -36,17 +36,20 @@
 
 このように指定することで、複数のフレームワークを対象にしたアセンブリを一度にビルドできます。
 
-(図)
+![TargetFrameworks](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/TargetFrameworks.png)
 
-.NET Framework 向けアセンブリを作成したい場合でも、.NET Core 向けのテンプレートから作成して `TargetFramework` を変更するのもよいでしょう。
+.NET Framework 向けのみのアセンブリを作成したい場合であっても、.NET Core 向けのテンプレートから作成して `TargetFramework` を変更する方法が有効です。
 
-また、`OutputType` に `Exe` を指定すればコンソール アプリになります。何も指定しなければクラス ライブラリです。
+また、`OutputType` に `Exe` を指定すればコンソール アプリになります。何も指定がなければクラス ライブラリです。
 ```xml
 <OutputType>Exe</OutputType>
 <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
 ```
 
 コンソール アプリのビルドでは、.NET Framework では .exe が生成されますが、.NET Core では .dll となります。
+
+![NetCoreConsole](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/NetCoreConsole.png)
+
 .NET Core 向けコンソール アプリを実行するには、dotnet コマンドを実行します。
 ```
 dotnet ConsoleApp1.dll
