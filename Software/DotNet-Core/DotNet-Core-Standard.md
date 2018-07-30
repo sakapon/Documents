@@ -14,13 +14,13 @@
   - .NET Standard アセンブリを参照可能
 
 .NET Framework と .NET Core はランタイムが異なるため、両方に対応するクロスプラットフォームのクラス ライブラリを作成するには .NET Standard をターゲットにします。
-なお、.NET Standard 2.0 アセンブリは、.NET Framework 4.6.1 以上で参照可能です。
+なお、.NET Standard 2.0 アセンブリは .NET Framework 4.6.1 以上で参照可能です。
 
 .NET Core および .NET Standard のプロジェクト テンプレートには、次の特徴があります。
 - .csproj ファイルの記述が簡略化されている
   - アセンブリ情報は .csproj ファイルに含まれ、AssemblyInfo.cs は不要
 - NuGet パッケージを簡単に作成できる
-  - ビルド時に作成する設定もできる
+  - ビルド時に作成するように設定できる
 
 クラス ライブラリの .csproj ファイルの内容は次のようになっています。
 ```xml
@@ -33,7 +33,7 @@
 </Project>
 ```
 
-`TargetFramework` を `TargetFrameworks` に変更すれば、セミコロン区切りで対象のフレームワークを複数指定できます。
+`TargetFramework` を `TargetFrameworks` に変更すれば、対象のフレームワークをセミコロン区切りで複数指定できます。
 ここで指定する `netstandard2.0` や `net40` は、Target Framework Moniker と呼ばれます。
 ```xml
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
@@ -45,7 +45,7 @@
 
 .NET Framework 向けのみのアセンブリを作成したい場合であっても、.NET Core 向けのテンプレートから作成して `TargetFramework` を変更する方法が有効です。
 
-また、`OutputType` に `Exe` を指定すればコンソール アプリになります (指定がなければクラス ライブラリ)。
+次に、`OutputType` に `Exe` を指定すればコンソール アプリになります (指定がなければクラス ライブラリ)。
 ```xml
     <OutputType>Exe</OutputType>
     <TargetFrameworks>netcoreapp2.0;net45</TargetFrameworks>
@@ -61,7 +61,7 @@ dotnet ConsoleApp1.dll
 ```
 
 #### その他の注意点
-- 例えば System.Security.Cryptography 名前空間は .NET Standard で利用可能ですが、.NET Framework と .NET Core ではクラス構成に差があります。
+- 例えば System.Security.Cryptography 名前空間は .NET Standard で利用可能ですが、.NET Framework と .NET Core ではクラス構成に差異があります。
 ビルドできても実行時にエラーとなることもあります (`HashAlgorithm.Create` メソッドなど)。
 
 ### 作成したサンプル
