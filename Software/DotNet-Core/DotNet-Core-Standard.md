@@ -75,4 +75,5 @@ dotnet ConsoleApp1.dll
 - [クロス プラットフォーム ツールによるライブラリの開発](https://docs.microsoft.com/ja-jp/dotnet/core/tutorials/libraries)
 - [ターゲット フレームワーク](https://docs.microsoft.com/ja-jp/dotnet/standard/frameworks)
 - [.NET Standardなライブラリプロジェクトを作成して参照する](https://www.buildinsider.net/language/dotnetcore/05)
-- [dotnet run](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-run)
+- [dotnet コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet)
+- [dotnet run コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-run)
