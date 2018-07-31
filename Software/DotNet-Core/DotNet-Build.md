@@ -2,7 +2,8 @@
 前回の [.NET Core と .NET Standard](DotNet-Core-Standard.md) に引き続き、コマンドラインでアプリやライブラリをビルドする方法を検証してみました。  
 まず、ビルドに関連する dotnet コマンドの一覧を挙げます。
 
-- dotnet restore: NuGet 参照を読み込む
+- dotnet restore
+  - NuGet 参照を読み込む
 - dotnet build
  	- 内部で restore する (ソースコードしかない状態でも実行できる)
 - dotnet msbuild
@@ -15,9 +16,22 @@
  	- 内部で build しない (ソースコードしかない状態では失敗)
 - dotnet clean
   - restore の結果は残る
-- dotnet App1.dll: ビルド済みのアプリを実行
 - dotnet run
-  - 内部で build する (ソースコードしかない状態でも実行できる)
+  - ソースコードからアプリを実行
+  - 内部で build する
+- dotnet App1.dll
+  - ビルド済みのアプリを実行
+
+以下、詳細について記述していきます。
+
+### dotnet msbuild と msbuild
+dotnet msbuild と msbuild の動作は同じです。
+```
+dotnet msbuild /p:Configuration=Release /t:Rebuild
+msbuild /p:Configuration=Release /t:Rebuild
+```
+
+ただし、msbuild は環境変数の PATH に設定されていないため、cmd や PowerShell で実行するにはそのパスを指定しなければなりませんが、dotnet は設定されているため cmd や PowerShell でそのまま実行できて便利です。
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
