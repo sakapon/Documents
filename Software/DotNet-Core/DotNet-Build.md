@@ -12,7 +12,6 @@
 - dotnet publish
   - 内部で build する (ソースコードしかない状態でも実行できる)
   - publish フォルダーに発行される
-  - `-f` で対象のフレームワークを指定する (複数ある場合)
 - dotnet pack
   - NuGet パッケージを作成する
   - 参照先の DLL は含まれず、依存関係が設定される
@@ -43,16 +42,18 @@ msbuild /p:Configuration=Release /t:Rebuild
 dotnet build -c Release --no-incremental
 ```
 
-ただし build では、.NET Core を対象とする場合、NuGet 参照の DLL がコピーされません。
+ただし build では、.NET Core を対象とする場合、NuGet 参照の DLL がコピーされません。  
 build では開発環境が想定されており、.dev.json ファイルに NuGet 参照が記述されます。
 (.NET Framework を対象とする場合は NuGet 参照の DLL もコピーされます。)
 
-配置用にすべての DLL を含めるには publish を使います。
-なお、publish 単独ではリビルドができないため、先に clean を実行します。
+配置用にすべての DLL を含めるには publish を使います。  
+プロジェクトに対象のフレームワークが複数ある場合、`-f` で一つだけ指定します。
 ```
 dotnet clean -c Release
 dotnet publish -c Release -f netcoreapp2.0
 ```
+
+なお、publish 単独ではリビルドができないため、先に clean を実行しています。
 
 ### NuGet パッケージ作成
 出力先のディレクトリを変更するには `-o` を指定します。
@@ -65,6 +66,8 @@ dotnet msbuild /p:Configuration=Release /t:pack
 ```
 dotnet build -c Release --no-incremental
 ```
+
+![GeneratePackageOnBuild](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/GeneratePackageOnBuild.png)
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
