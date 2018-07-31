@@ -3,24 +3,27 @@
 まず、ビルドに関連する dotnet コマンドの一覧を挙げます。
 
 - dotnet restore
-  - NuGet 参照を読み込む
+  - NuGet 参照を解決する
 - dotnet build
  	- 内部で restore する (ソースコードしかない状態でも実行できる)
 - dotnet msbuild
- 	- 内部で restore しない (ソースコードしかない状態では失敗)
+  - MSBuild.exe と同じ引数を指定する
+  - 内部で restore しない (ソースコードしかない状態では失敗)
 - dotnet publish
   - 内部で build する (ソースコードしかない状態でも実行できる)
   - publish フォルダーに発行される
   - `-f` で対象のフレームワークを指定する (複数ある場合)
 - dotnet pack
- 	- 内部で build しない (ソースコードしかない状態では失敗)
+  - NuGet パッケージを作成する
+  - 内部で build しない (ソースコードしかない状態では失敗)
 - dotnet clean
+  - 前回のビルド結果を消去する
   - restore の結果は残る
 - dotnet run
-  - ソースコードからアプリを実行
+  - ソースコードからアプリを実行する
   - 内部で build する
 - dotnet App1.dll
-  - ビルド済みのアプリを実行
+  - ビルド済みのアプリを実行する
 
 以下、詳細について記述していきます。
 
@@ -32,6 +35,23 @@ msbuild /p:Configuration=Release /t:Rebuild
 ```
 
 ただし、msbuild は環境変数の PATH に設定されていないため、cmd や PowerShell で実行するにはそのパスを指定しなければなりませんが、dotnet は設定されているため cmd や PowerShell でそのまま実行できて便利です。
+
+### アプリのビルド・発行
+リビルドするには `--no-incremental` を指定します。
+```
+dotnet build -c Release --no-incremental
+```
+
+ただし build では、.NET Core を対象とする場合、NuGet 参照の DLL がコピーされません。
+build では開発環境が想定されており、.dev.json ファイルに NuGet 参照が記述されます。
+(.NET Framework を対象とする場合は NuGet 参照の DLL もコピーされます。)
+
+配置用にすべての DLL を含めるには publish を使います。
+なお、publish 単独ではリビルドができないため、先に clean を実行します。
+```
+dotnet clean -c Release
+dotnet publish -c Release -f netcoreapp2.0
+```
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
