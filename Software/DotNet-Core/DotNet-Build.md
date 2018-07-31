@@ -15,6 +15,7 @@
   - `-f` で対象のフレームワークを指定する (複数ある場合)
 - dotnet pack
   - NuGet パッケージを作成する
+  - 参照先の DLL は含まれず、依存関係が設定される
   - 内部で build しない (ソースコードしかない状態では失敗)
 - dotnet clean
   - 前回のビルド結果を消去する
@@ -36,7 +37,7 @@ msbuild /p:Configuration=Release /t:Rebuild
 
 ただし、msbuild は環境変数の PATH に設定されていないため、cmd や PowerShell で実行するにはそのパスを指定しなければなりませんが、dotnet は設定されているため cmd や PowerShell でそのまま実行できて便利です。
 
-### アプリのビルド・発行
+### アセンブリのビルド・発行
 リビルドするには `--no-incremental` を指定します。
 ```
 dotnet build -c Release --no-incremental
@@ -51,6 +52,18 @@ build では開発環境が想定されており、.dev.json ファイルに NuG
 ```
 dotnet clean -c Release
 dotnet publish -c Release -f netcoreapp2.0
+```
+
+### NuGet パッケージ作成
+出力先のディレクトリを変更するには `-o` を指定します。
+```
+dotnet pack -c Release -o pkg
+dotnet msbuild /p:Configuration=Release /t:pack
+```
+
+`構築時に NuGet パッケージを生成する` (.csproj では GeneratePackageOnBuild) を設定して build する方法もあります。
+```
+dotnet build -c Release --no-incremental
 ```
 
 ### 作成したサンプル
