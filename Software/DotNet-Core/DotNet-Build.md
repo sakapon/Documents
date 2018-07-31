@@ -1,5 +1,5 @@
 # dotnet コマンドによるビルド
-前回の [.NET Core と .NET Standard](DotNet-Core-Standard.md) に引き続き、コマンドラインでアプリやライブラリをビルドする方法を検証してみました。  
+前回の [.NET Core と .NET Standard](DotNet-Core-Standard.md) に引き続き、コマンドラインでアプリやライブラリをビルドする方法を検証しました。  
 まず、ビルドに関連する dotnet コマンドの一覧を挙げます。
 
 - dotnet restore
@@ -68,6 +68,8 @@ dotnet build -c Release --no-incremental
 ```
 
 ![GeneratePackageOnBuild](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/GeneratePackageOnBuild.png)
+
+前回: [.NET Core と .NET Standard](DotNet-Core-Standard.md)
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
