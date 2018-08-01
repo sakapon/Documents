@@ -33,7 +33,7 @@
 </Project>
 ```
 
-`TargetFramework` を `TargetFrameworks` に変更すれば、対象のフレームワークをセミコロン区切りで複数指定できます。
+`TargetFramework` を `TargetFrameworks` に変更すれば、対象のフレームワークをセミコロン区切りで複数指定できます。  
 ここで指定する `netstandard2.0` や `net40` は、Target Framework Moniker と呼ばれます。
 ```xml
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
@@ -52,10 +52,11 @@
 ```
 
 コンソール アプリをビルドすると、.NET Framework 向けでは .exe が生成されますが、.NET Core 向けでは .dll となります。
+(自己完結型デプロイにより、各プラットフォーム向けの実行可能ファイルを生成することもできます。ただし 60MB 前後になります。)
 
 ![NetCoreConsole](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/NetCoreConsole.png)
 
-.NET Core 向けコンソール アプリを実行するには、dotnet コマンドを実行します。
+DLL の状態の .NET Core 向けアプリを実行するには、dotnet コマンドを実行します。
 ```
 dotnet ConsoleApp1.dll
 ```
