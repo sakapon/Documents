@@ -1,5 +1,5 @@
 # dotnet コマンドによるビルド
-前回の [.NET Core と .NET Standard](DotNet-Core-Standard.md) に引き続き、コマンドラインでアプリやライブラリをビルドする方法を検証しました。  
+前回の [.NET Core と .NET Standard](DotNet-Core-Standard.md) に引き続き、今回はコマンドラインでアプリやライブラリをビルドする方法を検証しました。  
 まず、ビルドに関連する dotnet コマンドの一覧を挙げます。
 
 - dotnet restore
@@ -10,8 +10,8 @@
   - MSBuild.exe と同じ引数を指定する
   - 内部で restore しない (ソースコードしかない状態では失敗)
 - dotnet publish
+  - publish フォルダーに発行する
   - 内部で build する (ソースコードしかない状態でも実行できる)
-  - publish フォルダーに発行される
 - dotnet pack
   - NuGet パッケージを作成する
   - 参照先の DLL は含まれず、依存関係が設定される
@@ -34,7 +34,7 @@ dotnet msbuild /p:Configuration=Release /t:Rebuild
 msbuild /p:Configuration=Release /t:Rebuild
 ```
 
-ただし、msbuild は環境変数の PATH に設定されていないため、cmd や PowerShell で実行するにはそのパスを指定しなければなりませんが、dotnet は設定されているため cmd や PowerShell でそのまま実行できて便利です。
+ただし、msbuild は環境変数の `PATH` に設定されていないため、cmd や PowerShell で実行するにはそのパスを指定しなければなりませんが、dotnet は `PATH` に設定されているため cmd や PowerShell でそのまま実行できて便利です。
 
 ### アセンブリのビルド・発行
 リビルドするには `--no-incremental` を指定します。
@@ -79,5 +79,6 @@ dotnet build -c Release --no-incremental
 
 ### 参照
 - [dotnet build コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-build)
+- [dotnet publish コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-publish)
 - [dotnet pack コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-pack)
 - [.NET Coreでコンソールアプリを配置する](https://www.buildinsider.net/language/dotnetcore/04)
