@@ -64,6 +64,8 @@ dotnet ConsoleApp1.dll
 - 例えば System.Security.Cryptography 名前空間は .NET Standard で利用可能ですが、.NET Framework と .NET Core ではクラス構成に差異があります。
 ビルドできても実行時にエラーとなることもあります (`HashAlgorithm.Create` メソッドなど)。
 
+次回: [dotnet コマンドによるビルド](DotNet-Build.md)
+
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
 
@@ -74,6 +76,6 @@ dotnet ConsoleApp1.dll
 ### 参照
 - [クロス プラットフォーム ツールによるライブラリの開発](https://docs.microsoft.com/ja-jp/dotnet/core/tutorials/libraries)
 - [ターゲット フレームワーク](https://docs.microsoft.com/ja-jp/dotnet/standard/frameworks)
-- [.NET Standardなライブラリプロジェクトを作成して参照する](https://www.buildinsider.net/language/dotnetcore/05)
 - [dotnet コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet)
 - [dotnet run コマンド](https://docs.microsoft.com/ja-jp/dotnet/core/tools/dotnet-run)
+- [.NET Standardなライブラリプロジェクトを作成して参照する](https://www.buildinsider.net/language/dotnetcore/05)
