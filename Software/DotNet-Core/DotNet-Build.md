@@ -59,10 +59,14 @@ dotnet publish -c Release -f netcoreapp2.0
 出力先のディレクトリを変更するには `-o` を指定します。
 ```
 dotnet pack -c Release -o pkg
+```
+
+または、
+```
 dotnet msbuild /p:Configuration=Release /t:pack
 ```
 
-`構築時に NuGet パッケージを生成する` (.csproj では GeneratePackageOnBuild) を設定して build する方法もあります。
+`構築時に NuGet パッケージを生成する` (.csproj では `GeneratePackageOnBuild`) を設定して build する方法もあります。
 ```
 dotnet build -c Release --no-incremental
 ```
