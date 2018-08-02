@@ -1,11 +1,13 @@
 # dotnet コマンドによるビルド
 前回の [.NET Core と .NET Standard](DotNet-Core-Standard.md) に引き続き、今回はコマンドラインでアプリやライブラリをビルドする方法を検証しました。  
-まず、ビルドに関連する dotnet コマンドの一覧を挙げます。
+まず、ビルドに関連する dotnet コマンドの一覧を挙げます。  
+基本的にはプロジェクト フォルダー上で実行しますが、build や pack などは ソリューション フォルダー上でも実行できます。
 
 - dotnet restore
   - NuGet 参照を解決する
 - dotnet build
- 	- 内部で restore する (ソースコードしかない状態でも実行できる)
+  - MSBuild.exe を実行する
+  - 内部で restore する (ソースコードしかない状態でも実行できる)
 - dotnet msbuild
   - MSBuild.exe と同じ引数を指定する
   - 内部で restore しない (ソースコードしかない状態では失敗)
