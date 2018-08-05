@@ -3,15 +3,14 @@ ASP.NET Core で Web API を利用する際の注意点や備忘録です。ほ�
 以前に書いた [ASP.NET Web API](ASPNET-WebAPI-Tips-1.md) と細かい差異はありますが、コントローラー作成などの基本的な説明は省略しています。
 
 ### CORS
-- NuGet で Microsoft.AspNetCore.Cors をインストールする
+- NuGet で [Microsoft.AspNetCore.Cors](https://www.nuget.org/packages/Microsoft.AspNetCore.Cors/) をインストールする
 - Startup.cs で AddCors メソッドおよび UseCors メソッドを呼び出すことで機能を有効にする
   - AddMvc メソッドおよび UseMvc メソッドの前で呼び出す必要がある
   - コントローラー、アクションの単位では `[EnableCors]` を指定する
 
 https://gist.github.com/sakapon/779fa14ee7e62682da43909b0fe0b39d
 
-CORS が機能しているかどうかをテストするには、現在実行中のものとは異なるドメインを Origin ヘッダーに付加して API を呼び出します。応答に Access-Control-Allow-Origin ヘッダーが含まれていれば OK です。  
-ツールとしては [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) などを使えばよいでしょう。
+CORS が機能しているかどうかをテストするには、現在実行中のものとは異なるドメインを Origin ヘッダーに付加して API を呼び出します。応答に Access-Control-Allow-Origin ヘッダーが含まれていれば OK です。
 
 要求ヘッダー
 ```
@@ -23,10 +22,28 @@ Origin: https://tempuri.org
 Access-Control-Allow-Origin: *
 ```
 
+ツールとしては [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) などを使えばよいでしょう。
+
 公式解説: [ASP.NET Core でのクロス オリジン要求 (CORS) を有効にする](https://docs.microsoft.com/ja-jp/aspnet/core/security/cors)
 
-### Swagger (Swashbuckle)
-TBD
+### ヘルプ ページ
+コードの XML ドキュメントから、ユーザー向けのヘルプ ページを自動的に生成する機能です。  
+ASP.NET Core では OpenAPI (Swagger) の .NET 向け実装である Swashbuckle を利用します。
+
+- NuGet で [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) をインストールする
+- プロジェクトのプロパティで、XML ドキュメントの出力を有効にする
+- Startup.cs で AddSwaggerGen メソッド、UseSwagger メソッドおよび UseSwaggerUI メソッドを呼び出すことで機能を有効にする
+  - ヘルプ ページの URI は既定で `/swagger` となるが、ルートに変更するには、RoutePrefix を空文字列に設定する
+- アクション メソッドの戻り値が IActionResult の場合、`[ProducesResponseType(200, Type = typeof(string))]` のように属性でデータの型を指定する
+
+https://gist.github.com/sakapon/d809e78dd19d6d8d54e01d3f9adda95b
+
+なお、このサンプルではアセンブリ情報の値をタイトルなどに設定しています。
+
+公式解説: [Swashbuckle と ASP.NET Core の概要](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/getting-started-with-swashbuckle)
+
+### 作成したサンプル
+- [AspNetCoreWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/AspNetCoreWebApiSample)
 
 ### バージョン情報
 - Microsoft.AspNetCore.All 2.0.8
@@ -34,5 +51,4 @@ TBD
 - Swashbuckle.AspNetCore 2.5.0
 
 ### 参照
-- [ASP.NET Core でのクロス オリジン要求 (CORS) を有効にする](https://docs.microsoft.com/ja-jp/aspnet/core/security/cors)
-- [Swashbuckle と ASP.NET Core の概要](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/getting-started-with-swashbuckle)
+- [ASP.NET Core で Web API を構築する](https://docs.microsoft.com/ja-jp/aspnet/core/web-api/)
