@@ -1,6 +1,11 @@
 # ASP.NET Core Web API の Tips
 ASP.NET Core で Web API を利用する際の注意点や備忘録です。ほぼ箇条書きです。  
-以前に書いた [ASP.NET Web API](ASPNET-WebAPI-Tips-1.md) と細かい差異はありますが、コントローラー作成などの基本的な説明は省略しています。
+
+## ルーティング、コントローラーなど
+以前に書いた [ASP.NET Web API](ASPNET-WebAPI-Tips-1.md) と細かい差異はありますが、説明は省略します。  
+公式解説を参照するとよいでしょう。
+- [ASP.NET Core のルーティング](https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/routing)
+- [ASP.NET Core Web API のコントローラー アクションの戻り値の型](https://docs.microsoft.com/ja-jp/aspnet/core/web-api/action-return-types)
 
 ## CORS
 - NuGet で [Microsoft.AspNetCore.Cors](https://www.nuget.org/packages/Microsoft.AspNetCore.Cors/) をインストールする
@@ -43,14 +48,20 @@ https://gist.github.com/sakapon/d809e78dd19d6d8d54e01d3f9adda95b
 公式解説: [Swashbuckle と ASP.NET Core の概要](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
 ## フォーマット
-ASP.NET Core Web API では、既定で JSON のみが有効になっています。  
+ASP.NET Core Web API では、既定でテキスト (text/plain) と JSON が有効になっています。  
 XML を有効にするには、Startup.ConfigureServices メソッド内で次のようにします。
-
-```
+```c#
 services.AddMvc().AddXmlSerializerFormatters();
 ```
 
+コントローラーまたはアクションに Produces 属性を指定することで、利用可能な Content-Type を制限することができます。
+```c#
+[Produces("application/json", "application/xml")]
+```
+
 公式解説: [ASP.NET Core Web API の応答データの書式設定](https://docs.microsoft.com/ja-jp/aspnet/core/web-api/advanced/formatting)
+
+前回: [dotnet コマンドによるビルド](../DotNet-Core/DotNet-Build.md)
 
 ### 作成したサンプル
 - [AspNetCoreWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/AspNetCoreWebApiSample)
@@ -62,3 +73,4 @@ services.AddMvc().AddXmlSerializerFormatters();
 
 ### 参照
 - [ASP.NET Core で Web API を構築する](https://docs.microsoft.com/ja-jp/aspnet/core/web-api/)
+- [ASP.NET Web API](ASPNET-WebAPI-Tips-1.md)
