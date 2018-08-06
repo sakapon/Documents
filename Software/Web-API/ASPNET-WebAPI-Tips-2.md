@@ -49,6 +49,8 @@ https://gist.github.com/sakapon/7c81d432b2a886fbcf1dd4a6c3dbe108
   - 引数に EnableCorsAttribute を渡すとグローバルに設定できる
   - コントローラー、アクションのレベルでは [EnableCors] を指定する
 
+CORS が機能しているかどうかをテストする方法については [ASP.NET Core Web API の Tips](ASPNET-Core-WebAPI-Tips.md) に書きました。
+
 公式解説: [Enabling Cross-Origin Requests in ASP.NET Web API 2](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
 
 ## JSONP
