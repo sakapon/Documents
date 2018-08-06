@@ -38,12 +38,12 @@ ASP.NET Core では、OpenAPI (Swagger) の .NET 向け実装である Swashbuck
 - NuGet で [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) をインストールする
 - プロジェクトのプロパティで、XML ドキュメントの出力を有効にする
 - Startup.cs で AddSwaggerGen メソッド、UseSwagger メソッドおよび UseSwaggerUI メソッドを呼び出すことで機能を有効にする
-  - ヘルプ ページの URI は既定で `/swagger` となるが、ルートに変更するには、RoutePrefix を空文字列に設定する
-- アクション メソッドの戻り値が IActionResult の場合、`[ProducesResponseType(200, Type = typeof(string))]` のように属性でデータの型を指定する
 
 https://gist.github.com/sakapon/d809e78dd19d6d8d54e01d3f9adda95b
 
-なお、このサンプルではアセンブリ情報の値をタイトルなどに設定しています。
+- ヘルプ ページの URI は既定で `/swagger` となるが、ルートに変更するには、RoutePrefix を空文字列に設定する
+- アクション メソッドの戻り値が IActionResult の場合、`[ProducesResponseType(200, Type = typeof(string))]` のように属性でデータの型を指定する
+- このサンプルではアセンブリ情報の値をタイトルなどに設定している
 
 公式解説: [Swashbuckle と ASP.NET Core の概要](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
