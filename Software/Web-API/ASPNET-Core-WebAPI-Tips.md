@@ -42,7 +42,7 @@ ASP.NET Core では、OpenAPI (Swagger) の .NET 向け実装である Swashbuck
 - プロジェクトのプロパティで、XML ドキュメントの出力を有効にする
 - Startup.cs で AddSwaggerGen メソッド、UseSwagger メソッドおよび UseSwaggerUI メソッドを呼び出すことで機能を有効にする
 
-https://gist.github.com/sakapon/d809e78dd19d6d8d54e01d3f9adda95b
+ソースコード: [Startup.cs](https://github.com/sakapon/Samples-2018/blob/master/AspNetCoreWebApiSample/SampleWebApi/Startup.cs)
 
 - ヘルプ ページの URI は既定で `/swagger` となるが、ルートに変更するには、RoutePrefix を空文字列に設定する
 - アクション メソッドの戻り値が IActionResult の場合、`[ProducesResponseType(200, Type = typeof(string))]` のように属性でデータの型を指定する
