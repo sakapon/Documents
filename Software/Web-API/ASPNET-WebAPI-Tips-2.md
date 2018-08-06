@@ -1,6 +1,7 @@
 # ASP.NET Web API の Tips (2)
 ASP.NET Web API を利用する際の注意点や備忘録です。ほぼ箇条書きです。  
-基本的な説明は省略しています。
+基本的な説明は省略しています。  
+([ASP.NET Core Web API 版](ASPNET-Core-WebAPI-Tips.md)も書きました。)
 
 ## 例外処理
 - 戻り値が HttpResponseMessage または IHttpActionResult の場合、Request.CreateErrorResponse メソッドなどで HttpResponseMessage を生成する
@@ -88,3 +89,4 @@ https://gist.github.com/sakapon/672c985198737adf48f0b5aa03636779
 
 ### 参照
 - [ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/)
+- [ASP.NET Core Web API の Tips](ASPNET-Core-WebAPI-Tips.md)
