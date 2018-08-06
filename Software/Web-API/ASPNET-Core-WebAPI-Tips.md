@@ -1,8 +1,9 @@
 # ASP.NET Core Web API の Tips
 ASP.NET Core で Web API を利用する際の注意点や備忘録です。ほぼ箇条書きです。  
+[ASP.NET Web API 版](ASPNET-WebAPI-Tips-1.md)は以前に書きました。
 
 ## ルーティング、コントローラーなど
-以前に書いた [ASP.NET Web API](ASPNET-WebAPI-Tips-1.md) と細かい差異はありますが、説明は省略します。  
+[ASP.NET Web API](ASPNET-WebAPI-Tips-1.md) と細かい差異はありますが、説明は省略します。  
 公式解説を参照するとよいでしょう。
 - [ASP.NET Core のルーティング](https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/routing)
 - [ASP.NET Core Web API のコントローラー アクションの戻り値の型](https://docs.microsoft.com/ja-jp/aspnet/core/web-api/action-return-types)
@@ -29,6 +30,8 @@ Access-Control-Allow-Origin: *
 
 ツールとしては [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) などを使えばよいでしょう。
 
+![](https://github.com/sakapon/Samples-2018/blob/master/Images/AspNetCoreWebApiSample/CORS-ARC.png)
+
 公式解説: [ASP.NET Core でのクロス オリジン要求 (CORS) を有効にする](https://docs.microsoft.com/ja-jp/aspnet/core/security/cors)
 
 ## ヘルプ ページ
@@ -45,6 +48,8 @@ https://gist.github.com/sakapon/d809e78dd19d6d8d54e01d3f9adda95b
 - アクション メソッドの戻り値が IActionResult の場合、`[ProducesResponseType(200, Type = typeof(string))]` のように属性でデータの型を指定する
 - このサンプルではアセンブリ情報の値をタイトルなどに設定している
 
+![](https://github.com/sakapon/Samples-2018/blob/master/Images/AspNetCoreWebApiSample/Swagger-UI.png)
+
 公式解説: [Swashbuckle と ASP.NET Core の概要](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
 ## フォーマット
@@ -53,7 +58,9 @@ ASP.NET Core Web API では、既定でテキスト (text/plain) と JSON が有
 
 https://gist.github.com/sakapon/7e64aebcc538871e65c2f97c7ab88f69
 
-また、コントローラーまたはアクションに Produces 属性を指定することで、利用可能な Content-Type を制限することもできます。
+![](https://github.com/sakapon/Samples-2018/blob/master/Images/AspNetCoreWebApiSample/Swagger-ContentType.png)
+
+さらに、コントローラーまたはアクションに Produces 属性を指定することで、利用可能な Content-Type を制限することもできます。
 ```c#
 [Produces("application/json", "application/xml")]
 ```
