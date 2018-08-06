@@ -1,6 +1,7 @@
 # ASP.NET Web API の Tips (1)
 ASP.NET Web API を利用する際の注意点や備忘録です。ほぼ箇条書きです。  
-基本的な説明は省略しています。
+基本的な説明は省略しています。  
+([ASP.NET Core Web API 版](ASPNET-Core-WebAPI-Tips.md)も書きました。)
 
 ## ルーティング
 WebApiConfig.cs にルーティングの設定が記述されています。  
@@ -58,3 +59,4 @@ https://gist.github.com/sakapon/8d0b561449af2d8103b1ee374b44376a
 
 ### 参照
 - [ASP.NET Web API](https://docs.microsoft.com/en-us/aspnet/web-api/)
+- [ASP.NET Core Web API の Tips](ASPNET-Core-WebAPI-Tips.md)
