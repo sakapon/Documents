@@ -49,12 +49,11 @@ https://gist.github.com/sakapon/d809e78dd19d6d8d54e01d3f9adda95b
 
 ## フォーマット
 ASP.NET Core Web API では、既定でテキスト (text/plain) と JSON が有効になっています。  
-XML を有効にするには、Startup.ConfigureServices メソッド内で次のようにします。
-```c#
-services.AddMvc().AddXmlSerializerFormatters();
-```
+テキストを無効にして XML を有効にするには、Startup.ConfigureServices メソッド内で次のようにします。
 
-コントローラーまたはアクションに Produces 属性を指定することで、利用可能な Content-Type を制限することができます。
+https://gist.github.com/sakapon/7e64aebcc538871e65c2f97c7ab88f69
+
+また、コントローラーまたはアクションに Produces 属性を指定することで、利用可能な Content-Type を制限することもできます。
 ```c#
 [Produces("application/json", "application/xml")]
 ```
@@ -73,4 +72,4 @@ services.AddMvc().AddXmlSerializerFormatters();
 
 ### 参照
 - [ASP.NET Core で Web API を構築する](https://docs.microsoft.com/ja-jp/aspnet/core/web-api/)
-- [ASP.NET Web API](ASPNET-WebAPI-Tips-1.md)
+- [ASP.NET Web API の Tips (1)](ASPNET-WebAPI-Tips-1.md)
