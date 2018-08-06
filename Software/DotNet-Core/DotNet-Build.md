@@ -75,7 +75,8 @@ dotnet build -c Release --no-incremental
 
 ![GeneratePackageOnBuild](https://github.com/sakapon/Samples-2018/blob/master/Images/NetStandardSample/GeneratePackageOnBuild.png)
 
-前回: [.NET Core と .NET Standard](DotNet-Core-Standard.md)
+前回: [.NET Core と .NET Standard](DotNet-Core-Standard.md)  
+次回: [ASP.NET Core Web API の Tips](../Web-API/ASPNET-Core-WebAPI-Tips.md)
 
 ### 作成したサンプル
 - [NetStandardSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/NetStandardSample)
