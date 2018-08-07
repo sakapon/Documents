@@ -5,6 +5,7 @@
 URL エンコーディングとは、URI の中で使われている記号と混在しないように一部の文字列をパーセント エンコーディングにより変換することです。  
 両者の言葉を区別せずに使うこともあります。
 
+## URL エンコーディング
 RFC 3986 では、文字は次のように分類されます。
 - 非予約文字
   - エンコードしなくても利用できる文字
@@ -25,6 +26,24 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
   - `key=value&message=Hello+World%21` の `value` や `Hello+World%21` の部分
   - 非予約文字以外をパーセント エンコーディングし、さらに `%20` (スペース) を `+` に変換
   - MIME タイプ `application/x-www-form-urlencoded` と呼ばれる
+
+## .NET Framework のライブラリ
+.NET Framework では、URL エンコーディングのために次のメソッドが用意されています。
+- System.Uri.EscapeDataString メソッド
+  - RFC 3986 に従って非予約文字以外をパーセント エンコーディング
+- System.Uri.EscapeUriString メソッド
+  - RFC 3986 に従って非予約文字・予約文字以外をパーセント エンコーディング
+  - 既に全体が URI の形式になっているときに利用する
+- System.Net.WebUtility.UrlEncode メソッド
+  - RFC 2396 (旧版) に近い仕様で非予約文字以外をパーセント エンコーディングし、さらに `%20` (スペース) を `+` に変換
+- System.Web.HttpUtility.UrlEncode メソッド
+  - System.Net.WebUtility.UrlEncode メソッドと同じだが、小文字になる
+- System.Net.Http.FormUrlEncodedContent クラス
+  - key-value データをまとめて `application/x-www-form-urlencoded` に変換
+
+したがって、.NET では System.Uri.EscapeDataString メソッド、System.Uri.EscapeUriString メソッド、System.Net.Http.FormUrlEncodedContent クラスを使えばよいでしょう。
+
+(ソースコード)
 
 ### 作成したサンプル
 - [ConversionSample (GitHub)](https://github.com/sakapon/Samples-2018/blob/master/ConversionSample/UnitTest/UriTest.cs)
