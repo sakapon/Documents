@@ -1,4 +1,10 @@
 # URL エンコーディング
+
+## パーセント エンコーディングと URL エンコーディング
+パーセント エンコーディングとは、文字をパーセント記号 `%` と UTF-8 でエンコードしたときの 16 進数を用いて表すことです。例えば、`/` は `%2F` に、`あ` は `%E3%81%82` に変換されます。  
+URL エンコーディングとは、URI の中で使われている記号と混在しないように一部の文字列をパーセント エンコーディングにより変換することです。  
+両者の言葉を区別せずに使うこともあります。
+
 RFC 3986 では、文字は次のように分類されます。
 - 非予約文字
   - エンコードしなくても利用できる文字
@@ -7,7 +13,15 @@ RFC 3986 では、文字は次のように分類されます。
   - URI で意味を持つ記号
   - 18  種類の記号 `!#$&'()*+,/:;=?@[]`
 - その他の文字
-  - 11  種類の記号 ` "%<>\^``{|}`、その他のすべての文字 (日本語など)
+  - エンコードが必要な文字
+  - 11  種類の記号 `` "%<>\^`{|}``、その他のすべての文字 (日本語など)
+
+### 作成したサンプル
+- [ConversionSample (GitHub)](https://github.com/sakapon/Samples-2018/blob/master/ConversionSample/UnitTest/UriTest.cs)
+- [AspNetWebApiSample (GitHub)](https://github.com/sakapon/Samples-2018/blob/master/AspNetWebApiSample/UnitTest/Client/UriQueryTest.cs)
+
+### バージョン情報
+- .NET Framework 4.5
 
 ### 参照
 - [Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)
