@@ -28,12 +28,19 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
   - MIME タイプ `application/x-www-form-urlencoded` と呼ばれる
 
 ## .NET Framework のライブラリ
-.NET Framework では、URL エンコーディングのために次のメソッドが用意されています。
+.NET Framework では、URL エンコーディングのために次の方法が用意されています。
 - System.Uri.EscapeDataString メソッド
   - RFC 3986 に従って非予約文字以外をパーセント エンコーディング
 - System.Uri.EscapeUriString メソッド
   - RFC 3986 に従って非予約文字・予約文字以外をパーセント エンコーディング
   - 既に全体が URI の形式になっているときに利用する
+    - クエリ文字列も同様の規則で変換される。`application/x-www-form-urlencoded` には変換されない
+- System.Uri インスタンスの AbsoluteUri プロパティ
+  - 基本的に Uri.EscapeUriString メソッドと同じだが、下記の点が異なる
+  - `%XX` の形式になっているかどうかで扱いが異なる
+    - `https://tempuri.org/%2` は `https://tempuri.org/%252` に
+    - `https://tempuri.org/%25` は `https://tempuri.org/%25` のまま
+  - クエリ文字列でない部分の `\` は `/` に変換される
 - System.Net.WebUtility.UrlEncode メソッド
   - RFC 2396 (旧版) に近い仕様で非予約文字以外をパーセント エンコーディングし、さらに `%20` (スペース) を `+` に変換
 - System.Web.HttpUtility.UrlEncode メソッド
@@ -43,7 +50,10 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
 
 したがって、.NET では System.Uri.EscapeDataString メソッド、System.Uri.EscapeUriString メソッド、System.Net.Http.FormUrlEncodedContent クラスを使えばよいでしょう。
 
-(ソースコード)
+アプリケーションから HTTP 接続をするために System.Net.Http.HttpClient クラスを使うことが多いと思いますが、接続先の URI を string で渡しても、HttpClient の内部では Uri インスタンスで扱われます。
+したがって、HttpClient に渡す前に URI をセグメントもクエリ文字列も URL エンコーディングしておくのがよいでしょう。
+
+https://gist.github.com/sakapon/d0d1f80395740c2488a57d812588e9c0
 
 ### 作成したサンプル
 - [ConversionSample (GitHub)](https://github.com/sakapon/Samples-2018/blob/master/ConversionSample/UnitTest/UriTest.cs)
