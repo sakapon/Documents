@@ -49,6 +49,8 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
 - System.Net.Http.FormUrlEncodedContent クラス
   - key-value データをまとめて `application/x-www-form-urlencoded` に変換
 
+![](https://github.com/sakapon/Samples-2018/blob/master/Images/ConversionSample/Uri.AbsoluteUri.png)
+
 .NET では [System.Uri.EscapeDataString メソッド](https://msdn.microsoft.com/ja-jp/library/system.uri.escapedatastring.aspx)、[System.Uri.EscapeUriString メソッド](https://msdn.microsoft.com/ja-jp/library/system.uri.escapeuristring.aspx)、[System.Net.Http.FormUrlEncodedContent クラス](https://msdn.microsoft.com/ja-jp/library/system.net.http.formurlencodedcontent(v=vs.110).aspx)を使えばよいでしょう。
 
 アプリケーションから HTTP 接続をするために [System.Net.Http.HttpClient クラス](https://msdn.microsoft.com/ja-jp/library/system.net.http.httpclient(v=vs.110).aspx)を使うことが多いと思いますが、接続先の URI を string で渡しても、HttpClient の内部では Uri インスタンスで扱われます。
