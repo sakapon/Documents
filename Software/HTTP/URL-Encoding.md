@@ -25,7 +25,7 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
 - URI のクエリ文字列や、POST などで送信するときの本文 (フォーム)
   - `key=value&message=Hello+World%21` の `value` や `Hello+World%21` の部分
   - 非予約文字以外をパーセント エンコーディングし、さらに `%20` (スペース) を `+` に変換
-  - MIME タイプ `application/x-www-form-urlencoded` と呼ばれる
+  - MIME タイプ `application/x-www-form-urlencoded` と定義されている
 
 ## .NET Framework のライブラリ
 .NET Framework では、URL エンコーディングのために次の方法が用意されています。
@@ -51,7 +51,7 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
 .NET では [System.Uri.EscapeDataString メソッド](https://msdn.microsoft.com/ja-jp/library/system.uri.escapedatastring.aspx)、[System.Uri.EscapeUriString メソッド](https://msdn.microsoft.com/ja-jp/library/system.uri.escapeuristring.aspx)、[System.Net.Http.FormUrlEncodedContent クラス](https://msdn.microsoft.com/ja-jp/library/system.net.http.formurlencodedcontent.aspx)を使えばよいでしょう。
 
 アプリケーションから HTTP 接続をするために [System.Net.Http.HttpClient クラス](https://msdn.microsoft.com/ja-jp/library/system.net.http.httpclient.aspx)を使うことが多いと思いますが、接続先の URI を string で渡しても、HttpClient の内部では Uri インスタンスで扱われます。
-したがって、URI を HttpClient に渡す前に、セグメントもクエリ文字列も URL エンコーディングしておくのがよいでしょう。
+したがって、URI を HttpClient に渡す前に、セグメントもクエリ文字列も URL エンコーディングしておくのがよさそうです。
 
 https://gist.github.com/sakapon/d0d1f80395740c2488a57d812588e9c0
 
