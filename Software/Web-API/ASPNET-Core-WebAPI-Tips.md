@@ -36,7 +36,8 @@ Access-Control-Allow-Origin: *
 
 ## ヘルプ ページ
 コードの XML ドキュメントから、ユーザー向けのヘルプ ページを自動的に生成する機能です。  
-ASP.NET Core では、OpenAPI (Swagger) の .NET 向け実装である Swashbuckle を利用します。
+ASP.NET Core では、OpenAPI (Swagger) の .NET 向け実装である Swashbuckle を利用します。  
+API を呼び出すためのテスト UI も含まれていて便利です。
 
 - NuGet で [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) をインストールする
 - プロジェクトのプロパティで、XML ドキュメントの出力を有効にする
