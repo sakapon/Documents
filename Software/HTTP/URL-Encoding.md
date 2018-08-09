@@ -24,7 +24,7 @@ URL エンコーディングは、主に次の 2 通りで利用されます。
   - 非予約文字以外をパーセント エンコーディング
     - ただし、Web フレームワーク個別の仕様により、パーセント エンコーディングしても使用を制限されることがある
 - URI のクエリ文字列や、POST などで送信するときの本文 (フォーム)
-  - `key=value&message=Hello+World%21` の `value` や `Hello+World%21` の部分
+  - `key=value&message=Hello+World%21` の `key` や `Hello+World%21` の部分
   - 非予約文字以外をパーセント エンコーディングし、さらに `%20` (スペース) を `+` に変換
   - MIME タイプ `application/x-www-form-urlencoded` と定義されている
 
@@ -69,4 +69,5 @@ https://gist.github.com/sakapon/d0d1f80395740c2488a57d812588e9c0
 - [Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)
 - [URIで使用できる文字](http://www.asahi-net.or.jp/~ax2s-kmtn/ref/uric.html)
 - [URLエンコードについておさらいしてみた](https://qiita.com/sisisin/items/3efeb9420cf77a48135d)
+- [application/x-www-form-urlencoded](https://wiki.suikawiki.org/n/application%2Fx-www-form-urlencoded)
 - [URLエンコード、URLデコードを行う](https://dobon.net/vb/dotnet/internet/urlencode.html)
