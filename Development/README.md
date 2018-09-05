@@ -10,6 +10,7 @@
 ### Create Project
 - Create Project
 - [Update Project Settings](Project-Settings.md)
+- [Update Project Settings (.NET Core)](Project-Settings-NetCore.md)
 
 ### Release
 - [Publish ClickOnce Application](https://github.com/sakapon/Tools/blob/master/Publish.md)
