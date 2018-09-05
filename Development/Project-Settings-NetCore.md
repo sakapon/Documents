@@ -19,7 +19,16 @@ or, TargetFrameworks
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
 ```
 
-Assembly Info
+Assembly Info (.exe or ASP.NET)
+```
+    <Version>1.0.0</Version>
+    <AssemblyTitle>The Tool</AssemblyTitle>
+    <Product>The Tools</Product>
+    <Authors>Keiho Sakapon</Authors>
+    <Copyright>© 2018 Keiho Sakapon</Copyright>
+```
+
+Assembly Info (.dll)
 ```
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
