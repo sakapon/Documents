@@ -6,7 +6,7 @@
   - 既定の名前空間
 - ビルド
   - 詳細設定 - デバッグ情報: なし (Release のみ)
-  - XML ドキュメント ファイル: `..\Release\Project1.xml` (Release のみ)
+  - XML ドキュメント ファイル: `bin\Release\netstandard2.0\Lib1.xml` (Release のみ)
 
 ### Assembly Info (Project File)
 For .exe
