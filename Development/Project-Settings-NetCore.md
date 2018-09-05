@@ -9,18 +9,9 @@
   - XML ドキュメント ファイル: `..\Release\Project1.xml` (Release のみ)
 
 ### Assembly Info (Project File)
-TargetFramework
+For .exe
 ```
     <TargetFramework>netcoreapp2.0</TargetFramework>
-```
-
-or, TargetFrameworks
-```
-    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
-```
-
-Assembly Info (.exe or ASP.NET)
-```
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
     <Product>The Tools</Product>
@@ -28,8 +19,20 @@ Assembly Info (.exe or ASP.NET)
     <Copyright>© 2018 Keiho Sakapon</Copyright>
 ```
 
-Assembly Info (.dll)
+For ASP.NET
 ```
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <AssemblyTitle>The Tool</AssemblyTitle>
+    <Product>The Tools</Product>
+    <Description>A tool.</Description>
+    <Authors>Keiho Sakapon</Authors>
+    <Copyright>© 2018 Keiho Sakapon</Copyright>
+```
+
+For .dll, using TargetFrameworks
+```
+    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
     <Product>The Tools</Product>
