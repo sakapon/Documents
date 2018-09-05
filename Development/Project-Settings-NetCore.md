@@ -10,7 +10,7 @@
 
 ### Assembly Info (Project File)
 For .exe
-```
+```xml
     <TargetFramework>net45</TargetFramework>
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
@@ -20,7 +20,7 @@ For .exe
 ```
 
 For ASP.NET
-```
+```xml
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
@@ -31,7 +31,7 @@ For ASP.NET
 ```
 
 For .dll, using TargetFrameworks
-```
+```xml
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
     <Version>1.0.0</Version>
     <Title>The Lib</Title>
