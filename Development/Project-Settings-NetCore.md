@@ -6,7 +6,7 @@
   - 既定の名前空間
 - ビルド
   - 詳細設定 - デバッグ情報: なし (Release のみ)
-  - XML ドキュメント ファイル: `bin\Release\netstandard2.0\Lib1.xml` (Release のみ)
+  - XML ドキュメント ファイル: `Lib1.xml` (Release のみ)
 
 ### Assembly Info (Project File)
 For .exe
@@ -14,7 +14,7 @@ For .exe
     <TargetFramework>net45</TargetFramework>
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
-    <Product>The Tools</Product>
+    <Product>KTools</Product>
     <Authors>Keiho Sakapon</Authors>
     <Copyright>© 2018 Keiho Sakapon</Copyright>
 ```
@@ -23,9 +23,9 @@ For ASP.NET
 ```xml
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Version>1.0.0</Version>
-    <AssemblyTitle>The Tool</AssemblyTitle>
-    <Product>The Tools</Product>
-    <Description>A tool.</Description>
+    <AssemblyTitle>The Web API</AssemblyTitle>
+    <Product>The Web APIs</Product>
+    <Description>Provides a Web API.</Description>
     <Authors>Keiho Sakapon</Authors>
     <Copyright>© 2018 Keiho Sakapon</Copyright>
 ```
