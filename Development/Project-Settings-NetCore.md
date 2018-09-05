@@ -11,7 +11,7 @@
 ### Assembly Info (Project File)
 For .exe
 ```
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
     <Version>1.0.0</Version>
     <AssemblyTitle>The Tool</AssemblyTitle>
     <Product>The Tools</Product>
@@ -34,11 +34,16 @@ For .dll, using TargetFrameworks
 ```
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
     <Version>1.0.0</Version>
-    <AssemblyTitle>The Tool</AssemblyTitle>
+    <Title>The Lib</Title>
+    <AssemblyTitle>The Lib</AssemblyTitle>
     <Product>The Tools</Product>
     <Description>A tool.</Description>
     <Authors>Keiho Sakapon</Authors>
     <Copyright>© 2018 Keiho Sakapon</Copyright>
+    <PackageProjectUrl>https://github.com/sakapon/KLibrary</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/sakapon/KLibrary/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>Lib Sample</PackageTags>
+    <PackageReleaseNotes>The first release.</PackageReleaseNotes>
 ```
 
 ### Tools
