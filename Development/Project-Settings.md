@@ -25,7 +25,7 @@
   - `[assembly: CLSCompliant(true)]` を追加
 
 ### ツール
-- [ZIP Release](https://www.nuget.org/packages/KTools.ZipRelease/) または [Version Increment](https://www.nuget.org/packages/KTools.VersionIncrement/) をインストール
+- [Build Release](https://github.com/sakapon/Build-Release)
 
 ### Local.testsettings
 - [データと診断] → [コード カバレッジ]: 有効
