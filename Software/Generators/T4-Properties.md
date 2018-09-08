@@ -1,3 +1,4 @@
+# T4 でクラスやプロパティを自動生成する
 Text Template Transformation Toolkit (T4) はテンプレート エンジンの一つで、主に Visual Studio で使われているものです。  
 これを使うと、ソースコードやデータの集合などのファイルを自動生成できます。
 
