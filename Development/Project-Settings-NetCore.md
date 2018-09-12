@@ -6,7 +6,7 @@
   - 既定の名前空間
 - ビルド
   - 詳細設定 - デバッグ情報: なし (Release のみ)
-  - XML ドキュメント ファイル: `Lib1.xml` (Release のみ)
+  - XML ドキュメント ファイル: `bin\Release\Lib1.xml` (Release のみ)
 
 ### Assembly Info (Project File)
 For .exe
@@ -36,8 +36,8 @@ For .dll, using TargetFrameworks
     <Version>1.0.0</Version>
     <Title>The Lib</Title>
     <AssemblyTitle>The Lib</AssemblyTitle>
-    <Product>The Tools</Product>
-    <Description>A tool.</Description>
+    <Product>KLibrary</Product>
+    <Description>A library.</Description>
     <Authors>Keiho Sakapon</Authors>
     <Copyright>© 2018 Keiho Sakapon</Copyright>
     <PackageProjectUrl>https://github.com/sakapon/KLibrary</PackageProjectUrl>
