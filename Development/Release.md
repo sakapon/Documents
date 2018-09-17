@@ -5,7 +5,8 @@
 - Save the ZIP file to `Downloads` or `zip` folder
 
 ### Create a NuGet Package (for .dll)
-- Run CreatePackage.ps1
+- Run `NuGet Packup`
+- Save the .nupkg file to `Published` or `pkg` folder
 
 #### In Case of Prerelease Version
 例えば、1.0.3.0 を 1.0.3-alpha としてリリースする場合。
