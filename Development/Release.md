@@ -5,6 +5,7 @@
 - Save the ZIP file to `Downloads` or `zip` folder
 
 ### Create a NuGet Package (for .dll)
+- Update **Release Notes**
 - Run `NuGet Packup`
 - Save the .nupkg file to `Published` or `pkg` folder
 
