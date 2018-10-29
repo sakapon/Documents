@@ -41,5 +41,5 @@
 - Visual Basic では Module
 
 ## 参照
-- [作成したサンプル](https://github.com/sakapon/Samples-2018/tree/master/ProgrammingSample/UnitTest)
+- 作成したサンプル: [ProgrammingSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/ProgrammingSample/UnitTest)
 - [Type.TypeInitializerプロパティから静的コンストラクタを取得して呼び出す](https://t.co/dqq0C8k4h6)
