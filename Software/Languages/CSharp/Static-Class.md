@@ -28,6 +28,8 @@
 - 前節のデメリットも理由
 
 ### 静的クラスを使う場面
+- 関数
+  - 数学など、外部要因に影響されない場合
 - 拡張メソッド
   - 既存のクラス (インスタンス) にメソッドを後付け
 - Facade パターン
@@ -36,7 +38,7 @@
 ### その他
 - `using static`
   - クラスをインポートすることで、クラス名を省略できる
-- VB では Module
+- Visual Basic では Module
 
 ## 参照
 - [作成したサンプル](https://github.com/sakapon/Samples-2018/tree/master/ProgrammingSample/UnitTest)
