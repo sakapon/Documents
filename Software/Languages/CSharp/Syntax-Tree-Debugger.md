@@ -30,7 +30,7 @@ https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
 SyntaxHelper クラスでは、デバッグ対象の C# ソースコードを構文ツリー (SyntaxTree) に変換して走査し、各ステートメントの前にデバッグ用のコード行を挿入していきます。
 
-なお、メソッド、ステートメント、式など、すべてのノードを表す親クラスは SyntaxNode クラスで、
+なお、メソッド・ステートメント・式など、すべてのノードを表す親クラスは SyntaxNode クラスであり、
 - Parent プロパティ: 親
 - Ancestors メソッド: 祖先
 - ChildNodes メソッド: 子
@@ -52,7 +52,7 @@ https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/DebuggerConsole.gif)
 
-以上をもとに、WPF アプリを作成します。  
+以上をもとに、WPF アプリでデバッグ ツールを作成します。  
 左側の C# ソースコードの部分は TextBox で、編集もできます。
 デバッグ実行時は、各ステートメントを選択状態にすることでハイライトしています。  
 右側の変数一覧が表示される部分は DataGrid です。
