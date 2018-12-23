@@ -28,7 +28,7 @@ WPF アプリを作成する前に、まず .NET Framework 上のコンソール
 
 https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
-SyntaxHelper クラスでは、元のソースコードを構文ツリー (SyntaxTree) に変換して走査し、各ステートメントの前にデバッグ用のコード行を挿入していきます。
+SyntaxHelper クラスでは、デバッグ対象の C# ソースコードを構文ツリー (SyntaxTree) に変換して走査し、各ステートメントの前にデバッグ用のコード行を挿入していきます。
 
 なお、メソッド、ステートメント、式など、すべてのノードを表す親クラスは SyntaxNode クラスで、
 - Parent プロパティ: 親
@@ -53,8 +53,20 @@ https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/DebuggerConsole.gif)
 
 以上をもとに、WPF アプリを作成します。  
-左側のソースコードの部分は TextBox で、編集もできます。
+左側の C# ソースコードの部分は TextBox で、編集もできます。
 デバッグ実行時は、各ステートメントを選択状態にすることでハイライトしています。  
 右側の変数一覧が表示される部分は DataGrid です。
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger-Pi.png)
+
+### 作成したサンプル
+- [SyntaxTreeSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample)
+
+### バージョン情報
+- .NET Framework 4.7
+- [Microsoft.CodeAnalysis](https://www.nuget.org/packages/Microsoft.CodeAnalysis) 2.10.0
+- [ReactiveProperty](https://www.nuget.org/packages/ReactiveProperty/) 5.3.2
+
+### 参照
+- [.NET Compiler Platform SDK (Roslyn API)](https://docs.microsoft.com/ja-jp/dotnet/csharp/roslyn-sdk/)
+- [WPF4.5入門 その24 「DataGridコントロール その2」](https://blog.okazuki.jp/entry/20130224/1361693816)
