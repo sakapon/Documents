@@ -28,7 +28,7 @@ WPF アプリを作成する前に、まず .NET Framework 上のコンソール
 
 https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
-SyntaxHelper クラスでは、元のソースコードを構文ツリー (SyntaxTree) に変換して解析し、各ステートメントの前にデバッグ用のコード行を挿入していきます。
+SyntaxHelper クラスでは、元のソースコードを構文ツリー (SyntaxTree) に変換して走査し、各ステートメントの前にデバッグ用のコード行を挿入していきます。
 
 なお、メソッド、ステートメント、式など、すべてのノードを表す親クラスは SyntaxNode クラスで、
 - Parent プロパティ: 親
@@ -44,10 +44,17 @@ SyntaxHelper クラスでは、元のソースコードを構文ツリー (Synta
 Program クラスでは、生成されたデバッグ用のソースコードをファイルに保存したら、System.CodeDom.Compiler 名前空間の CodeDomProvider を使ってこれをコンパイルし、そのエントリ ポイント (Main メソッド) を呼び出します。
 また、デバッグ コードが実行されたときのイベントハンドラーを登録しておき、Thread.Sleep メソッドを使って、指定した時間だけ停止させます。
 
-これで、デバッグ対象の元のソースコードが下の Program.cs だとすると、デバッグ用のソースコードとして Program.g.cs が生成されます。
+これで、デバッグ対象の元のソースコードが次の Program.cs だとすると、デバッグ用のソースコードとして Program.g.cs が生成されます。
 
 https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
 作成したコンソール アプリを実行すると、次の図のようになります (時間間隔は 0.3 秒)。
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/DebuggerConsole.gif)
+
+以上をもとに、WPF アプリを作成します。  
+左側のソースコードの部分は TextBox で、編集もできます。
+デバッグ実行時は、各ステートメントを選択状態にすることでハイライトしています。  
+右側の変数一覧が表示される部分は DataGrid です。
+
+![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger-Pi.png)
