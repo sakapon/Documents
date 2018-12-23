@@ -59,6 +59,14 @@ https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger-Pi.png)
 
+今回は上記の方法でプロトタイプを作ってみましたが、デバッグ コードの挿入の部分に関しては、よりスマートな方法があるのではないかと思います。
+
+### 注意点
+- 考えられうるすべてのステートメントには対応できていません。また、Main メソッドしか構文解析していません。
+- コンパイル時に生成されるアセンブリ (EXE) は、`%TEMP%` フォルダー (ユーザーの `AppData\Local\Temp`) に保存されていきます。
+- TextBox で、IsInactiveSelectionHighlightEnabled を True に設定しても利かないことがあります。また、選択状態のハイライトがずれることがあります。  
+  RichTextBox で Run などを使うのがよいかもしれません。
+
 ### 作成したサンプル
 - [SyntaxTreeSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample)
 
