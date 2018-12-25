@@ -16,17 +16,17 @@
 
 ### 結果
 というわけで、WPF でプロトタイプ「Tick-tack Debugger」を作ってみた結果、このようになりました。  
-例として、ニュートン法で平方根を求めています (クリックで拡大)。
+例として、ニュートン法で平方根を求めています。(クリックで拡大)
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger.gif)
 
 ### 解説
 以下は概略の技術解説です。  
 WPF アプリを作成する前に、まず .NET Framework 上のコンソール アプリで実験してみます。  
-構文解析を使うには、NuGet で [Microsoft.CodeAnalysis](https://www.nuget.org/packages/Microsoft.CodeAnalysis) をインストールします。
+C# の構文解析を使うには、NuGet で [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) をインストールします。
 
 デバッグ対象となるソースコードにデバッグ コードを挿入し、それを動的にコンパイルして実行する、という方針です。  
-先にソースコードを示しておきます (全体のソリューションは [SyntaxTreeSample](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample) にあります)。
+コンソール アプリのソースコードを以下に示します (全体のソリューションは [SyntaxTreeSample](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample) にあります)。
 
 https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
@@ -78,7 +78,7 @@ https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
 ### バージョン情報
 - .NET Framework 4.7
-- [Microsoft.CodeAnalysis](https://www.nuget.org/packages/Microsoft.CodeAnalysis) 2.10.0
+- [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) 2.10.0
 - [ReactiveProperty](https://www.nuget.org/packages/ReactiveProperty/) 5.3.2
 
 ### 参照
