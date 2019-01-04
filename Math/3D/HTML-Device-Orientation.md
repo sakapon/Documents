@@ -16,8 +16,7 @@ HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸お�
 | z 軸 | (画面が水平のとき) 鉛直の上が正 | 鉛直の上が正 |
 | 回転角度 | 回転軸の方向に**左ねじ**を回す場合が正 | 回転軸の方向に**右ねじ**を回す場合が正 |
 
-### 回転状態の同期
-CSS の transform プロパティと JavaScript の deviceorientation イベントを利用して、デバイスの回転状態を画面上の立方体オブジェクトに同期させるサンプルを作成しました。
+CSS の transform プロパティと JavaScript の deviceorientation イベントを利用して、デバイスの回転状態を画面内の立方体オブジェクトに同期させるサンプルを作成しました。
 
 (図)
 
@@ -46,6 +45,25 @@ element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 以下に `rotateX(45deg)` と `rotateY(45deg)` を組み合わせた例を載せておきます。
 
 (図)
+
+### deviceorientation イベント
+`window.addEventListener` で `deviceorientation` に対するイベントリスナーを登録します。
+デバイスの回転状態が変化すると、イベントリスナーが呼び出されます。
+
+引数の `alpha, beta, gamma` はそれぞれ z 軸、x 軸、y 軸を中心とした回転の角度を表し、座標系ごと回転させながらこの順に適用したものが回転状態を表します。  
+それぞれの値の範囲は次の通りです。
+- z 軸: 0 ≦ alpha < 360
+  - 北を向いたとき、alpha = 0
+- x 軸: -180 ≦ beta < 180
+- y 軸: -90 ≦ gamma < 90
+
+### 回転状態の同期
+以上から、デバイスの回転状態を画面内のオブジェクトに同期させるには次のようにします。
+```JS
+cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
+```
+
+結果として、z 軸および x 軸における回転角度の正負は異なり、y 軸では同じになります。
 
 ### 作成したサンプル
 - [DeviceOrientation](https://github.com/sakapon/JS-Test/tree/master/DeviceOrientation) (GitHub)
