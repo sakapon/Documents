@@ -44,7 +44,16 @@ element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 
 以下に `rotateX(45deg)` と `rotateY(45deg)` を組み合わせた例を載せておきます。
 
-(図)
+初期状態  
+![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/transform/rotate-0.png)
+
+`rotateX(45deg)` (左) `rotateX(45deg) rotateY(45deg)` (右)  
+![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/transform/rotate-x45.png)
+![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/transform/rotate-x45-y45.png)
+
+`rotateY(45deg)` (左) `rotateY(45deg) rotateX(45deg)` (右)  
+![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/transform/rotate-y45.png)
+![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/transform/rotate-y45-x45.png)
 
 ### deviceorientation イベント
 `window.addEventListener` で `deviceorientation` に対するイベントリスナーを登録します。
