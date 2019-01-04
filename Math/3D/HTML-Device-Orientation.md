@@ -55,7 +55,10 @@ element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 - [3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)
 
 transform
+- [transform](https://developer.mozilla.org/ja/docs/Web/CSS/transform)
 - [perspective](https://developer.mozilla.org/ja/docs/Web/CSS/perspective)
+- [CSS3 のみでキューブ(立方体)を作る！](https://cartman0.hatenablog.com/entry/2015/05/29/173343)
+- [CSS3: 3次元空間に立方体をつくって回す ー transformプロパティ](http://www.fumiononaka.com/Business/html5/FN1404001.html)
 
 deviceorientation
 - [デバイスの方向の検出](https://developer.mozilla.org/ja/docs/Web/API/Detecting_device_orientation)
