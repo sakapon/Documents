@@ -2,7 +2,7 @@
 HTML 関連で 3D の回転を扱う場面として、CSS の transform プロパティと JavaScript の deviceorientation イベントがあります。
 deviceorientation は、デバイスのジャイロ センサーが回転状態を通知することで発生するイベントです。
 
-HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸および y 軸に、スクリーンに垂直な z 軸が追加されます。
+HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸および y 軸に加えて、スクリーンに垂直な z 軸が存在します。
 デバイス (スマートフォンなど) を水平に持ち、北を向いた状態を基準に考えます。
 
 このとき、CSS の transform プロパティと JavaScript の deviceorientation イベントにおける、回転に関する性質の違いを下の表にまとめました。  
@@ -50,7 +50,7 @@ element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 `window.addEventListener` で `deviceorientation` に対するイベントリスナーを登録します。
 デバイスの回転状態が変化すると、イベントリスナーが呼び出されます。
 
-引数の `alpha, beta, gamma` はそれぞれ z 軸、x 軸、y 軸を中心とした回転の角度を表し、座標系ごと回転させながらこの順に適用したものが回転状態を表します。  
+引数の `alpha, beta, gamma` はそれぞれ z 軸、x 軸、y 軸を中心とした回転の角度を表し、座標系ごと回転させながらこの順に重ね合わせたものが回転状態を表します。  
 それぞれの値の範囲は次の通りです。
 - z 軸: 0 ≦ alpha < 360
   - 北を向いたとき、alpha = 0
