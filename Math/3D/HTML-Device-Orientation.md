@@ -13,8 +13,40 @@ HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸お�
 | 座標系 | **左手系** | **右手系** |
 | x 軸 | 右が正 | 右が正 |
 | y 軸 | **下 (手前) が正** | **上 (奥) が正** |
-| z 軸 | 鉛直の上が正 | 鉛直の上が正 |
+| z 軸 | (画面が水平のとき) 鉛直の上が正 | 鉛直の上が正 |
 | 回転角度 | 回転軸の方向に**左ねじ**を回す場合が正 | 回転軸の方向に**右ねじ**を回す場合が正 |
+
+### 回転状態の同期
+CSS の transform プロパティと JavaScript の deviceorientation イベントを利用して、デバイスの回転状態を画面上の立方体オブジェクトに同期させるサンプルを作成しました。
+
+(図)
+
+ソースコードはこちらです。
+
+https://gist.github.com/sakapon/168ebc510f375af192cd3fc6d44d6a02
+
+以下は、各技術についての説明です。
+
+### transform プロパティ
+transform プロパティで rotateX などを利用して回転状態を指定する場合、  
+CSS では
+```CSS
+transform: rotateX(45deg) rotateY(30deg) rotateZ(60deg);
+```
+
+JavaScript では
+```JS
+element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
+```
+
+のように、複数の回転を重ね合わせることができます。
+
+ただし、**座標系ごと回転させながら**左から順に適用します。
+これは、[3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)で書いた通り、**元の座標系のまま**右から順に適用する、と考えても同じです。
+
+以下に `rotateX(45deg)` と `rotateY(45deg)` を組み合わせた例を載せておきます。
+
+(図)
 
 ### 作成したサンプル
 - [DeviceOrientation](https://github.com/sakapon/JS-Test/tree/master/DeviceOrientation)
