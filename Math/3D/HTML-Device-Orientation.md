@@ -28,28 +28,27 @@ https://gist.github.com/sakapon/168ebc510f375af192cd3fc6d44d6a02
 以下は、各技術についての説明です。
 
 ### transform プロパティ
-transform プロパティで rotateX などを利用して回転状態を指定する場合、  
-CSS では
+transform プロパティで rotateX などを利用して回転状態を指定する場合、次に示すように複数の回転を重ね合わせることができます。
+
+CSS:
 ```CSS
 transform: rotateX(45deg) rotateY(30deg) rotateZ(60deg);
 ```
 
-JavaScript では
+JavaScript:
 ```JS
 element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 ```
 
-のように、複数の回転を重ね合わせることができます。
-
-ただし、**座標系ごと回転させながら**左から順に適用します。
-これは、[3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)で書いた通り、**元の座標系のまま**右から順に適用する、と考えても同じです。
+ただし、**座標系ごと回転させながら**左から順に適用します。  
+これは、以前に [3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)で書いた通り、**元の座標系のまま**右から順に適用する、と考えても同じです。
 
 以下に `rotateX(45deg)` と `rotateY(45deg)` を組み合わせた例を載せておきます。
 
 (図)
 
 ### 作成したサンプル
-- [DeviceOrientation](https://github.com/sakapon/JS-Test/tree/master/DeviceOrientation)
+- [DeviceOrientation](https://github.com/sakapon/JS-Test/tree/master/DeviceOrientation) (GitHub)
 
 ### 参照
 - [3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)
