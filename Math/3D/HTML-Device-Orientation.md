@@ -1,4 +1,4 @@
-# transform と deviceorientation における回転の表現 (HTML)
+## transform と deviceorientation における回転の表現 (HTML)
 HTML 関連で 3D の回転を扱う場面として、CSS の transform プロパティと JavaScript の deviceorientation イベントがあります。
 deviceorientation は、デバイスのジャイロ センサーが回転状態を通知することで発生するイベントです。
 
@@ -16,7 +16,7 @@ HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸お�
 | z 軸 | (画面が水平のとき) 鉛直の上が正 | 鉛直の上が正 |
 | 回転角度 | 回転軸の正方向に**左ねじ**を進める場合が正 | 回転軸の正方向に**右ねじ**を進める場合が正 |
 
-CSS の transform プロパティと JavaScript の deviceorientation イベントを利用して、デバイスの回転状態を画面内の立方体オブジェクトに同期させるサンプルを作成しました。
+検証のため、CSS の transform プロパティと JavaScript の deviceorientation イベントを利用して、デバイスの回転状態を画面内の立方体オブジェクトに同期させるサンプルを作成しました。
 
 ![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/DeviceOrientation.gif)
 
@@ -59,7 +59,7 @@ element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 `window.addEventListener` で `deviceorientation` に対するイベントリスナーを登録します。
 デバイスの回転状態が変化すると、イベントリスナーが呼び出されます。
 
-引数の `alpha, beta, gamma` はそれぞれ z 軸、x 軸、y 軸を中心とした回転の角度を表し、座標系ごと回転させながらこの順に重ね合わせたものが回転状態を表します。  
+引数の `alpha, beta, gamma` はそれぞれ z 軸、x 軸、y 軸を中心とした回転の角度を表し、**座標系ごと回転させながら**この順に重ね合わせたものが回転状態を表します。  
 それぞれの値の範囲は次の通りです。
 - z 軸: 0 ≦ alpha < 360
   - 北を向いたとき、alpha = 0
@@ -78,7 +78,7 @@ cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY
 - [DeviceOrientation](https://github.com/sakapon/JS-Test/tree/master/DeviceOrientation) (GitHub)
 
 ### 参照
-- [3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)
+- [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)
 
 transform
 - [transform](https://developer.mozilla.org/ja/docs/Web/CSS/transform)
