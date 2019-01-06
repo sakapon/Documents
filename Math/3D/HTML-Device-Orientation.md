@@ -1,5 +1,5 @@
 ## transform と deviceorientation における回転の表現 (HTML)
-HTML 関連で 3D の回転を扱う場面として、CSS の transform プロパティと JavaScript の deviceorientation イベントがあります。
+CSS の transform プロパティと JavaScript の deviceorientation イベントではともに 3D の回転状態 (姿勢、傾き) が登場しますが、その扱い方に差があるため検証しました。  
 deviceorientation は、デバイスのジャイロ センサーが回転状態を通知することで発生するイベントです。
 
 HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸および y 軸に加えて、スクリーンに垂直な z 軸が存在します。
@@ -39,8 +39,8 @@ JavaScript:
 element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 ```
 
-ただし、**座標系ごと回転させながら**左から順に適用します。  
-これは、以前に [3D における回転の表現と相互変換](https://sakapon.wordpress.com/2017/01/15/3d-rotation-conversion/)で書いた通り、**元の座標系のまま**右から順に適用する、と考えても同じです。
+ただし、**座標系ごと回転させながら**左から順に適用します (オイラー角)。  
+これは、以前に [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)で書いた通り、**元の座標系のまま**右から順に適用する、と考えても同じです。
 
 以下に `rotateX(45deg)` と `rotateY(45deg)` を組み合わせた例を載せておきます。
 
