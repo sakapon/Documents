@@ -20,7 +20,7 @@ HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸お�
 
 ![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/DeviceOrientation.gif)
 
-ソースコードはこちらです。
+HTML のソースはこちらです。
 
 https://gist.github.com/sakapon/168ebc510f375af192cd3fc6d44d6a02
 
@@ -80,13 +80,13 @@ cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY
 ### 参照
 - [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)
 
-transform
+#### transform
 - [transform](https://developer.mozilla.org/ja/docs/Web/CSS/transform)
 - [perspective](https://developer.mozilla.org/ja/docs/Web/CSS/perspective)
 - [CSS3 のみでキューブ(立方体)を作る！](https://cartman0.hatenablog.com/entry/2015/05/29/173343)
 - [CSS3: 3次元空間に立方体をつくって回す ー transformプロパティ](http://www.fumiononaka.com/Business/html5/FN1404001.html)
 
-deviceorientation
+#### deviceorientation
 - [デバイスの方向の検出](https://developer.mozilla.org/ja/docs/Web/API/Detecting_device_orientation)
 - [方向および動きとして示されるデータ](https://developer.mozilla.org/ja/docs/DOM/Orientation_and_motion_data_explained)
 - [端末画面の向きと端末のモーション](https://developers.google.com/web/fundamentals/native-hardware/device-orientation/?hl=ja)
