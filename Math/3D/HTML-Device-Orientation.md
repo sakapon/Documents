@@ -20,7 +20,8 @@ HTML の 3 次元座標系では、2 次元スクリーン座標系の x 軸お�
 
 ![](https://github.com/sakapon/JS-Test/blob/master/images/DeviceOrientation/DeviceOrientation.gif)
 
-HTML のソースはこちらです。
+ジャイロ センサーを搭載した端末であれば、[こちらのテストページ](https://sakapon.github.io/JS-Test/DeviceOrientation/sync)で確認できます。  
+HTML のソースは以下の通りです。
 
 https://gist.github.com/sakapon/168ebc510f375af192cd3fc6d44d6a02
 
@@ -39,7 +40,7 @@ JavaScript:
 element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 ```
 
-ただし、**座標系ごと回転させながら**左から順に適用します (オイラー角)。  
+ただし、**座標系ごと回転させながら**左から順に適用します ([オイラー角](https://t.co/4WbYGmDCfa))。  
 これは、以前に [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)で書いた通り、**元の座標系のまま**右から順に適用する、と考えても同じです。
 
 以下に `rotateX(45deg)` と `rotateY(45deg)` を組み合わせた例を載せておきます。
@@ -72,6 +73,7 @@ element.style.transform = "rotateX(45deg) rotateY(30deg) rotateZ(60deg)";
 cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${e.gamma}deg)`;
 ```
 
+正負の符号に注意します。  
 結果として、z 軸および x 軸における回転角度の正負は異なり、y 軸では同じになります。
 
 ### 作成したサンプル
@@ -79,6 +81,7 @@ cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY
 
 ### 参照
 - [3D における回転の表現と相互変換](3D-Rotation-Conversion.md)
+- [Leap Motion で手の回転状態を取得する](Leap-Hand-Rotation.md)
 
 #### transform
 - [transform](https://developer.mozilla.org/ja/docs/Web/CSS/transform)
@@ -89,4 +92,5 @@ cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY
 #### deviceorientation
 - [デバイスの方向の検出](https://developer.mozilla.org/ja/docs/Web/API/Detecting_device_orientation)
 - [方向および動きとして示されるデータ](https://developer.mozilla.org/ja/docs/DOM/Orientation_and_motion_data_explained)
+- [Using device orientation with 3D transforms](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms)
 - [端末画面の向きと端末のモーション](https://developers.google.com/web/fundamentals/native-hardware/device-orientation/?hl=ja)
