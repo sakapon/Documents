@@ -30,16 +30,16 @@ The source code of the console application is shown below (the whole solution is
 
 https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
-SyntaxHelper クラスでは、デバッグ対象の C# ソースコードを構文ツリー (SyntaxTree) に変換して走査し、各ステートメントの前にデバッグ用のコード行を挿入していきます。
+In the SyntaxHelper class, C# source code to be debugged is converted to a syntax tree and scanned, and a line of code for debugging is inserted before each statement.
 
-CSharpSyntaxTree.ParseText メソッドを使うことで、ソースコードを構文ツリーに変換できます。  
-また、メソッド・ステートメント・式など、すべてのノードを表す親クラスは SyntaxNode クラスであり、
-- Parent プロパティ: 親
-- Ancestors メソッド: 祖先
-- ChildNodes メソッド: 子
-- DescendantNodes メソッド: 子孫
+By using the `CSharpSyntaxTree.ParseText` method, you can convert the source code into a SyntaxTree object.  
+Also, the superclass representing all nodes, such as methods, statements and expressions, is the SyntaxNode class,
+- Parent property
+- Ancestors method
+- ChildNodes method
+- DescendantNodes method
 
-が存在することを知っておけば、だいたいの探索ができるでしょう。
+if you know that there is, you can do a rough search.
 
 この他に、デバッグ用のコードから呼び出されるメソッドを定義するクラス ライブラリとして DebuggerLib を作成しています。
 各ステートメントの位置、およびその直前で存在する変数とその値を通知するために、このライブラリを経由させます。
