@@ -1,22 +1,22 @@
-# Roslyn の構文解析を使ってデバッガーを自作する
-// [C# Advent Calendar 2018](https://qiita.com/advent-calendar/2018/c-sharp) の 23 日目の記事です。
+# Build your own debugger using Roslyn's syntax analysis
+// This is the 23rd article of [C# Advent Calendar 2018 in Japan](https://qiita.com/advent-calendar/2018/c-sharp).
 
-デバッガーのようなものを自作してみました。
+I tried to make something like a debugger.
 
-### 動機
-- 普段は Visual Studio を使っているが、デバッグ時に手動でステップ実行するのが面倒
-  - ループなどでステップ数が多い場合
-  - 分岐の様子や変数の状態を軽くチェックしたい場合
+### Motivation
+- I normally use Visual Studio, but it is troublesome to step by step manually at debugging
+  - When the number of steps is large in a loop or the like
+  - When I want to check the state of branching and the state of variables lightly
 
-### 解決案
-- ステップの時間間隔だけを指定して、デバッガーを自動で実行させる
-  - 変数の一覧が表示される
-  - 時間間隔をリアルタイムで調節できる
-- .NET Compiler Platform (Roslyn) の構文解析の機能を使い、各ステップの間にデバッグ用のコードを差し込めば実現できそう
+### Solution
+- Specify only the time interval of the step and let the debugger run automatically
+  - A list of variables is displayed
+  - Time interval can be adjusted in real time
+- Using the syntax analysis of .NET Compiler Platform (Roslyn), it seems to be realizable if we insert debugging code between each step
 
-### 結果
-というわけで、WPF でプロトタイプ「Tick-tack Debugger」を作ってみた結果、このようになりました。  
-例として、ニュートン法で平方根を求めています。(クリックで拡大)
+### Result
+So, as a result of trying to make prototype "Tick-tack Debugger" with WPF, it looked like this.  
+As an example, we are seeking a square root by the Newton's method. (Click to enlarge)
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger.gif)
 
