@@ -20,13 +20,13 @@ As an example, we are seeking a square root by the Newton's method. (Click to en
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger.gif)
 
-### 解説
-以下は概略の技術解説です。  
-WPF アプリを作成する前に、まず .NET Framework 上のコンソール アプリで実験してみます。  
-C# の構文解析を使うには、NuGet で [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) をインストールします。
+### Commentary
+The following is an outline technical explanation.  
+Before creating a WPF application, first try using the console application on the .NET Framework.  
+To use C# syntax analysis, install [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) with NuGet.
 
-デバッグ対象となるソースコードにデバッグ コードを挿入し、それを動的にコンパイルして実行する、という方針です。  
-コンソール アプリのソースコードを以下に示します (全体のソリューションは [SyntaxTreeSample](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample) にあります)。
+It is a policy to insert debugging code into the source code to be debugged, compile it dynamically and execute it.  
+The source code of the console application is shown below (the whole solution is in [SyntaxTreeSample](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample)).
 
 https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
