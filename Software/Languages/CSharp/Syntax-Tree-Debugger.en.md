@@ -41,13 +41,13 @@ Also, the superclass representing all nodes, such as methods, statements and exp
 
 if you know that there is, you can do a rough search.
 
-この他に、デバッグ用のコードから呼び出されるメソッドを定義するクラス ライブラリとして DebuggerLib を作成しています。
-各ステートメントの位置、およびその直前で存在する変数とその値を通知するために、このライブラリを経由させます。
+In addition to this, DebuggerLib is created as a class library that defines methods called from code for debugging.
+Let this library go through to notify the position of each statement and the variables and their values that exist immediately before it.
 
-Program クラスでは、生成されたデバッグ用のソースコードをファイルに保存したら、System.CodeDom.Compiler 名前空間の CodeDomProvider を使ってこれをコンパイルし、そのエントリ ポイント (Main メソッド) を呼び出します。  
-また、デバッグ コードが実行されたときのイベントハンドラーを登録しておき、Thread.Sleep メソッドを使って、指定した時間だけ停止させます。
+In the Program class, after saving the generated debugging source code to a file, compile it using CodeDomProvider in the System.CodeDom.Compiler namespace, and call its entry point (the Main method).  
+It also registers the event handler when the debug code is executed, and stops it for the specified time using the Thread.Sleep method.
 
-これで、デバッグ対象の元のソースコードが次の Program.cs だとすると、デバッグ用のソースコードとして下の Program.g.cs が生成されます。
+Now, if the original source code to be debugged is Program.cs, the following Program.g.cs is generated as the debugging source code.
 
 https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
