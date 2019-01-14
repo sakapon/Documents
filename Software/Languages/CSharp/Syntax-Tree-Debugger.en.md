@@ -68,9 +68,9 @@ This time I tried to make a prototype by the above method, but I think that ther
 
 ### Remarks
 - We can not deal with all possible statements. Also, we only scan the Main method.
-- The assembly (EXE) generated at compile time is saved in the `%TEMP%` folder (user's `AppData\Local\Temp`).
+- The assemblies generated at compile time (EXE) are saved in the `%TEMP%` folder (user's `AppData\Local\Temp`).
 - In the TextBox, setting IsInactiveSelectionHighlightEnabled to True may not work.  
-  In addition, highlights in the selected state may shift.  
+  In addition, highlights in the selected state may slip.  
   It might be better to use Run etc in RichTextBox.
 
 ### Samples Created
