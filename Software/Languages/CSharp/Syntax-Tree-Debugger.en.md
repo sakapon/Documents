@@ -66,21 +66,20 @@ The part where the variable list is displayed on the right is a DataGrid.
 
 This time I tried to make a prototype by the above method, but I think that there is a smart way to insert debug code and compile.
 
-### 注意点
-- 考えられうるすべてのステートメントには対応できていません。また、Main メソッドしか構文解析していません。
-- コンパイル時に生成されるアセンブリ (EXE) は、`%TEMP%` フォルダー (ユーザーの `AppData\Local\Temp`) に保存されていきます。
-- TextBox で、IsInactiveSelectionHighlightEnabled を True に設定しても利かないことがあります。  
-  また、選択状態のハイライトがずれることがあります。  
-  RichTextBox で Run などを使うのがよいかもしれません。
+### Remarks
+- We can not deal with all possible statements. Also, we only scan the Main method.
+- The assembly (EXE) generated at compile time is saved in the `%TEMP%` folder (user's `AppData\Local\Temp`).
+- In the TextBox, setting IsInactiveSelectionHighlightEnabled to True may not work.  
+  In addition, highlights in the selected state may shift.  
+  It might be better to use Run etc in RichTextBox.
 
-### 作成したサンプル
+### Samples Created
 - [SyntaxTreeSample (GitHub)](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample)
 
-### バージョン情報
+### Version
 - .NET Framework 4.7
 - [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) 2.10.0
 - [ReactiveProperty](https://www.nuget.org/packages/ReactiveProperty/) 5.3.2
 
-### 参照
-- [.NET Compiler Platform SDK (Roslyn API)](https://docs.microsoft.com/ja-jp/dotnet/csharp/roslyn-sdk/)
-- [WPF4.5入門 その24 「DataGridコントロール その2」](https://blog.okazuki.jp/entry/20130224/1361693816)
+### References
+- [.NET Compiler Platform SDK (Roslyn API)](https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/)
