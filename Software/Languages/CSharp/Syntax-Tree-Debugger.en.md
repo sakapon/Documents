@@ -51,20 +51,20 @@ Now, if the original source code to be debugged is Program.cs, the following Pro
 
 https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
-作成したコンソール アプリを実行すると、次の図のようになります (時間間隔は 0.3 秒)。
+When we run the console application we created, it will look like the following figure (time interval is 0.3 seconds).
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/DebuggerConsole.gif)
 
-以上をもとに、WPF アプリでデバッグ ツールを作成しました。  
-左側の C# ソースコードの部分は TextBox で、編集もできます。
-デバッグ実行時は、各ステートメントを選択状態にすることでハイライトしています。  
-右側の変数一覧が表示される部分は DataGrid です。
+Based on the above, we created a debugging tool as the WPF application.  
+The part of the C# source code on the left is a TextBox and can be edited.
+When debugging is executed, highlighting is done by setting each statement to the selected state.  
+The part where the variable list is displayed on the right is a DataGrid.
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger-Pi.png)
 
-(図は円周率を求める例)
+(An example of figuring out the pi)
 
-今回は上記の方法でプロトタイプを作ってみましたが、デバッグ コードの挿入やコンパイルに関しては、よりスマートな方法があるのではないかと思います。
+This time I tried to make a prototype by the above method, but I think that there is a smart way to insert debug code and compile.
 
 ### 注意点
 - 考えられうるすべてのステートメントには対応できていません。また、Main メソッドしか構文解析していません。
