@@ -22,8 +22,8 @@ As an example, we are figuring out a square root by the Newton's method. (Click 
 
 ### Commentary
 The following is an outline technical explanation.  
-Before creating a WPF application, first try using the console application on the .NET Framework.  
-To use C# syntax analysis, install [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) with NuGet.
+Before creating a WPF application, first try a console application on the .NET Framework.  
+To use C# syntax analysis, install [Microsoft.CodeAnalysis.CSharp](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp) via NuGet.
 
 It is a policy to insert debugging code into the source code to be debugged, compile it dynamically and execute it.  
 The source code of the console application is shown below (the whole solution is in [SyntaxTreeSample](https://github.com/sakapon/Samples-2018/tree/master/SyntaxTreeSample)).
@@ -32,14 +32,14 @@ https://gist.github.com/sakapon/f6366ea8353c565757073fbd3727598e
 
 In the SyntaxHelper class, C# source code to be debugged is converted to a syntax tree and scanned, and a line of code for debugging is inserted before each statement.
 
-By using the `CSharpSyntaxTree.ParseText` method, you can convert the source code into a SyntaxTree object.  
+By using the `CSharpSyntaxTree.ParseText` method, you can convert the source code to a SyntaxTree object.  
 Also, the superclass representing all nodes, such as methods, statements and expressions, is the SyntaxNode class,
 - Parent property
 - Ancestors method
 - ChildNodes method
 - DescendantNodes method
 
-if you know that there is, you can do a rough search.
+if you know these members, you can scan nodes.
 
 In addition to this, DebuggerLib is created as a class library that defines methods called from code for debugging.
 Let this library go through to notify the position of each statement and the variables and their values that exist immediately before it.
