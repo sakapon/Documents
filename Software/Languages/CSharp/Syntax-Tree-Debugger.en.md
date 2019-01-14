@@ -51,11 +51,11 @@ Now, if the original source code to be debugged is Program.cs below, the followi
 
 https://gist.github.com/sakapon/e418ec76781dcff701bd61692f03890c
 
-When we run the console application we created, it will look like the following figure (time interval is 0.3 seconds).
+When we run the console application we created, it will look like the following figure (the time interval is 0.3 seconds).
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/DebuggerConsole.gif)
 
-Based on the above, we created a debugging tool as the WPF application.  
+Based on the above, we created a debugging tool as a WPF application.  
 The part of the C# source code on the left is a TextBox and can be edited.
 When debugging is executed, highlighting is done by setting each statement to the selected state.  
 The part where the variable list is displayed on the right is a DataGrid.
@@ -64,7 +64,7 @@ The part where the variable list is displayed on the right is a DataGrid.
 
 (An example of figuring out the pi)
 
-This time I tried to make a prototype by the above method, but I think that there is a smart way to insert debug code and compile.
+This time I tried to make a prototype by the above method, but I think that there is a smarter way to insert debug code and compile.
 
 ### Remarks
 - We can not deal with all possible statements. Also, we only scan the Main method.
