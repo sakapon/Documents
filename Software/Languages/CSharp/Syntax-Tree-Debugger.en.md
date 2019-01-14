@@ -4,9 +4,9 @@
 I tried to make something like a debugger.
 
 ### Motivation
-- I normally use Visual Studio, but it is troublesome to step by step manually at debugging
+- I normally use Visual Studio, but it is troublesome to step through code manually at debugging
   - When the number of steps is large in a loop or the like
-  - When I want to check the state of branching and the state of variables lightly
+  - When I want to check the state of branching or variables lightly
 
 ### Solution
 - Specify only the time interval of the step and let the debugger run automatically
@@ -16,7 +16,7 @@ I tried to make something like a debugger.
 
 ### Result
 So, as a result of trying to make prototype "Tick-tack Debugger" with WPF, it looked like this.  
-As an example, we are seeking a square root by the Newton's method. (Click to enlarge)
+As an example, we are figuring out a square root by the Newton's method. (Click to enlarge)
 
 ![](https://github.com/sakapon/Samples-2018/blob/master/Images/SyntaxTreeSample/TickTackDebugger.gif)
 
