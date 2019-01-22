@@ -10,6 +10,11 @@
   - ユーザビリティ エンジニアリング原論の定義を含む
   - 調査のプロセスではエスノグラフィも
 
+### 参照
+- [ユーザビリティ - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3)
+- [UIデザインの指標・ユーザビリティとは](https://u-site.jp/usability/)
+- [ユーザビリティの関連規格](https://u-site.jp/usability/standards/)
+
 ### ガイドライン
 - [ユーザビリティ ガイドライン](https://matome.naver.jp/odai/2139895932412346701)
 - [電子政府ガイドライン作成検討会](http://www.kantei.go.jp/jp/singi/it2/guide/index_before090916.html)
