@@ -76,6 +76,8 @@ cubeEl.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY
 正負の符号に注意します。  
 結果として、z 軸および x 軸における回転角度の正負は異なり、y 軸では同じになります。
 
+次回は、回転状態をネットワーク経由で同期させます。
+
 次回: [ASP.NET SignalR でデバイスの回転状態を同期する](SignalR-Device-Orientation.md)
 
 ### 作成したサンプル
