@@ -2,9 +2,23 @@
 
 前回の [transform と deviceorientation における回転の表現 (HTML)](HTML-Device-Orientation.md) では、そのデバイスのブラウザー上で回転の状態を表示していましたが、今回は他のデバイスのブラウザーにネットワーク経由で同期するようにしました。
 
+WebSocket で同期するためのフレームワークとして ASP.NET SignalR を利用し、Azure Web App に GitHub からの継続的デプロイを設定しています。
+
 https://www.youtube.com/watch?v=616reMOovi8
 
+これを実装する方法について以下で解説します。
+
+Visual Studio で空の ASP.NET Web プロジェクトを作成し、NuGet で [Microsoft.AspNet.SignalR](https://www.nuget.org/packages/Microsoft.AspNet.SignalR/) をインストールします。  
+まずサーバー側の C# コードとして、次のクラスを実装します。
+
 https://gist.github.com/sakapon/732b69c502e629f9386da1f29e67310f
+
+Startup.Configuration メソッドの中で ASP.NET SignalR を有効にします。  
+そして、送受信をするためのハブとして SensorHub クラスを作成しています。  
+今回は、JavaScript の deviceorientation イベントで取得できる `alpha, beta, gamma` の値を引数で受け渡して通知するだけです。
+
+次に、クライアントとなる HTML を実装します。  
+センサーのデータを送信する sensor.html と、それを受信して表示する viewer.html に分かれています。
 
 https://gist.github.com/sakapon/bd27820c79c487ae43c7b709282cf312
 
