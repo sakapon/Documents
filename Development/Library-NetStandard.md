@@ -12,4 +12,5 @@
   - packages.config
 
 例
+- https://github.com/sakapon/Blaze/commit/70cd681e117d2320ae4d7cdd36ab77852dea5291
 - https://github.com/sakapon/Harmonia/commit/fd4fc6c69da83da4cc19bdca893ff8c71ea27cc3
