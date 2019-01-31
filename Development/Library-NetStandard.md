@@ -6,3 +6,7 @@
 - 単体テスト プロジェクト
   - .csproj ファイルを .NET Core フォーマットにする
   - Properties/AssemblyInfo.cs を削除する
+- NuGet Packup を For .NET Core に切り替える場合、次のファイルを削除する
+  - NuGetPackup.exe
+  - Package.nuspec.xml
+  - packages.config
