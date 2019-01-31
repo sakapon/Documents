@@ -10,3 +10,6 @@
   - NuGetPackup.exe
   - Package.nuspec.xml
   - packages.config
+
+例
+- https://github.com/sakapon/Harmonia/commit/fd4fc6c69da83da4cc19bdca893ff8c71ea27cc3
