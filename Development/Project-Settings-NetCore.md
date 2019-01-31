@@ -46,5 +46,18 @@ For .dll, using TargetFrameworks
     <PackageReleaseNotes>The first release.</PackageReleaseNotes>
 ```
 
+### Unit Test Project
+.NET Standard 向けライブラリの場合、
+```
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+```
+
+と
+```
+    <TargetFramework>net45</TargetFramework>
+```
+を都度切り替えてテストを実行する。  
+`<TargetFrameworks>` では、どちらで実行されているのかわからない。
+
 ### Tools
 - [Build Release](https://github.com/sakapon/Build-Release)
