@@ -32,7 +32,7 @@ For ASP.NET
 
 For .dll, using TargetFrameworks
 ```xml
-    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <Version>1.0.0</Version>
     <Title>The Lib</Title>
     <AssemblyTitle>The Lib</AssemblyTitle>
