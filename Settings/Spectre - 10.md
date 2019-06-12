@@ -12,7 +12,6 @@
 
 ### Infrastructure
 * Internet Information Services 8.5
-  * .NET Framework 4.6
 * Office Professional Plus 2019
 * [Skype](http://www.skype.com/)
 * [Open Live Writer](https://www.microsoft.com/ja-jp/store/p/open-live-writer/9nblggh5279m)
