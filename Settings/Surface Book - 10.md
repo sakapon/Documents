@@ -2,6 +2,7 @@
 * Google Chrome
 * // Mozilla Firefox
 * TeraPad
+* Logicool ゲームソフトウェア 9.0.42
 * // かざぐるマウス
 * [Adobe Reader](https://get.adobe.com/jp/reader/)
 * [Dropbox](https://www.dropbox.com/)
@@ -40,6 +41,7 @@
 * [Fiddler 4](http://www.telerik.com/fiddler)
 * [ILSpy 2.3](http://ilspy.net/)
 * LINQPad
+* Visual Studio Code 1.29.1
 
 ### SDKs
 * Kinect for Windows SDK 1.8, 2.0
