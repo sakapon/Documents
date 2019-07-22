@@ -1,4 +1,5 @@
 # OBS Studio
+[OBS Studio](https://obsproject.com/ja)
 
 ## 出力
 - 録画フォーマット: mp4
