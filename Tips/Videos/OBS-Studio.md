@@ -19,8 +19,14 @@
 - 出力解像度: 1280 x 720 (720p)
 
 ## その他
-プロファイルおよびシーンコレクションを保存できる
+- Surface Book で OBS Studio の画面キャプチャができない
+  - 右クリックして、GPU を「統合型グラフィックス (Integrated Graphics)」に指定して起動する
+  - [How to fix OBS Black Screen Issue 2019 (on Surface Book laptop)](https://www.youtube.com/watch?v=5M2y5ZKXQTc)
+  - 「NVIDIA コントロール パネル」で設定できる
+- プロファイルおよびシーンコレクションを保存できる
 
 ## 参照
 - [【Twitch】ゲーム配信を始めるためのやり方・入門ガイド](https://vip-jikkyo.net/how-to-stream-on-twitch)
+  - [過去の配信を保存する]
 - [YouTube Liveでゲーム配信する方法・やり方](https://vip-jikkyo.net/youtube-live)
+  - ライブ ストリーミングを有効にするには、最大で 24 時間待つ
