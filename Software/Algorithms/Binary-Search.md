@@ -2,7 +2,7 @@
 // [Competitive Programming (2) Advent Calendar 2019](https://adventar.org/calendars/4587) の 20 日目の記事です。
 
 競技プログラミングでたびたび利用する二分探索について考察してみます。  
-といっても、とくに競技プログラミングに限らないのですが。
+といっても、とくに競技プログラミングに限らず活用できると思います。
 
 まず二分探索の基本的な例として、昇順にソートされた整数のリストから、指定された値より大きい値が最初に現れるインデックスを求めてみます。
 存在しない場合はリストの長さ (範囲外のインデックス) を返すことにすると、「その値をリストに挿入するときのインデックス」と考えても同じです。
@@ -27,7 +27,7 @@ https://gist.github.com/sakapon/056daac8eee07fd36d52c3bef0e7f5a1
 https://gist.github.com/sakapon/ba3c310c476b65619b4342ee9117f638
 
 この形にすれば、降順のリストにも、リスト以外の数値の範囲にも適用できます。  
-例として、[ABC 146 C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c) を解いてみます。
+例として、[ABC 146 C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c) を解いてみます。  
 先ほどの First メソッドに対して Last メソッドを用意しています (コメントは省略)。
 
 https://gist.github.com/sakapon/de28afc51ca773275f3ed3f1137884c8
@@ -39,11 +39,13 @@ https://gist.github.com/sakapon/bb272a7bc19cdcaee42dc47b45e0bdea
 
 ### まとめ
 というわけで、今後は二分探索の問題を意味論的に「与えられた条件を満たす最初または最後の値を求める」と考えれば、今回作成したライブラリを使って実装ができます。
-- [作成したライブラリとサンプル コード](https://github.com/sakapon/Samples-2019/tree/master/AlgorithmSample)
+- [作成したライブラリとサンプル コード (GitHub)](https://github.com/sakapon/Samples-2019/tree/master/AlgorithmSample)
 
 ### その他
 - これまでは二分探索を実装するときに再帰を使っていたのですが、おそらく過去に読んだ解説に再帰を使うものが多かったためだと思います。競技プログラミングを始めてから自然に `while (l < r)` を使うようになりました。
 - [Array.BinarySearch メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.array.binarysearch)や [List<T>.BinarySearch メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.list-1.binarysearch)では、重複する値を検索する場合、その最初のインデックスが返ってくるとは限りません。
+
+前回: [競技プログラミングでも C# で簡潔に書きたい](../Languages/CSharp/Competitive-Short-Code.md)
 
 ### 参照
 - [二分探索 - Wikipedia](https://bit.ly/2Ssg0dx)
