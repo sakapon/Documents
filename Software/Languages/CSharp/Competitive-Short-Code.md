@@ -76,6 +76,8 @@ https://gist.github.com/sakapon/ee5d8b247c56e101ab931ab3d2899d04
 また、2文字目のインデックスを探索するところを二分探索にすれば O(1000・logN) となります。
 ただし、前処理が少なくとも O(N) であるためそちらのほうが影響するかもしれません。
 
+次回: [二分探索のライブラリ化](../../Algorithms/Binary-Search.md)
+
 ### 以前に投稿した記事
 - [AtCoder を始めようかと思っている学生たちへ](https://blog.kcg.ne.jp/futurelab/2019/10/04/atcoder/)
 - [11月祭で「利きコード選手権」を開催しました (その1)](https://blog.kcg.ne.jp/futurelab/2019/11/18/kikicode/)
