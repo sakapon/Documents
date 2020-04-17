@@ -10,7 +10,7 @@
 ### Create Project
 - Create Branch `vX.Y`
 - Create Project
-- [Update Project Settings](Project-Settings.md)
+- [Update Project Settings (.NET Framework)](Project-Settings.md)
 - [Update Project Settings (.NET Core)](Project-Settings-NetCore.md)
 
 ### Release
