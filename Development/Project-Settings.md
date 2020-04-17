@@ -1,4 +1,4 @@
-## Project Settings
+## Project Settings (.NET Framework Project Format)
 
 ### プロジェクトのプロパティ
 - アプリケーション
