@@ -40,8 +40,8 @@ For .dll, using TargetFrameworks
     <Description>A library.</Description>
     <Authors>Keiho Sakapon</Authors>
     <Copyright>© 2018 Keiho Sakapon</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/sakapon/KLibrary</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/sakapon/KLibrary/blob/master/LICENSE</PackageLicenseUrl>
     <PackageTags>Lib Sample</PackageTags>
     <PackageReleaseNotes>The first release.</PackageReleaseNotes>
 ```
