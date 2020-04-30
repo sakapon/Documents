@@ -46,7 +46,8 @@ https://gist.github.com/sakapon/bb272a7bc19cdcaee42dc47b45e0bdea
 - これまでは二分探索を実装するときに再帰を使っていたのですが、おそらく過去に読んだ解説に再帰を使うものが多かったためだと思います。競技プログラミングを始めてから自然に `while (l < r)` を使うようになりました。
 - [Array.BinarySearch メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.array.binarysearch)や [List<T>.BinarySearch メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.collections.generic.list-1.binarysearch)では、重複する値を検索する場合、その最初のインデックスが返ってくるとは限りません。
 
-前回: [競技プログラミングでも C# で簡潔に書きたい](../Languages/CSharp/Competitive-Short-Code.md)
+前回: [競技プログラミングでも C# で簡潔に書きたい](../Languages/CSharp/Competitive-Short-Code.md)  
+次回: [数論・素数に関するメソッドを実装する](Numerics.md)
 
 ### 参照
 - [二分探索 - Wikipedia](https://bit.ly/2Ssg0dx)
