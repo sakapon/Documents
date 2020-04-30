@@ -1,4 +1,7 @@
 # 数論・素数に関する機能を実装する (C#)
+数論・素数に関する機能を C# で一通り実装したメソッド群を紹介します。  
+通常の数値計算プログラミングにも、また競技プログラミング用のライブラリとしても使えます。
+
 機能は次の通りです。
 
 ### Euclid 互除法
@@ -8,6 +11,7 @@
   - ax + by = 1 の解
 
 ### 素数
+下の O(x) は計算量のオーダーを表します。
 - 素因数分解
   - O(√n)
 - 約数の列挙
@@ -28,3 +32,14 @@ https://gist.github.com/sakapon/9ee745bd460ae03045ee406a3de6a90c
 使用例を次に示します。
 
 https://gist.github.com/sakapon/62e6644f0c0208007325896c03642552
+
+### 作成したサンプル
+- [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib)
+
+### バージョン情報
+- .NET Standard 2.0
+
+### 参照
+- [LINQ で素数を求める (C#)](https://sakapon.wordpress.com/2014/08/18/linq-prime-numbers/)
+- [プログラミングコンテストチャレンジブック](https://www.amazon.co.jp/dp/B00CY9256C)
+- [エラトステネスのふるいとその計算量](https://mathtrain.jp/eratosthenes)
