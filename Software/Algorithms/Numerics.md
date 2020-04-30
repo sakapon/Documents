@@ -1,4 +1,4 @@
-# 数論・素数に関するメソッドを実装する (C#)
+# 数論・素数に関するメソッドを実装する
 数論・素数に関するメソッドを C# で一通り実装してまとめました。  
 通常の数値計算プログラミングにも、また競技プログラミング用のライブラリとしても使えます。
 
@@ -39,6 +39,7 @@ https://gist.github.com/sakapon/62e6644f0c0208007325896c03642552
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib)
 
 ### バージョン情報
+- C# 7.0
 - .NET Standard 2.0
 
 ### 参照
