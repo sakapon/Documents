@@ -26,6 +26,7 @@
 * **Tag** 「vX.Y.Z」と入力する
 * **Title** 「vX.Y.Z」と入力する
 * **Description** Release Notes の内容を転記する
+* .exe をリリースする場合、ZIP ファイルを添付してもよい
 
 ### Upload the NuGet Package
 * Upload the created NuGet package to [NuGet Gallery](https://www.nuget.org/).
