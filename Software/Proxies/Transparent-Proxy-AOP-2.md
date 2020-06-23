@@ -35,4 +35,5 @@ C# 7.0
 
 #### 参照
 - [RealProxy クラス](https://msdn.microsoft.com/ja-jp/library/system.runtime.remoting.proxies.realproxy.aspx)
-- [アスペクト指向プログラミング](https://t.co/K3PluHqMbh)
+- [アスペクト指向プログラミング](https://t.co/K3PluHqMbh) (Wikipedia)
+- [.NETでアスペクト指向プログラミング（AOP）](http://architect360.apricot-jp.com/300/netaop.html)
