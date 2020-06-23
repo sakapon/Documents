@@ -43,4 +43,5 @@ C# 7.0
 
 #### 参照
 - [RealProxy クラス](https://msdn.microsoft.com/ja-jp/library/system.runtime.remoting.proxies.realproxy.aspx)
-- [アスペクト指向プログラミング](https://t.co/K3PluHqMbh)
+- [アスペクト指向プログラミング](https://t.co/K3PluHqMbh) (Wikipedia)
+- [RealProxy クラスによるアスペクト指向プログラミング](https://docs.microsoft.com/ja-jp/archive/msdn-magazine/2014/february/aspect-oriented-programming-aspect-oriented-programming-with-the-realproxy-class) (MSDN Magazine)
