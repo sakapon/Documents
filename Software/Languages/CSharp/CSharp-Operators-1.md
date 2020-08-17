@@ -24,15 +24,16 @@ https://gist.github.com/sakapon/b104bcf4af76f5131fb2cfdb25cc4da0
 それほどパフォーマンスを気にせず、楽な実装で等値演算を実現したいのであれば、上記のようなコードだけで済ませることもできます。
 
 ### タプル型など
-ついでに、匿名型 (参照型)、Tuple (参照型) および ValueTuple (値型) の動作にも触れておきます。
+ついでに、[匿名型](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types) (参照型)、[Tuple](https://docs.microsoft.com/dotnet/api/system.tuple) (参照型) および [ValueTuple](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/value-tuples) (値型) の動作にも触れておきます。
 
-これらはいずれも Equals メソッドで各要素を比較できます。
-C# 7.3 以降の ValueTuple では言語の機能として `==` および `!=` 演算子が使え、コンパイラにより各要素の等値比較に展開されます。
+これらはいずれも Equals メソッドで各要素の等値性を評価できます。  
+C# 7.3 以降の ValueTuple では言語の機能として `==` および `!=` 演算子が使え、コンパイラにより各要素の等値演算に展開されます。
+なお、フィールド名は無視され、フィールドの定義順により Item1, Item2, ・・・となります (下図は ILSpy)。
 
 (図)
 
-さらに、Tuple および ValueTuple はともに IComparable を実装しており、そのまま Array.Sort や LINQ のソートにおいてキーとして利用できます。第1要素、第2要素、・・・の順に優先されます。
-なお、IComparable を実装しているものの、`<` などの比較演算子は定義されていません。
+さらに、Tuple および ValueTuple はともに IComparable インターフェイスを実装しており、そのまま Array.Sort や LINQ のソートにおいてキーとして利用できます。評価は Item1, Item2, ・・・の順に優先されます。
+なお、IComparable インターフェイスを実装しているものの、`<` などの比較演算子は定義されていません。
 
 https://gist.github.com/sakapon/951a8f4b29347dbcdee1f77767ce1ff9
 
@@ -55,5 +56,6 @@ https://gist.github.com/sakapon/951a8f4b29347dbcdee1f77767ce1ff9
 ### 参照
 - [C# 演算子と式 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/)
 - [タプル型 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/value-tuples)
+- [Tuple クラス](https://docs.microsoft.com/dotnet/api/system.tuple)
 - [匿名型 (C# プログラミング ガイド)](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types)
 - [.NETのクラスライブラリ設計](https://amzn.to/3kLf0R8) (書籍)
