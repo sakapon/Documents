@@ -40,6 +40,20 @@ https://gist.github.com/sakapon/557c5cbd3b29f45fa3b4967bfbed0221
 比較演算についても同様に CompareTo(T) メソッドの中に実際の処理を記述し、各比較演算子からこれを呼び出しています。
 
 ### 実装例 (クラス)
+クラスでも同様に、等値演算子と比較演算子をオーバーロードする実装例を示します。
+
+https://gist.github.com/sakapon/ed8320839f2543d21e9f793afd215e3f
+
+### Visual Studio による自動生成
+Visual Studio には等値演算に関するコードを自動生成する機能があります。  
+クラス名のところで `Ctrl + .` を押し、`[Equals および GetHashCode を生成する]` を選択して利用できます。
+
+(図)
+
+すると、だいたい上記の例のようなコードが生成されます。構造体とクラスのパターンがあります。  
+実装が面倒な場合はこの機能を使うのもよいでしょう。
+
+次回は算術演算子のオーバーロードについてです。
 
 前回: [C# で演算子を実装する (1)](CSharp-Operators-1.md)  
 次回: [C# で演算子を実装する (3)](CSharp-Operators-3.md)
@@ -55,8 +69,9 @@ https://gist.github.com/sakapon/557c5cbd3b29f45fa3b4967bfbed0221
 ### 参照
 - [C# 演算子と式 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/)
 - [演算子のオーバーロード (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/operator-overloading)
-- [等値演算子 (C# プログラミング ガイド)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-operators)
-- [比較演算子 (C# プログラミング ガイド)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/comparison-operators)
+- [等値演算子 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-operators)
+- [比較演算子 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/comparison-operators)
+- [構造体型 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/struct)
 - [.NETのクラスライブラリ設計](https://amzn.to/3kLf0R8) (書籍)
 - [演算子のオーバーロード](https://ufcpp.net/study/csharp/oo_operator.html)
 - [C# 7のタプルが一般的なガイドラインに沿わずに書き換え可能な構造体である背景](https://www.buildinsider.net/column/iwanaga-nobuyuki/016)
