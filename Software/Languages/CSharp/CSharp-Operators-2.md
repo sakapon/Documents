@@ -9,11 +9,13 @@
 等値演算子をオーバーロードするときは、[IEquatable\<T\> インターフェイス](https://docs.microsoft.com/dotnet/api/system.iequatable-1)を実装します。  
 また、比較演算子をオーバーロードするときは、[IComparable\<T\> インターフェイス](https://docs.microsoft.com/dotnet/api/system.icomparable-1)を実装します。
 
-原理上はこれらのインターフェイスを実装しなくても演算子のオーバーロードはできるのですが、これらのジェネリックなインターフェイスを実装することで、各種のライブラリ (例えば Array.IndexOf\<T\>, Array.Sort\<T\>) から [EqualityComparer\<T\>.Default](https://docs.microsoft.com/dotnet/api/system.collections.generic.equalitycomparer-1.default) および [Comparer\<T\>.Default](https://docs.microsoft.com/dotnet/api/system.collections.generic.comparer-1.default
-) を通じて Equals(T) メソッドおよび CompareTo(T) メソッドが呼び出され、構造体の値のボックス化を避けることができます。  
-逆に、型引数 T に対して等値演算・比較演算を呼び出すライブラリを作る側のときは、EqualityComparer\<T\>.Default および Comparer\<T\>.Default を使いましょう。
+原理上はこれらのインターフェイスを実装しなくても演算子のオーバーロードはできるのですが、これらのジェネリックなインターフェイスを実装することで、各種のライブラリ (Array.IndexOf\<T\>, Array.Sort\<T\> など) からは型変換を伴わずに Equals(T) メソッドおよび CompareTo(T) メソッドが呼び出されます。
+構造体であれば値のボックス化を避けることができます。  
+これは、各種のライブラリが [EqualityComparer\<T\>.Default](https://docs.microsoft.com/dotnet/api/system.collections.generic.equalitycomparer-1.default) および [Comparer\<T\>.Default](https://docs.microsoft.com/dotnet/api/system.collections.generic.comparer-1.default
+) を通じて各インターフェイスにアクセスする仕組みによるものです。
+したがって、逆に型引数 T に対して等値演算・比較演算を呼び出すライブラリを作る立場のときは、EqualityComparer\<T\>.Default および Comparer\<T\>.Default を使いましょう。
 
-また、各種ライブラリからの等値演算・比較演算さえできればよいというケースでは、演算子をオーバーロードせずにインターフェイスを実装するだけ、という選択肢もあります。
+また、各種ライブラリからの等値演算・比較演算さえできればよいというケース (ソートに使うだけ、など) では、演算子をオーバーロードせずにインターフェイスを実装するだけ、という選択肢もあります。
 
 前回: [C# で演算子を実装する (1)](CSharp-Operators-1.md)  
 次回: [C# で演算子を実装する (3)](CSharp-Operators-3.md)
