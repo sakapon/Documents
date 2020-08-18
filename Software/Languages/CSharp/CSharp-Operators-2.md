@@ -1,7 +1,7 @@
 # C# で演算子を実装する (2)
 
 ユーザー定義型で演算子を実装することを「演算子をオーバーロードする」と呼びます。  
-オーバーロードできる演算子の一覧は、[演算子のオーバーロード (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/operator-overloading) に載っています。
+オーバーロードできる演算子の一覧は、[演算子のオーバーロード (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/operator-overloading) に記載されています。
 
 今回は、実装の頻度が高く、かつ最もややこしい等値演算子 (`==`, `!=`) と比較演算子 (`<`, `>`, `<=`, `>=`) を扱います。
 
@@ -14,7 +14,7 @@
 
 これは、各種のライブラリが [EqualityComparer\<T\>.Default](https://docs.microsoft.com/dotnet/api/system.collections.generic.equalitycomparer-1.default) および [Comparer\<T\>.Default](https://docs.microsoft.com/dotnet/api/system.collections.generic.comparer-1.default
 ) を通じて各インターフェイスにアクセスする仕組みによるものです。  
-したがって、逆に型引数 T に対して等値演算・比較演算を呼び出すライブラリを作る立場のときは、EqualityComparer\<T\>.Default および Comparer\<T\>.Default を利用しましょう。
+逆に、型引数 T に対して等値演算・比較演算を呼び出すライブラリを作る立場のときは、EqualityComparer\<T\>.Default および Comparer\<T\>.Default を利用しましょう。
 
 また、各種ライブラリからの等値演算・比較演算さえできればよいというケース (ソートに使うだけ、など) では、演算子をオーバーロードせずにインターフェイスを実装するだけ、という選択肢もあります。
 
@@ -30,7 +30,7 @@ https://gist.github.com/sakapon/557c5cbd3b29f45fa3b4967bfbed0221
 ここでは HashCode.Combine メソッドを利用していますが、これは比較的新しく、.NET Standard 2.1 には含まれ、.NET Standard 2.0 には含まれていません。
 もし HashCode.Combine メソッドを利用できない環境であれば、ValueTuple や Tuple を構成してその GetHashCode メソッドを呼び出すとよいでしょう。
 
-さて、実装しなければならないメソッドがいくつもあるのですが、本題である各プロパティに対する等価性評価をどこか一か所で実装して、他からそれを呼び出す形にすればよいです。
+さて、実装しなければならないメソッドがいくつもあるのですが、本題である各プロパティに対する等価性評価をいずれかの一か所で実装して、他からそれを呼び出す形にすればよいです。
 ここではインターフェイスを実装する Equals(T) メソッドの中に実際の処理を一元的に記述しています。
 
 どこに実装しても、整合性が取れていれば問題ないでしょう。  
@@ -46,7 +46,7 @@ https://gist.github.com/sakapon/ed8320839f2543d21e9f793afd215e3f
 
 ### Visual Studio による自動生成
 Visual Studio には等値演算に関するコードを自動生成する機能があります。  
-クラス名のところで `Ctrl + .` を押し、`[Equals および GetHashCode を生成する]` を選択して利用できます。
+型名のところで `Ctrl + .` を押し、`[Equals および GetHashCode を生成する]` を選択して利用できます。
 
 (図)
 
