@@ -6,7 +6,7 @@ C# では、ユーザー定義型 (自作の型) においても、組込み型�
 ### 素のクラスおよび構造体
 しかしその前に、何も演算子を実装しなかったらどのような動作をするのか確認しておきましょう。  
 こちらはプロパティを定義しただけのクラス (参照型) です。
-このコードでオブジェクトの等値性を確認します。
+このコードでオブジェクトの等価性を確認します。
 
 https://gist.github.com/sakapon/a592069d354ce6229c3bb259044c3e56
 
@@ -16,7 +16,7 @@ https://gist.github.com/sakapon/a592069d354ce6229c3bb259044c3e56
 
 https://gist.github.com/sakapon/b104bcf4af76f5131fb2cfdb25cc4da0
 
-構造体の場合はなんと、Equals メソッドでプロパティごと (正確にはフィールドごと) の等値性評価が機能します。  
+構造体の場合はなんと、Equals メソッドでプロパティごと (正確にはフィールドごと) の等価性評価が機能します。  
 これは、構造体は暗黙的に ValueType クラスを継承していることにより [ValueType.Equals メソッド](https://docs.microsoft.com/dotnet/api/system.valuetype.equals)が呼び出され、すべてのフィールドの値が等しいかどうか判定されるためです。
 
 この仕組みにより、何もしなくても構造体のインスタンスを Array.IndexOf や LINQ の Distinct、さらに Dictionary のキーとしても使うことができます。
@@ -26,9 +26,11 @@ https://gist.github.com/sakapon/b104bcf4af76f5131fb2cfdb25cc4da0
 ### タプル型など
 ついでに、[匿名型](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types) (参照型)、[Tuple](https://docs.microsoft.com/dotnet/api/system.tuple) (参照型) および [ValueTuple](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/value-tuples) (値型) の動作にも触れておきます。
 
-これらはいずれも Equals メソッドで各要素の等値性を評価できます。  
+これらはいずれも Equals メソッドで各要素の等価性が評価されます。  
 C# 7.3 以降の ValueTuple では言語の機能として `==` および `!=` 演算子が使え、コンパイラにより各要素の等値演算に展開されます。  
 なお、内部でフィールド名は無視され、フィールドの定義順により Item1, Item2, ・・・となります (下図は ILSpy)。
+
+https://gist.github.com/sakapon/c00fe5960bba2d60d11ddd3c4b1dc74d
 
 (図)
 
