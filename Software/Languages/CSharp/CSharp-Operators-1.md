@@ -32,14 +32,14 @@ C# 7.3 以降の ValueTuple では言語の機能として `==` および `!=` �
 
 https://gist.github.com/sakapon/c00fe5960bba2d60d11ddd3c4b1dc74d
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/ValueTuple-ILSpy.png)
 
 さらに、Tuple および ValueTuple はともに IComparable インターフェイスを実装しており、そのまま Array.Sort や LINQ のソートにおいてキーとして利用できます。評価は Item1, Item2, ・・・の順に優先されます。  
 なお、IComparable インターフェイスを実装しているものの、比較演算子 (`<`, `>`, `<=`, `>=`) は定義されていません。
 
 https://gist.github.com/sakapon/951a8f4b29347dbcdee1f77767ce1ff9
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/ValueTuple-Sort.png)
 
 したがって、ユーザー定義型を作成しなくても ValueTuple で済んでしまうケースもあるでしょう。
 
