@@ -57,7 +57,9 @@ https://gist.github.com/sakapon/ed8320839f2543d21e9f793afd215e3f
 Visual Studio には等値演算に関するコードを自動生成する機能があります。  
 型名のところで `[Ctrl + .]` を押し、`[Equals および GetHashCode を生成する]` を選択して利用できます。
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/VS-Equality-1.png)
+
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/VS-Equality-2.png)
 
 すると、だいたい上記の実装例のようなコードが生成されます。構造体とクラスのパターンがあります。  
 実装が面倒な場合はこの機能を使うのもよいでしょう。
