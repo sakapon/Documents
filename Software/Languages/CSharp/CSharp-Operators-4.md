@@ -23,6 +23,38 @@ https://gist.github.com/sakapon/ef775da2dab677534d60c8b2717713ea
 これにより、逆順のインデックスでもアクセスできるようになります。  
 [Range 型](https://docs.microsoft.com/dotnet/api/system.range)は、例えば数列の部分和を求めるというケースで使えるでしょう。
 
+```cs
+[TestMethod]
+public void Indexer()
+{
+	BitArray b = 10;
+	Assert.AreEqual(false, b[0]);
+	Assert.AreEqual(true, b[1]);
+	Assert.AreEqual(false, b[2]);
+	Assert.AreEqual(true, b[3]);
+	Assert.AreEqual(false, b[4]);
+	Assert.AreEqual(false, b[5]);
+	Assert.AreEqual(false, b[^27]);
+	Assert.AreEqual(10, (int)b);
+
+	b[5] = true;
+	Assert.AreEqual(true, b[5]);
+	Assert.AreEqual(true, b[^27]);
+	Assert.AreEqual(42, (int)b);
+}
+
+[TestMethod]
+public void Initializer()
+{
+	var b = new BitArray
+	{
+		[3] = true,
+		[6] = true,
+	};
+	Assert.AreEqual(72, b.Value);
+}
+```
+
 次回は論理演算子についてです。
 
 前回: [C# で演算子を実装する (3)](CSharp-Operators-3.md)  
