@@ -2,7 +2,7 @@
 
 [前回の記事](CSharp-Operators-3.md)では、算術演算子のオーバーロードについて説明しました。  
 今回は例として、.NET の基本クラスライブラリにある BitArray クラスや BitVector32 構造体のような、整数をビットの配列として扱えるものを実装します。
-インデクサー、キャスト演算子、インクリメント演算子 (算術演算子の一部) をオーバーロードしており、その他にもいろいろな観点が詰め込まれています。
+キャスト演算子、インデクサー、インクリメント演算子 (算術演算子の一部) をオーバーロードしており、その他にもいろいろな観点が詰め込まれています。
 
 まずはソースコードを示します。
 
@@ -57,12 +57,12 @@ public void Indexer()
 	Assert.AreEqual(true, b[3]);
 	Assert.AreEqual(false, b[4]);
 	Assert.AreEqual(false, b[5]);
-	Assert.AreEqual(false, b[^27]);
+	Assert.AreEqual(false, b[^27]); // Index
 	Assert.AreEqual(10, (int)b);
 
 	b[5] = true;
 	Assert.AreEqual(true, b[5]);
-	Assert.AreEqual(true, b[^27]);
+	Assert.AreEqual(true, b[^27]); // Index
 	Assert.AreEqual(42, (int)b);
 }
 
@@ -80,6 +80,40 @@ public void Initializer()
 
 ### インクリメント演算子
 インクリメント演算子 `++` およびデクリメント演算子 `--` は、引数の型も戻り値の型も定義元と同じでなければなりません (派生型はOK)。
+
+### bit 全探索
+以上のように実装すると、いわゆる bit 全探索のアルゴリズムが次のようなコードでできます。
+
+```cs
+[TestMethod]
+public void BitSearch()
+{
+	var n = 8;
+	var n2 = 1 << n; // 256
+
+	// bit 全探索
+	for (BitArray b = 0; b.Value < n2; b++)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			// b[i] の真偽による何らかの処理
+			Console.Write(b[i] ? 1 : 0);
+		}
+		Console.WriteLine();
+	}
+}
+```
+
+(図)
+
+なお、.NET の基本クラスライブラリの [BitArray クラス](https://docs.microsoft.com/dotnet/api/system.collections.bitarray)では `new BitArray(new[] { x })` のようにコンストラクターで元の整数を配列で渡す必要があり、[BitVector32 構造体](https://docs.microsoft.com/dotnet/api/system.collections.specialized.bitvector32)ではインデクサーで `b[i]` ではなく `b[1 << i]` のようにマスクを表す整数を指定する必要がある、という違いがあります。
+
+### デバッグ時の表示
+Visual Studio において、デバッグ時の `[ローカル]` ウィンドウや `[ウォッチ]` ウィンドウで値を表示するとき、既定では ToString メソッドを呼び出した結果が利用されます。
+これを ToString と異なるものにしたい場合、型に [[DebuggerDisplay] 属性](https://docs.microsoft.com/dotnet/api/system.diagnostics.debuggerdisplayattribute)を追加します。  
+上の実装例では、整数を16進数形式で表示させています。
+
+(図)
 
 次回は論理演算子についてです。
 
