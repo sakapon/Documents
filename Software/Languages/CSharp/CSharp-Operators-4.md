@@ -20,18 +20,7 @@ https://gist.github.com/sakapon/ef775da2dab677534d60c8b2717713ea
 ToString メソッドの逆の操作として、インスタンスの文字列表現からインスタンスを復元するための Parse メソッドを用意することがあります。
 Parse メソッドを実装する場合は、少なくとも ToString メソッドで得られた文字列をそのまま Parse メソッドで解析でき、元と同等のインスタンスが得られることが望ましいでしょう。
 
-```cs
-[TestMethod]
-public void Parse()
-{
-	BitArray b1 = 65535; // implicit conversion
-	Assert.AreEqual("65535", b1.ToString());
-
-	var b2 = BitArray.Parse(b1.ToString());
-	Assert.AreEqual(65535, (int)b2); // explicit conversion
-	Assert.AreEqual(b1, b2);
-}
-```
+https://gist.github.com/sakapon/5a62d055ec735cde2575f2b1f91c91ce
 
 ### インデクサー
 `this[]` という特殊な形式のプロパティを実装することで、配列のように `[]` でアクセスできるようになります。  
@@ -46,37 +35,7 @@ public void Parse()
 これにより、逆順のインデックスでもアクセスできるようになります。  
 [Range 型](https://docs.microsoft.com/dotnet/api/system.range)は、例えば数列の部分和を求めるというケースで使えるでしょう。
 
-```cs
-[TestMethod]
-public void Indexer()
-{
-	BitArray b = 10;
-	Assert.AreEqual(false, b[0]);
-	Assert.AreEqual(true, b[1]);
-	Assert.AreEqual(false, b[2]);
-	Assert.AreEqual(true, b[3]);
-	Assert.AreEqual(false, b[4]);
-	Assert.AreEqual(false, b[5]);
-	Assert.AreEqual(false, b[^27]); // Index
-	Assert.AreEqual(10, (int)b);
-
-	b[5] = true;
-	Assert.AreEqual(true, b[5]);
-	Assert.AreEqual(true, b[^27]); // Index
-	Assert.AreEqual(42, (int)b);
-}
-
-[TestMethod]
-public void Initializer()
-{
-	var b = new BitArray
-	{
-		[3] = true,
-		[6] = true,
-	};
-	Assert.AreEqual(72, b.Value);
-}
-```
+https://gist.github.com/sakapon/26dcf40b8daa77a891a6c8db2275100d
 
 ### インクリメント演算子
 インクリメント演算子 `++` およびデクリメント演算子 `--` は、引数の型も戻り値の型も定義元と同じでなければなりません (派生型はOK)。
@@ -84,25 +43,7 @@ public void Initializer()
 ### bit 全探索
 以上のように実装すると、いわゆる bit 全探索のアルゴリズムが次のようなコードでできます。
 
-```cs
-[TestMethod]
-public void BitSearch()
-{
-	var n = 8;
-	var n2 = 1 << n; // 256
-
-	// bit 全探索
-	for (BitArray b = 0; b.Value < n2; b++)
-	{
-		for (int i = 0; i < n; i++)
-		{
-			// b[i] の真偽による何らかの処理
-			Console.Write(b[i] ? 1 : 0);
-		}
-		Console.WriteLine();
-	}
-}
-```
+https://gist.github.com/sakapon/06d170b712990531022ed577ba051a37
 
 (図)
 
