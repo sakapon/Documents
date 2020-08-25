@@ -32,7 +32,7 @@ https://gist.github.com/sakapon/5a62d055ec735cde2575f2b1f91c91ce
 他にも、Add メソッドを定義することで、List<T> のように値を追加するコレクション初期化子を利用できます。
 
 また、C# 8.0 で Index および Range の機能が導入されたため、インデクサーのオーバーロードで [Index 型](https://docs.microsoft.com/dotnet/api/system.index)を引数として使えるようにしています。
-これにより、`b[^i]` の形式により逆順のインデックスでもアクセスできるようになります。  
+これで `b[^i]` の形式により、逆順のインデックスでもアクセスできるようになります。  
 [Range 型](https://docs.microsoft.com/dotnet/api/system.range)は、例えば数列の部分和を求めるというケースで使えるでしょう。
 
 https://gist.github.com/sakapon/26dcf40b8daa77a891a6c8db2275100d
@@ -53,7 +53,7 @@ https://gist.github.com/sakapon/06d170b712990531022ed577ba051a37
 Visual Studio において、デバッグ時の `[ローカル]` ウィンドウや `[ウォッチ]` ウィンドウで値を表示するとき、既定では ToString メソッドを呼び出した結果が利用されます。
 これを ToString と異なるものにしたい場合、型に [[DebuggerDisplay] 属性](https://docs.microsoft.com/dotnet/api/system.diagnostics.debuggerdisplayattribute)を追加します。  
 コンストラクターに指定する文字列では、`{}` の中にコードを記述することができます。  
-上の実装例では、整数を16進数形式で表示させています。
+上の実装例では、整数を 16 進数形式で表示させています。
 
 (図)
 
