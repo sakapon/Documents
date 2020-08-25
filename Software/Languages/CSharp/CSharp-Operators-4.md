@@ -106,11 +106,12 @@ public void BitSearch()
 
 (図)
 
-なお、.NET の基本クラスライブラリの [BitArray クラス](https://docs.microsoft.com/dotnet/api/system.collections.bitarray)では `new BitArray(new[] { x })` のようにコンストラクターで元の整数を配列で渡す必要があり、[BitVector32 構造体](https://docs.microsoft.com/dotnet/api/system.collections.specialized.bitvector32)ではインデクサーで `b[i]` ではなく `b[1 << i]` のようにマスクを表す整数を指定する必要がある、という違いがあります。
+なお、.NET の基本クラスライブラリの [BitArray クラス](https://docs.microsoft.com/dotnet/api/system.collections.bitarray)では `new BitArray(new[] { x })` のようにコンストラクターで元の整数を配列で渡し、[BitVector32 構造体](https://docs.microsoft.com/dotnet/api/system.collections.specialized.bitvector32)ではインデクサーで `b[i]` ではなく `b[1 << i]` のようにマスクを表す整数を指定する、という違いがあります。
 
 ### デバッグ時の表示
 Visual Studio において、デバッグ時の `[ローカル]` ウィンドウや `[ウォッチ]` ウィンドウで値を表示するとき、既定では ToString メソッドを呼び出した結果が利用されます。
 これを ToString と異なるものにしたい場合、型に [[DebuggerDisplay] 属性](https://docs.microsoft.com/dotnet/api/system.diagnostics.debuggerdisplayattribute)を追加します。  
+コンストラクターに指定する文字列では、`{}` の中にコードを記述することができます。  
 上の実装例では、整数を16進数形式で表示させています。
 
 (図)
