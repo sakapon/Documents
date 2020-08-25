@@ -55,6 +55,19 @@ public void Initializer()
 }
 ```
 
+### キャスト演算子
+型変換 (キャスト) には、明示的な型変換と暗黙的な型変換が存在します。  
+基本的な方針として、情報の消失がない場合は暗黙的な型変換を実装可能である、と考えます。  
+ただし、一方が他方のインスタンスをラップしている関係の場合には、ラップする操作を暗黙的な型変換として、ラップを解除する操作を明示的な型変換として定義することが多いです。
+今回の例では、BitArray が int をラップしています。
+
+### Parse メソッド
+ToString メソッドの逆の操作として、インスタンスの文字列表現からインスタンスを復元するための Parse メソッドを用意することがあります。
+Parse メソッドを実装する場合は、少なくとも ToString メソッドで得られた文字列をそのまま Parse メソッドで解析でき、元と同等のインスタンスが得られることが望ましいでしょう。
+
+### インクリメント演算子
+インクリメント演算子 `++` およびデクリメント演算子 `--` は、引数の型も戻り値の型も定義元と同じでなければなりません (派生型はOK)。
+
 次回は論理演算子についてです。
 
 前回: [C# で演算子を実装する (3)](CSharp-Operators-3.md)  
@@ -77,5 +90,6 @@ public void Initializer()
 - [算術演算子 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators)
 - [BitArray クラス](https://docs.microsoft.com/dotnet/api/system.collections.bitarray)
 - [BitVector32 構造体](https://docs.microsoft.com/dotnet/api/system.collections.specialized.bitvector32)
+- [DebuggerDisplayAttribute クラス](https://docs.microsoft.com/dotnet/api/system.diagnostics.debuggerdisplayattribute)
 - [演算子のオーバーロード](https://ufcpp.net/study/csharp/oo_operator.html)
 - [.NETのクラスライブラリ設計](https://amzn.to/3kLf0R8) (書籍)
