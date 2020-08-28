@@ -1,7 +1,7 @@
 # C# で演算子を実装する (4)
 
 [前回の記事](CSharp-Operators-3.md)では、算術演算子のオーバーロードについて説明しました。  
-今回は例として、.NET の基本クラスライブラリにある BitArray クラスや BitVector32 構造体のような、整数をビットの配列として扱えるものを実装します。
+今回は例として、.NET の基本クラスライブラリにある [BitArray クラス](https://docs.microsoft.com/dotnet/api/system.collections.bitarray)や [BitVector32 構造体](https://docs.microsoft.com/dotnet/api/system.collections.specialized.bitvector32)のような、整数をビットの配列として扱えるものを実装します。
 キャスト演算子、インデクサー、インクリメント演算子 (算術演算子の一部) をオーバーロードしており、その他にもいろいろな観点が詰め込まれています。
 
 まずはソースコードを示します。
