@@ -38,11 +38,13 @@ https://gist.github.com/sakapon/9d92680e9c68f3d53bb8e0c6b66ee443
 
 https://gist.github.com/sakapon/70c0df78061d3e6a6b28623c12040031
 
+このコードにより、下図のような真理値表が得られます。
+
 (図)
 
 ### クリーネの3値論理
 情報技術で多く使われているクリーネの3値論理における、真でも偽でもない3つ目の値 (C# では bool? 型の null) とは、「真でも偽でもない、もう一つの異なる固定値」ではなく「本来は真または偽の値を持つが、現在はわかっていない状態」と考えたほうが意味論的には理解しやすいと思います。  
-(命題論理の考え方については、以前に[命題論理を実装する (C#)](https://sakapon.wordpress.com/2016/12/16/propositional-logic/) という記事で書きました。)
+(命題論理の考え方については、以前に[命題論理を実装する (C#)](https://github.com/sakapon/Documents/blob/master/Math/Propositions/Propositional-Logic.md) という記事で書きました。)
 
 そこで、null の代わりに unknown という名前を使うことにします。  
 具体例として、`unknown & false` は、左側のオペランドが実際に true とわかっても false とわかっても式全体では false であることが確定しています。また、`unknown & true` は、左側のオペランドが true とわかるか false とわかるかで式全体の結果が変わるため現在は unknown です。すると、`x & y` が現時点で true と確定するのは x と y がともに true のときだけです。  
@@ -51,7 +53,7 @@ https://gist.github.com/sakapon/70c0df78061d3e6a6b28623c12040031
 bool? 型における論理演算もこれと同じになります。
 演算結果の真理値表はなかなか丸暗記できないと思いますが、上記のように短絡評価と関連付けることで導けるようになるはずです。
 
-また、`==` および `!=` 演算子を等価性ではなく命題論理における同値性として扱いたい場合、これら演算子の戻り値の型を定義元の型とし、`x == y` は `!(x ^ y)` と同じ意味に、`x != y` は `x ^ y` と同じ意味になるようにオーバーロードします。
+また、`==` および `!=` 演算子を等価性ではなく命題論理における同値性として扱いたい場合、これら演算子の戻り値の型を bool ではなく定義元の型とし、`x == y` は `!(x ^ y)` と同じ意味に、`x != y` は `x ^ y` と同じ意味になるようにオーバーロードします。
 
 もし null を unknown ではなく「もう一つの異なる固定値」と考えて「一方が null ならば `x & y` は null」のような体系を立てる場合であっても、各論理演算子をオーバーロードすれば実現できるでしょう。ただし、短絡評価はできません。
 
@@ -85,4 +87,4 @@ public static implicit operator bool(StringBool v) => v.IsTrue;
 - [演算子のオーバーロード](https://ufcpp.net/study/csharp/oo_operator.html)
 - [.NETのクラスライブラリ設計](https://amzn.to/3kLf0R8) (書籍)
 - [3値論理 - Wikipedia](https://t.co/WRXPzaVG1D)
-- [命題論理を実装する (C#)](https://sakapon.wordpress.com/2016/12/16/propositional-logic/)
+- [命題論理を実装する (C#)](https://github.com/sakapon/Documents/blob/master/Math/Propositions/Propositional-Logic.md)
