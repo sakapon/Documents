@@ -45,7 +45,7 @@ https://gist.github.com/sakapon/26dcf40b8daa77a891a6c8db2275100d
 
 https://gist.github.com/sakapon/06d170b712990531022ed577ba051a37
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/BitArray-BitSearch.png)
 
 なお、.NET の基本クラスライブラリの [BitArray クラス](https://docs.microsoft.com/dotnet/api/system.collections.bitarray)では `new BitArray(new[] { x })` のようにコンストラクターで元の整数を配列で渡し、[BitVector32 構造体](https://docs.microsoft.com/dotnet/api/system.collections.specialized.bitvector32)ではインデクサーで `b[i]` ではなく `b[1 << i]` のようにマスクを表す整数を指定する、という違いがあります。
 
@@ -55,7 +55,7 @@ Visual Studio において、デバッグ時の `[ローカル]` ウィンドウ
 コンストラクターに指定する文字列では、`{}` の中にコードを記述することができます。  
 上の実装例では、整数を 16 進数形式で表示させています。
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/VS-Debug-Attribute.png)
 
 次回は論理演算子についてです。
 
