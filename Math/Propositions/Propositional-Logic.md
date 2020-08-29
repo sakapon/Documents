@@ -6,10 +6,10 @@
 この投稿では、これらを一般化、形式化した命題論理をプログラミングで表現することを目指します。
 プログラミングをしない方も、適宜飛ばせばなんとか読めると思います。
 
-用語や定義については、主に [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)の第 7 章「命題論理入門」に記載されているものを使い、解説と実装をしていきます。
+用語や定義については、主に [Raymond Smullyan「記号論理学: 一般化と記号化」](https://amzn.to/32z1Y2c)の第 7 章「命題論理入門」に記載されているものを使い、解説と実装をしていきます。
 プログラミング言語としては C# (.NET) を利用します。
 
-[「記号論理学: 一般化と記号化」高橋 昌一郎, Raymond Smullyan, 川辺 治之](https://www.amazon.co.jp/dp/4621085727)
+[「記号論理学: 一般化と記号化」高橋 昌一郎, Raymond Smullyan, 川辺 治之](https://amzn.to/32z1Y2c)
 
 ### 論理結合子
 任意の命題 p は、真偽値 (truth value) を持ちます。真偽値とは、真 (T) または偽 (F) です。
@@ -82,4 +82,4 @@ Visual Studio で新規のコンソール アプリケーション プロジェ�
 .NET Framework 4.5
 
 **参照**  
-[Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)
+[Raymond Smullyan「記号論理学: 一般化と記号化」](https://amzn.to/32z1Y2c)
