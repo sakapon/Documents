@@ -42,6 +42,6 @@ https://gist.github.com/sakapon/62e6644f0c0208007325896c03642552
 - .NET Standard 2.0
 
 ### 参照
-- [プログラミングコンテストチャレンジブック](https://www.amazon.co.jp/dp/B00CY9256C)
+- [プログラミングコンテストチャレンジブック](https://amzn.to/3hfJLuN) (蟻本)
 - [エラトステネスのふるいとその計算量](https://mathtrain.jp/eratosthenes)
 - [LINQ で素数を求める (C#)](https://sakapon.wordpress.com/2014/08/18/linq-prime-numbers/)
