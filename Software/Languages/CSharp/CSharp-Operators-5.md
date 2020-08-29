@@ -38,9 +38,10 @@ https://gist.github.com/sakapon/9d92680e9c68f3d53bb8e0c6b66ee443
 
 https://gist.github.com/sakapon/70c0df78061d3e6a6b28623c12040031
 
-このコードにより、下図のような真理値表が得られます。
+このコードにより、下図のような真理値表が得られます。  
+短絡になったケースは小文字始まりで表示されています。
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/StringBool-Tables.png)
 
 ### クリーネの3値論理
 情報技術で多く使われているクリーネの3値論理における、真でも偽でもない3つ目の値 (C# では bool? 型の null) とは、「真でも偽でもない、もう一つの異なる固定値」ではなく「本来は真または偽の値を持つが、現在はわかっていない状態」と考えたほうが意味論的には理解しやすいと思います。  
