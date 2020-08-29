@@ -6,7 +6,7 @@
 今回は、このライブラリを利用して複雑な問題をいくつか解いてみます。
 
 ### 騎士と悪漢
-まず、前回でも紹介した書籍 [Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)から、問題を 2 つ引用します。
+まず、前回でも紹介した書籍 [Raymond Smullyan「記号論理学: 一般化と記号化」](https://amzn.to/32z1Y2c)から、問題を 2 つ引用します。
 
 ```
 すべての住民は騎士または悪漢のいずれかであり、騎士はつねに本当のことを言い、悪漢はつねに噓をつく。
@@ -101,5 +101,5 @@ B が 7 ターン目に静観したため、A は B=9 だとわかりました�
 .NET Framework 4.5
 
 **参照**  
-[Raymond Smullyan「記号論理学: 一般化と記号化」](https://www.amazon.co.jp/dp/4621085727)  
+[Raymond Smullyan「記号論理学: 一般化と記号化」](https://amzn.to/32z1Y2c)  
 [David Gale「Tracking the Automatic ANT: And Other Mathematical Explorations」](https://www.amazon.com/dp/1461274532)
