@@ -16,6 +16,12 @@
 
 https://gist.github.com/sakapon/588f5d94c7bee663746a91dc63e3b171
 
+### タプル型との相互変換
+C# 7.0 以降の機能で、ユーザー定義型でも Deconstruct メソッドを追加することにより、タプル型と同様に分解を利用できます (後付けの拡張メソッドでも可)。
+次のコードは、タプル型とのキャスト演算子と Deconstruct メソッドにより、ユーザー定義の構造体をタプル型に近い形で扱うことを目指した実装例です。
+
+https://gist.github.com/sakapon/ac87a691cdb62b1debfdfe551de321f7
+
 前回: [C# で演算子を実装する (5)](CSharp-Operators-5.md)
 
 ### 作成したサンプル
@@ -30,6 +36,7 @@ https://gist.github.com/sakapon/588f5d94c7bee663746a91dc63e3b171
 - [C# 演算子と式 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/)
 - [演算子のオーバーロード (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/operator-overloading)
 - [構造体型 (C# リファレンス)](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/struct)
+- [タプルとその他の型の分解](https://docs.microsoft.com/dotnet/csharp/deconstruct)
 - [KeyValuePair<TKey,TValue> 構造体](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)
 - [演算子のオーバーロード](https://ufcpp.net/study/csharp/oo_operator.html)
 - [.NETのクラスライブラリ設計](https://amzn.to/3kLf0R8) (書籍)
