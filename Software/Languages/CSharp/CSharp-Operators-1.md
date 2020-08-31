@@ -9,7 +9,7 @@ C# では、ユーザー定義型 (自作の型) においても、組込み型�
 - [(3) 算術演算子](CSharp-Operators-3.md)
 - [(4) キャスト演算子、インデクサー](CSharp-Operators-4.md)
 - [(5) 論理演算子](CSharp-Operators-5.md)
-- [(6) ？？？](CSharp-Operators-6.md)
+- [(6) 補足](CSharp-Operators-6.md)
 
 ### 素のクラスおよび構造体
 演算子を実装する前に、まず何も演算子を実装しなかったらどのような動作をするのか確認しておきましょう。  
