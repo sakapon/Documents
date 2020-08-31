@@ -67,7 +67,7 @@ bool? 型における論理演算もこれと同じになります。
 public static implicit operator bool(StringBool v) => v.IsTrue;
 ```
 
-次回はその他の設計についてです。
+次回はその他の注意点や設計についてです。
 
 前回: [C# で演算子を実装する (4)](CSharp-Operators-4.md)  
 次回: [C# で演算子を実装する (6)](CSharp-Operators-6.md)
