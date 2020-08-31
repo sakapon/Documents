@@ -15,15 +15,7 @@ https://gist.github.com/sakapon/ac87a691cdb62b1debfdfe551de321f7
 
 なお、最近のバージョンの基本クラスライブラリでは KeyValuePair<TKey,TValue> に [Deconstruct メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2.deconstruct)が追加されているため、例えば Dictionary<TKey,TValue> を使うときに次のように分解を利用できます。
 
-```cs
-[TestMethod]
-public void KeyValuePair_Deconstruct()
-{
-	var d = Enumerable.Range(1, 100).ToDictionary(i => i, i => i / 2.0);
-	foreach (var (i, value) in d)
-		Console.WriteLine($"{i} {value}");
-}
-```
+https://gist.github.com/sakapon/8752a4c7d5c07e6c88d317197f36139e
 
 ### ValueType のような抽象クラスを作る
 [(1) の記事](CSharp-Operators-1.md)で、構造体は暗黙的に ValueType クラスを継承するため最初からフィールドごとの等価性評価ができると書きました。  
