@@ -22,6 +22,22 @@ C# 7.0 以降の機能で、ユーザー定義型でも Deconstruct メソッド
 
 https://gist.github.com/sakapon/ac87a691cdb62b1debfdfe551de321f7
 
+### KeyValuePair
+[(1) のタプル型など](CSharp-Operators-1.md)の補足となりますが、タプル型 (ValueTuple) が登場する以前は、2つの値を値型で保持するために [KeyValuePair<TKey,TValue> 構造体](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)を使うことがありました。
+この KeyValuePair<TKey,TValue> では、等値演算子のオーバーロードも Equals メソッドのオーバーライドもないため、いちおう Equals メソッドで等価性評価はできるもののパフォーマンスは最適化されていません。
+
+なお、最近のバージョンの基本クラスライブラリでは KeyValuePair<TKey,TValue> に [Deconstruct メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2.deconstruct)が追加されているため、例えば Dictionary<TKey,TValue> を使うときに次のように分解を利用できます。
+
+```cs
+[TestMethod]
+public void KeyValuePair_Deconstruct()
+{
+	var d = Enumerable.Range(1, 100).ToDictionary(i => i, i => i / 2.0);
+	foreach (var (i, value) in d)
+		Console.WriteLine($"{i} {value}");
+}
+```
+
 前回: [C# で演算子を実装する (5)](CSharp-Operators-5.md)
 
 ### 作成したサンプル
