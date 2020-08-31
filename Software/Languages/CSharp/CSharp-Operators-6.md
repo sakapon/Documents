@@ -1,7 +1,7 @@
 # C# で演算子を実装する (6)
 
 [前回の記事](CSharp-Operators-5.md)では、論理演算子のオーバーロードについて説明しました。  
-今回はその他の注意点や設計について書いていきます。
+今回は補足として、その他の注意点や設計について書いていきます。
 
 ### タプル型との相互変換
 C# 7.0 以降の機能で、ユーザー定義型でも Deconstruct メソッドを追加することにより、タプル型と同様に分解を利用できます (後付けの拡張メソッドでも可)。
@@ -10,7 +10,7 @@ C# 7.0 以降の機能で、ユーザー定義型でも Deconstruct メソッド
 https://gist.github.com/sakapon/ac87a691cdb62b1debfdfe551de321f7
 
 ### KeyValuePair
-[(1) のタプル型など](CSharp-Operators-1.md)の補足となりますが、タプル型 (ValueTuple) が登場する以前は、2つの値を値型で保持するために [KeyValuePair<TKey,TValue> 構造体](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)を使うことがありました。
+[(1) のタプル型など](CSharp-Operators-1.md) の補足となりますが、タプル型 (ValueTuple) が登場する以前は、2つの値を値型で保持するために [KeyValuePair<TKey,TValue> 構造体](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)を使うことがありました。
 この KeyValuePair<TKey,TValue> には等値演算子のオーバーロードも Equals メソッドのオーバーライドもないため、いちおう Equals メソッドで等価性評価はできるもののパフォーマンスは最適化されていません。
 
 なお、最近のバージョンの基本クラスライブラリでは KeyValuePair<TKey,TValue> に [Deconstruct メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2.deconstruct)が追加されているため、例えば Dictionary<TKey,TValue> を使うときに次のように分解を利用できます。
