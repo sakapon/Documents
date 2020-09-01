@@ -11,15 +11,16 @@ https://gist.github.com/sakapon/ac87a691cdb62b1debfdfe551de321f7
 
 ### KeyValuePair
 [(1) のタプル型など](CSharp-Operators-1.md) の補足となりますが、タプル型 (ValueTuple) が登場する以前は、2つの値を値型で保持するために [KeyValuePair<TKey,TValue> 構造体](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)を使うことがありました。
-この KeyValuePair<TKey,TValue> には等値演算子のオーバーロードも Equals メソッドのオーバーライドもないため、いちおう Equals メソッドで等価性評価はできるもののパフォーマンスは最適化されていません。
+この KeyValuePair<TKey,TValue> には等値演算子のオーバーロードも Equals メソッドのオーバーライドもないため、いちおう Equals メソッドで Key および Value に対する等価比較はできるもののパフォーマンスは最適化されていません。
 
-なお、最近のバージョンの基本クラスライブラリでは KeyValuePair<TKey,TValue> に [Deconstruct メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2.deconstruct)が追加されているため、例えば Dictionary<TKey,TValue> を使うときに次のように分解を利用できます。
+なお、最近のバージョンの基本クラスライブラリでは KeyValuePair<TKey,TValue> に [Deconstruct メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2.deconstruct)が追加されているため、例えば Dictionary<TKey,TValue> の要素を列挙するときに次のように分解を利用できます。
 
 https://gist.github.com/sakapon/8752a4c7d5c07e6c88d317197f36139e
 
 ### ValueType のような抽象クラスを作る
-[(1) の記事](CSharp-Operators-1.md)で、構造体は暗黙的に ValueType クラスを継承するため最初からフィールドごとの等価性評価ができると書きました。  
-パフォーマンスは気にしないけど簡単な実装で等値演算を備えたクラスを実装したいという場合、ValueType と同様にリフレクションでフィールドごとの等価性評価をする抽象クラスを次の通り作ることができます。
+[(1) の記事](CSharp-Operators-1.md)で、構造体は暗黙的に ValueType クラスを継承するため最初から Equals メソッドでフィールドごとの等価性評価ができると書きました。  
+これのクラス版で、パフォーマンスは気にしないけど簡単な実装で等値演算を備えたクラスを実装したいという場合、ValueType と同様にリフレクションでフィールドごとの等価性評価をする抽象クラスを次のコードで作ることができます。  
+なお、ValueType クラスを直接継承することはできません。
 
 https://gist.github.com/sakapon/dca0caed09eb950c714c96fffa9c7aec
 
