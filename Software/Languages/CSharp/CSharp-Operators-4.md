@@ -29,7 +29,7 @@ https://gist.github.com/sakapon/5a62d055ec735cde2575f2b1f91c91ce
 この例では setter でビットを書き換えています。  
 構造体は、基本的には不変 (immutable) な値として扱うことが多いのですが、値を書き換えることもできます。  
 このインデクサーの setter を実装することで、キーと値を指定する[コレクション初期化子](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers)を利用できるようになります。  
-他にも、Add メソッドを定義することで、List<T> のように値を追加するコレクション初期化子を利用できます。
+他にも、Add メソッドを定義することで、List<T> のように値を追加するコレクション初期化子を利用できます (後付けの拡張メソッドでも可)。
 
 また、C# 8.0 で Index および Range の機能が導入されたため、インデクサーのオーバーロードで [Index 型](https://docs.microsoft.com/dotnet/api/system.index)を引数として使えるようにしています。
 これで `b[^i]` の形式により、逆順のインデックスでもアクセスできるようになります。  
