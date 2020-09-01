@@ -18,7 +18,7 @@ https://gist.github.com/sakapon/ac87a691cdb62b1debfdfe551de321f7
 https://gist.github.com/sakapon/8752a4c7d5c07e6c88d317197f36139e
 
 ### ValueType のような抽象クラスを作る
-[(1) の記事](CSharp-Operators-1.md)で、構造体は暗黙的に ValueType クラスを継承するため最初から Equals メソッドでフィールドごとの等価性評価ができると書きました。  
+[(1) の記事](CSharp-Operators-1.md)で、構造体は暗黙的に [ValueType クラス](https://docs.microsoft.com/dotnet/api/system.valuetype)を継承するため最初から Equals メソッドでフィールドごとの等価性評価ができると書きました。  
 これのクラス版で、パフォーマンスは気にしないけど簡単な実装で等値演算を備えたクラスを実装したいという場合、ValueType と同様にリフレクションでフィールドごとの等価性評価をする抽象クラスを次のコードで作ることができます。  
 なお、ValueType クラスを直接継承することはできません。
 
