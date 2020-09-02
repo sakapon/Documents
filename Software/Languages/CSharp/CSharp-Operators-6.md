@@ -45,7 +45,7 @@ https://gist.github.com/sakapon/588f5d94c7bee663746a91dc63e3b171
 この表はなかなかすべて覚えられるものではないため、優先順位が高くてもあまり馴染みのない演算の組合せの場合には丸括弧で囲むことがあります。  
 Visual Studio などのエディターに省略を推奨されるのであれば丸括弧を省略してよいでしょう (下図で丸括弧が灰色になっています)。とくに省略を推奨されない (どちらでもよい) 組合せもあります。
 
-(図)
+![](https://github.com/sakapon/Samples-2020/blob/master/Images/OperatorsSample/VS-Precedence.png)
 
 前回: [C# で演算子を実装する (5)](CSharp-Operators-5.md)
 
