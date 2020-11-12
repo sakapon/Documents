@@ -4,8 +4,10 @@
 - [Create Repository](Create-Repository.md)
 - Update LICENSE
 - Update README.md
+- Update .gitignore
+  - `# *.nupkg`
 - Add .gitattributes
-  - text=false
+  - `text=false`
 
 ### Create Project
 - Create Branch `vX.Y`
