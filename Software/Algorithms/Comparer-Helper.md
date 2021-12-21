@@ -1,4 +1,4 @@
-# IComparer\<T\> の補助クラス
+# ソート用の比較関数の補助クラス
 .NET で配列やコレクションをソートするときに、ソートの条件を指定する方法がいくつかあります。  
 それらを調べ、ソート条件の指定を補助するためのクラスを作成しました。
 
@@ -39,6 +39,8 @@
 言語は C# です。
 
 https://gist.github.com/sakapon/41f1917e8a7a49c5fc682503a1153730
+
+これにより、LINQ 以外の場面でソートするときも、LINQ とほぼ同様の記述方法でキーを指定できるようになりました。
 
 ### 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/Collections)
