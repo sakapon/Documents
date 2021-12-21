@@ -21,6 +21,10 @@
 - [IComparer\<T\>](https://docs.microsoft.com/dotnet/api/system.collections.generic.icomparer-1)
   - Comparison\<T\> をインターフェイスにしたもの
   - [Comparer\<T\>.Create メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.comparer-1.create)により、Comparison\<T\> から生成できる
+- 各要素に対応するキーの配列
+  - 主に配列をソートするとき
+  - 各キーが IComparable\<TKey\> インターフェイスを実装していることが必要
 - Func\<T, TKey\> によるキーの指定、および昇順・降順の指定
   - 主に LINQ の Enumerable.OrderBy メソッドなど
   - 第2キー以降を指定するには Enumerable.ThenBy メソッドなど
+  - 各キーが IComparable\<TKey\> インターフェイスを実装していることが必要
