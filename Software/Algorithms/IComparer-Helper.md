@@ -37,3 +37,12 @@
 
 そこで、「Func\<T, TKey\> によるキーの指定、および昇順・降順の指定」から IComparer\<T\> オブジェクトを生成するためのヘルパー クラスを作成しました。
 言語は C# です。
+
+https://gist.github.com/sakapon/41f1917e8a7a49c5fc682503a1153730
+
+### 作成したサンプル
+- [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/Collections)
+
+### 検証したバージョン
+- C# 6
+- .NET Standard 2.0
