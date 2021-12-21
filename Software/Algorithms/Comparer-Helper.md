@@ -1,6 +1,6 @@
 # ソート用の比較関数の補助クラス
 .NET で配列やコレクションをソートするときに、ソートの条件を指定する方法がいくつかあります。  
-それらを一通り調べ、さらにソート条件の指定を補助するためのクラスを作成しました。
+今回はそれらを一通り調べ、さらにソート条件の指定を補助するためのクラスを作成しました。
 
 まず、配列やコレクションをソートするために呼び出す主なメソッドを挙げてみます。
 - [Array.Sort メソッド](https://docs.microsoft.com/dotnet/api/system.array.sort)
@@ -20,13 +20,13 @@
 - [IComparer\<T\>](https://docs.microsoft.com/dotnet/api/system.collections.generic.icomparer-1)
   - Comparison\<T\> をインターフェイスにしたもの
   - [Comparer\<T\>.Create メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.comparer-1.create)により、Comparison\<T\> から生成できる
-- 各要素に対応するキーの配列
-  - Array.Sort メソッドのオーバーロード
-  - 各キーが IComparable\<TKey\> インターフェイスを実装していることが必要
+- TKey[]
+  - 各要素に対応するキーの配列
+  - キーの型が IComparable\<TKey\> インターフェイスを実装していることが必要
 - Func\<T, TKey\> によるキーの指定、および昇順・降順の指定
   - LINQ の Enumerable.OrderBy メソッドなど
   - 第2キー以降を指定するには Enumerable.ThenBy メソッドなど
-  - 各キーが IComparable\<TKey\> インターフェイスを実装していることが必要
+  - キーの型が IComparable\<TKey\> インターフェイスを実装していることが必要
 
 普段これらを使っていると、次のような実感があります。
 - 対象となる型 T が IComparable\<T\> インターフェイスを実装しており、その昇順でソートしたい場合は、引数のないオーバーロードを呼び出すだけであり簡単
