@@ -46,3 +46,7 @@ https://gist.github.com/sakapon/41f1917e8a7a49c5fc682503a1153730
 ### 検証したバージョン
 - C# 6
 - .NET Standard 2.0
+
+### 参照
+- [IComparer\<T\> インターフェイス](https://docs.microsoft.com/dotnet/api/system.collections.generic.icomparer-1)
+- [IComparable\<T\> インターフェイス](https://docs.microsoft.com/dotnet/api/system.icomparable-1)
