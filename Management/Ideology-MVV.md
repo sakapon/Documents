@@ -102,3 +102,4 @@ Web 上には、とてもこれらの出典を読解したとは思えない、�
 - [「ドラッカー5つの質問」](https://www.amazon.co.jp/dp/B077YVPPKK)
 - [「経営者に贈る5つの質問 第2版」](https://www.amazon.co.jp/dp/B0756VXT7X)
 - [「ビジョナリー・カンパニー」](https://www.amazon.co.jp/dp/B00MVM2EPE)
+- [ドラッカーはMVVについてロクに語っていなかった](https://blog.goo.ne.jp/05tatsu/e/06072900850a99272e304a7bc229177a)
