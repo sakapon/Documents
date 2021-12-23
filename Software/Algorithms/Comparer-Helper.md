@@ -2,6 +2,7 @@
 .NET で配列やコレクションをソートするときに、ソートの条件を指定する方法がいくつかあります。  
 今回はそれらを一通り調べ、さらにソート条件の指定を補助するためのクラスを作成しました。
 
+### 既存ライブラリのまとめ
 まず、配列やコレクションをソートするために呼び出す主なメソッドを挙げてみます。
 - [Array.Sort メソッド](https://docs.microsoft.com/dotnet/api/system.array.sort)
 - [List\<T\>.Sort メソッド](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.sort)
@@ -28,6 +29,7 @@
   - 第2キー以降を指定するには Enumerable.ThenBy メソッドなど
   - キーの型が IComparable\<TKey\> インターフェイスを実装していることが必要
 
+### 課題と解決策
 普段これらを使っていると、次のような実感があります。
 - 対象となる型 T が IComparable\<T\> インターフェイスを実装しており、その昇順でソートしたい場合は、引数のないオーバーロードを呼び出すだけであり簡単
 - それ以外の少し複雑な条件の場合、LINQ のように、Func\<T, TKey\> によりキーを指定したいことが多い
