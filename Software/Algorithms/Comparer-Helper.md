@@ -43,6 +43,8 @@ https://gist.github.com/sakapon/41f1917e8a7a49c5fc682503a1153730
 
 これにより、LINQ 以外の場面でソートするときも、LINQ とほぼ同様の記述方法でキーを指定できるようになりました。
 
+次回: [平衡二分探索木を優先度付きキューとして使う](BST-PQ.md)
+
 ### 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/DataTrees)
 
