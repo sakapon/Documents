@@ -1,5 +1,5 @@
 # 平衡二分探索木を優先度付きキューとして使う
-.NET 6 では、優先度付きキューを表す [PriorityQueue\<TElement,TPriority\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2) が基本クラスライブラリ (BCL) に追加されました。  
+.NET 6 では、優先度付きキューを表す [PriorityQueue\<TElement,TPriority\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)が基本クラスライブラリ (BCL) に追加されました。  
 言い換えると、.NET 5 以前の BCL には優先度付きキューが存在しません。  
 そこで、.NET 5 以前の環境において、平衡二分探索木のクラスを利用して優先度付きキューに相当する処理を実現する方法を考えてみます。
 
@@ -17,3 +17,24 @@
 - 要素に対して、優先度を表すキーを指定できる
 
 例えば、1組の生徒たち、2組の生徒たち、・・・のような順でデータを取得する要件に対応するには、優先度を表すキーを指定できる機能があると便利です。
+
+## 平衡二分探索木に関連するクラス
+ここでは、.NET 5 以前の BCL に存在する平衡二分探索木およびその周辺のクラスについてまとめます。  
+以下の3種類があり、「追加した要素が自動的にキーの順序でソートされる」「キーの重複は不許可」という点はこれらに共通です。
+なお、SortedList\<TKey,TValue\> クラスは平衡二分探索木ではありません (この記事の後半では使いません)。
+
+- [SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
+  - 要素をキーとして使用する
+  - 要素の動的な追加および削除の時間計算量は O(log n)
+  - HashSet\<T\> が順序付きになったと考えてよい
+- [SortedDictionary\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2)
+  - キーと値のペアを格納する
+  - 要素の動的な追加および削除の時間計算量は O(log n)
+  - Dictionary\<TKey,TValue\> が順序付きになったと考えてよい
+- [SortedList\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2)
+  - キーと値のペアを格納する
+  - 要素の動的な追加および削除の時間計算量は O(n)
+  - キーからインデックスの取得、インデックスから要素の取得の時間計算量は O(log n)
+  - 通常のリストのような構造であり、空間計算量は O(n)
+    - 平衡二分探索木ではない
+  - ソート済みの静的データで初期化するだけの場合や、末尾にくるデータを追加するだけであれば速い
