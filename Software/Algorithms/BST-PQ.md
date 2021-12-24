@@ -39,6 +39,24 @@
     - 平衡二分探索木ではない
   - ソート済みの静的データで初期化するだけの場合や、末尾にくるデータを追加するだけであれば速い
 
+## 実装
+では、平衡二分探索木を利用して、優先度付きキューを実装していきます。  
+要件に合わせて以下の3種類を用意しました。
+
+(1) 要素を重複させない場合
+- SortedSet\<T\> をほぼそのまま利用する
+- Min プロパティおよび Add, Remove メソッドを呼び出せばよい
+
+(2) 要素の重複を許す場合 (一般的な優先度付きキュー)
+- SortedDictionary\<T, int\> を利用する
+- 要素ごとの個数を管理する
+
+(3) 要素に対して優先度を表すキーを指定する場合 (重複を許可)
+- SortedDictionary\<TKey, Queue\<T\>\> を利用する
+- キーごとにキューで要素を管理する
+
+ソースコードは次の通りです。言語は C# です。
+
 ### 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/DataTrees)
 
