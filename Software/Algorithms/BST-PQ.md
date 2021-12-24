@@ -20,7 +20,7 @@
 
 ## 平衡二分探索木に関連するクラス
 ここでは、.NET 5 以前の BCL に存在する平衡二分探索木およびその周辺のクラスについてまとめます。  
-以下の3種類があり、「追加した要素が自動的にキーの順序でソートされる」「キーの重複は不許可」という点はこれらに共通です。
+以下の3種類があり、「追加した要素が自動的にキーの順序でソートされる」「キーの重複は不許可」という点はこれらに共通です。  
 なお、SortedList\<TKey,TValue\> クラスは平衡二分探索木ではありません (この記事の後半では使いません)。
 
 - [SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
@@ -38,3 +38,15 @@
   - 通常のリストのような構造であり、空間計算量は O(n)
     - 平衡二分探索木ではない
   - ソート済みの静的データで初期化するだけの場合や、末尾にくるデータを追加するだけであれば速い
+
+### 作成したサンプル
+- [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/DataTrees)
+
+### 検証したバージョン
+- C# 8.0
+- .NET Standard 2.1
+
+### 参照
+- [PriorityQueue\<TElement,TPriority\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)
+- [SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
+- [SortedDictionary\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2)
