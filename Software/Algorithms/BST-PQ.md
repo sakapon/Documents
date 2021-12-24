@@ -21,19 +21,19 @@
 ## 平衡二分探索木に関連するクラス
 ここでは、.NET 5 以前の BCL に存在する平衡二分探索木およびその周辺のクラスについてまとめます。  
 以下の3種類があり、「追加した要素が自動的にキーの順序でソートされる」「キーの重複は不許可」という点はこれらに共通です。  
-なお、SortedList\<TKey,TValue\> クラスは平衡二分探索木ではありません (この記事の後半では使いません)。
+なお、SortedList\<TKey,TValue\> クラスは平衡二分探索木ではありません (以降の節では使いません)。
 
-[SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
+(1) [SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
 - 要素をキーとして使用する
 - 要素の動的な追加および削除の時間計算量は O(log n)
 - HashSet\<T\> が順序付きになったと考えてよい
 
-[SortedDictionary\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2)
+(2) [SortedDictionary\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2)
 - キーと値のペアを格納する
 - 要素の動的な追加および削除の時間計算量は O(log n)
 - Dictionary\<TKey,TValue\> が順序付きになったと考えてよい
 
-[SortedList\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2)
+(3) [SortedList\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2)
 - キーと値のペアを格納する
 - 要素の動的な追加および削除の時間計算量は O(n)
 - キーからインデックスの取得、インデックスから要素の取得の時間計算量は O(log n)
@@ -60,6 +60,10 @@
 ソースコードは次の通りです。言語は C# です。
 
 https://gist.github.com/sakapon/4fcfbf8fceb2483a703779e65da7e451
+
+降順を指定するには、[前回の記事](Comparer-Helper.md)で作成した補助クラスで IComparer\<T\> を生成すればよいです。
+
+前回: [ソート用の比較関数の補助クラス](Comparer-Helper.md)
 
 ### 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/DataTrees)
