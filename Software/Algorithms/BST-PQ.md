@@ -4,7 +4,7 @@
 そこで、.NET 5 以前の環境において、平衡二分探索木のクラスを利用して優先度付きキューに相当する処理を実現する方法を考えてみます。
 
 ## 優先度付きキューの要件
-まず、優先度付きキューに必要な機能を整理します：
+まず、優先度付きキュー (priority queue) に必要な機能を整理します：
 - Count: 現在の要素の数を取得する
 - Peek: 優先度が最も高い要素を取得する。削除はしない
 - Pop: 優先度が最も高い要素を取得し、同時に削除する
@@ -62,6 +62,19 @@
 https://gist.github.com/sakapon/4fcfbf8fceb2483a703779e65da7e451
 
 降順を指定するには、[前回の記事](Comparer-Helper.md)で作成した補助クラスで IComparer\<T\> を生成すればよいです。
+
+## 利用例
+(1) DistinctPriorityQueue
+- [ABC 223 D - Restricted Permutation](https://atcoder.jp/contests/abc223/tasks/abc223_d)
+- [提出コード](https://atcoder.jp/contests/abc223/submissions/28159673)
+
+(2) BstPriorityQueue
+- [ABC 141 D - Powerful Discount Tickets](https://atcoder.jp/contests/abc141/tasks/abc141_d)
+- [提出コード](https://atcoder.jp/contests/abc141/submissions/28160509)
+
+(3) KeyedPriorityQueue
+- [競プロ典型 90 問 006 - Smallest Subsequence](https://atcoder.jp/contests/typical90/tasks/typical90_f)
+- [提出コード](https://atcoder.jp/contests/typical90/submissions/28159389)
 
 前回: [ソート用の比較関数の補助クラス](Comparer-Helper.md)
 
