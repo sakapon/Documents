@@ -57,11 +57,10 @@
 - SortedDictionary\<TKey, Queue\<T\>\> を利用する
 - キーごとにキューで要素を管理する
 
-ソースコードは次の通りです。言語は C# です。
+ソースコードは次の通りです。言語は C# です。  
+なお、降順を指定するには、[前回の記事](Comparer-Helper.md)で作成した補助クラスで IComparer\<T\> を生成すればよいです。
 
 https://gist.github.com/sakapon/4fcfbf8fceb2483a703779e65da7e451
-
-降順を指定するには、[前回の記事](Comparer-Helper.md)で作成した補助クラスで IComparer\<T\> を生成すればよいです。
 
 ## 利用例
 (1) DistinctPriorityQueue
