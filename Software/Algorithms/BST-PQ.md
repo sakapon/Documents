@@ -85,6 +85,7 @@ https://gist.github.com/sakapon/4fcfbf8fceb2483a703779e65da7e451
 - .NET Standard 2.1
 
 ### 参照
+- [優先度付きキュー (Wikipedia)](https://t.co/hRIyIbXAmC)
 - [PriorityQueue\<TElement,TPriority\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)
 - [SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
 - [SortedDictionary\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2)
