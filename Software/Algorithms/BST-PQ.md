@@ -62,6 +62,9 @@
 
 https://gist.github.com/sakapon/4fcfbf8fceb2483a703779e65da7e451
 
+また、平衡二分探索木を利用する利点として、優先度の高いほうだけでなく、両側に対する優先度付きキューを実現できることが挙げられます。  
+PopFirst, PopLast メソッドとして作成すればよいです。
+
 ## 利用例
 (1) DistinctPriorityQueue
 - [ABC 223 D - Restricted Permutation](https://atcoder.jp/contests/abc223/tasks/abc223_d)
