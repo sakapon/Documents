@@ -94,3 +94,4 @@ PopFirst, PopLast メソッドとして作成すればよいでしょう。
 - [PriorityQueue\<TElement,TPriority\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)
 - [SortedSet\<T\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
 - [SortedDictionary\<TKey,TValue\> クラス](https://docs.microsoft.com/dotnet/api/system.collections.generic.sorteddictionary-2)
+- [重み平衡二分木による List, Set, Map](https://avant-garde-code.hatenablog.com/entry/wbtrees)
