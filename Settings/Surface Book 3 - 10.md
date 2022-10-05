@@ -15,7 +15,7 @@
 ### Development Tools
 * [Visual Studio Community 2022](https://visualstudio.microsoft.com/ja/vs/community/)
   * Git グローバル設定 → メールアドレス
-* [SourceTree 1.9](http://www.sourcetreeapp.com/)
+* [Sourcetree](https://www.sourcetreeapp.com/)
 * [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
 * // [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
 * // [Fiddler 4](http://www.telerik.com/fiddler)
