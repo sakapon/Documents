@@ -1,3 +1,7 @@
+### Settings
+* [バッテリー制限モード](https://learn.microsoft.com/ja-jp/surface/battery-limit)
+* [以前のバージョンの Microsoft IME を使う](https://withtulpa.com/win10-ime-error/)
+
 ### Platforms
 * Google Chrome
   * 拡張機能
