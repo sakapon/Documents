@@ -25,6 +25,7 @@
 ### Development Tools
 * [Visual Studio Community 2022](https://visualstudio.microsoft.com/ja/vs/community/)
   * Git グローバル設定 → メールアドレス
+  * Fira Code Medium, 12
 * [Sourcetree](https://www.sourcetreeapp.com/)
 * [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
 * // [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
