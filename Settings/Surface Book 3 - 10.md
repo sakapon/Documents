@@ -5,6 +5,12 @@
 ### Platforms
 * Google Chrome
   * 拡張機能
+  * フォント
+    * 18, 14
+    * Meiryo
+    * UD Digi Kyokasho NK-R
+    * BIZ UDPGothic
+    * Consolas
 * TeraPad
 * [Adobe Reader](https://get.adobe.com/jp/reader/)
 * [Dropbox](https://www.dropbox.com/)
