@@ -14,6 +14,7 @@
 * TeraPad
 * [Adobe Reader](https://get.adobe.com/jp/reader/)
 * [Dropbox](https://www.dropbox.com/)
+* [Logicool G HUB](https://gaming.logicool.co.jp/ja-jp/innovation/g-hub.html)
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
 * // GX-HDMI/U2 ユーティリティ 1.5
 * // [DisplayLink USB Graphics Software for Windows](http://www.displaylink.com/downloads/windows)
