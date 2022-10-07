@@ -30,6 +30,7 @@
   * フォント → Fira Code Medium, 12
   * テキスト エディター → タブ
 * [Sourcetree](https://www.sourcetreeapp.com/)
+  * `git config --global core.autocrlf false`
 * [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
 * // [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
 * // [Fiddler 4](http://www.telerik.com/fiddler)
