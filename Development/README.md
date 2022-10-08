@@ -1,5 +1,9 @@
 ## Using GitHub
 
+### Git Global Configuration
+- E-mail address
+- `git config --global core.autocrlf false`
+
 ### Create Repository
 - [Create Repository](Create-Repository.md)
 - Update LICENSE
