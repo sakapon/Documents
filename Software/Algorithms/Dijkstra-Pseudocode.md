@@ -53,3 +53,10 @@
 1. [ダイクストラ法 - Wikipedia](https://ja.wikipedia.org/wiki/ダイクストラ法)
 1. [Shortest Path (ダイクストラ法のライブラリチェッカー)](https://judge.yosupo.jp/problem/shortest_path)
 1. [AlgorithmLab (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLab/Graphs/SPPs) - 筆者による実装サンプル (C#)
+
+競技プログラミングの参考書
+- [プログラミングコンテストチャレンジブック](https://www.amazon.co.jp/dp/B00CY9256C)
+- [プログラミングコンテスト攻略のためのアルゴリズムとデータ構造](https://www.amazon.co.jp/dp/B00U5MVXZO)
+- [問題解決力を鍛える！アルゴリズムとデータ構造](https://www.amazon.co.jp/dp/B08PV83L3N)
+- [アルゴリズム実技検定 公式テキスト［エントリー～中級編］](https://www.amazon.co.jp/dp/B08QRNJ7M3)
+- [競技プログラミングの鉄則](https://www.amazon.co.jp/dp/B0BDZGDM9J)
