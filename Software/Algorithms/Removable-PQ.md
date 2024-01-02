@@ -2,6 +2,7 @@
 
 // [競技プログラミング Advent Calendar 2023](https://qiita.com/advent-calendar/2023/kyopro) の 23 日目の記事として、あとから登録しました。
 
+## はじめに
 前回投稿した [mex のライブラリ化](Mex-Multiset.md) で、「削除機能を持った優先度付きキュー」について触れました。
 前回の記事では、
 - キーは、範囲の制限された非負整数
@@ -11,7 +12,13 @@
 - キーは、任意の `T` 型の値
 - up-heap や down-heap を自作する
 
-という場合の実装を示します。
+という場合の実装を考えていきます。
+
+## 実装 1
+基本的な方針は前回と同様で、各要素の重複数を保持しておき、先頭の要素が削除済 (重複数が 0) になっていれば削除します (遅延評価)。
+任意の `T` 型の各要素の重複数を管理するために、連想配列 (.NET では `Dictionary<T, int>`) を利用します。
+
+ソースコードは次のようになります。
 
 ```csharp:RemovableListHeapQueue.cs
 // ImplicitUsings: enable
@@ -103,6 +110,8 @@ public class RemovableListHeapQueue<T>
 	}
 }
 ```
+
+## 実装 2
 
 ## 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib10/DataTrees/PQ)
