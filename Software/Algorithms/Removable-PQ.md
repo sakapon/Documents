@@ -15,7 +15,7 @@
 という場合の実装を考えていきます。
 
 ## 実装 1
-基本的な方針は前回と同様で、各要素の重複数を保持しておき、先頭の要素が削除済 (重複数が 0) になっていれば削除します (遅延評価)。
+基本的な方針は[前回](Mex-Multiset.md)と同様で、各要素の重複数を保持しておき、先頭の要素が削除済 (重複数が 0) になっていれば削除します (遅延評価)。
 任意の `T` 型の各要素の重複数を管理するために、連想配列 (.NET では `Dictionary<T, int>`) を利用します。
 
 ソースコードは次のようになります。
@@ -142,6 +142,8 @@ void EnsureFirst()
 https://atcoder.jp/contests/abc194/submissions/48987254
 
 https://atcoder.jp/contests/abc194/submissions/48987280
+
+前回: [mex のライブラリ化](Mex-Multiset.md)
 
 ## 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib10/DataTrees/PQ)
