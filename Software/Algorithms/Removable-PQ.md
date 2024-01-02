@@ -118,6 +118,20 @@ public class RemovableListHeapQueue<T>
 
 ## 実装 2
 
+```csharp
+void EnsureFirst()
+{
+	while (l.Count > 0 && !counts.ContainsKey(l[0]))
+	{
+		while (l.Count > 0 && !counts.ContainsKey(l[l.Count - 1])) l.RemoveAt(l.Count - 1);
+		if (l.Count == 0) break;
+		l[0] = l[l.Count - 1];
+		l.RemoveAt(l.Count - 1);
+		DownHeap();
+	}
+}
+```
+
 ## 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib10/DataTrees/PQ)
 
