@@ -22,7 +22,7 @@
 
 ```csharp:RemovableListHeapQueue.cs
 // ImplicitUsings: enable
-[System.Diagnostics.DebuggerDisplay(@"Count = {Count}")]
+[System.Diagnostics.DebuggerDisplay("Count = {Count}")]
 public class RemovableListHeapQueue<T>
 {
 	readonly IComparer<T> c;
