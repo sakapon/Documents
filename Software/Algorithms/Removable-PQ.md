@@ -119,7 +119,7 @@ public class RemovableListHeapQueue<T>
 ここで、`EnsureFirst` メソッドをもう少し軽くできないかを考えてみます。
 
 例えば、先頭の要素のみ未削除で他の要素がすべて削除済のときに `Pop` を呼び出すと、計算量 $O(n \log n)$ で二分ヒープから要素が削除されていき、最終的に空になります。
-そこで `EnsureFirst` メソッドを、末尾の要素が削除済の場合は先頭に移動させずにそのまま二分ヒープから削除するという実装に変更することで、このような例で $O(n)$ にできます。
+そこで `EnsureFirst` メソッドを、末尾の要素が削除済の場合は先頭に移動させずにそのまま二分ヒープから削除するという実装に変更することで、このような例に対して $O(n)$ にできます。
 
 ```csharp
 void EnsureFirst()
@@ -135,16 +135,24 @@ void EnsureFirst()
 }
 ```
 
+## 性能テスト
+最大 150 万件のデータを扱う [ABC 194 E - Mex Min](https://atcoder.jp/contests/abc194/tasks/abc194_e) で実行時間を比較してみます。
+最も重いテストケース `answer_n_00` が、実装 1 では 873 ms、実装 2 では 522 ms となりました。
+
+https://atcoder.jp/contests/abc194/submissions/48987254
+
+https://atcoder.jp/contests/abc194/submissions/48987280
+
 ## 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib10/DataTrees/PQ)
 
 ## 検証したバージョン
-- C# 10
-- .NET 6
+- 開発環境: C# 10, .NET 6
+- 実行環境: C# 11, .NET 7
 
 ## 問題集
-- [ABC 330 E - Mex and Update](https://atcoder.jp/contests/abc330/tasks/abc330_e)
 - [ABC 194 E - Mex Min](https://atcoder.jp/contests/abc194/tasks/abc194_e)
+- [ABC 330 E - Mex and Update](https://atcoder.jp/contests/abc330/tasks/abc330_e)
 - [ABC 306 E - Best Performances](https://atcoder.jp/contests/abc306/tasks/abc306_e)
 - [ABC 281 E - Least Elements](https://atcoder.jp/contests/abc281/tasks/abc281_e)
 
