@@ -3,7 +3,7 @@
 ## はじめに
 前回投稿した [mex のライブラリ化](Mex-Multiset.md)で、「削除機能を持った優先度付きキュー」について触れました。
 前回の記事では、
-- キーは、範囲の制限された非負整数
+- キーは、範囲が制限された非負整数
 - .NET の [`PriorityQueue<TElement, TPriority>`](https://learn.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2) クラスを利用する
 
 という場合のソースコードを示しましたが、今回は、
@@ -147,8 +147,6 @@ https://atcoder.jp/contests/abc194/submissions/48987280
 
 また、連想配列を利用して各要素のインデックスを管理するなど、遅延評価せずに直接削除できる実装もありますが、こちらはかなり性能が落ちてしまいます。
 
-前回: [mex のライブラリ化](Mex-Multiset.md)
-
 ## 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib10/DataTrees/PQ)
 
@@ -165,3 +163,5 @@ https://atcoder.jp/contests/abc194/submissions/48987280
 ## 参照
 1. [優先度付きキュー (Wikipedia)](https://t.co/hRIyIbXAmC)
 1. [PriorityQueue\<TElement,TPriority\> クラス](https://learn.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)
+
+前回: [mex のライブラリ化](Mex-Multiset.md)
