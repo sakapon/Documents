@@ -219,10 +219,10 @@ https://atcoder.jp/contests/abc330/submissions/48661449
 ## 作成したサンプル
 - [AlgorithmSample (GitHub)](https://github.com/sakapon/Samples-2020/tree/master/AlgorithmSample/AlgorithmLib10/Collections)
 
-## バージョン情報
-- C# 10
-- .NET 6
+## 検証したバージョン
+- 開発環境: C# 10, .NET 6
   - `PriorityQueue<TElement, TPriority>` クラスが登場した .NET のバージョン
+- 実行環境: C# 11, .NET 7
 
 ## 問題集
 - [ABC 330 E - Mex and Update](https://atcoder.jp/contests/abc330/tasks/abc330_e)
@@ -230,6 +230,8 @@ https://atcoder.jp/contests/abc330/submissions/48661449
 
 ## 参照
 1. [Mex (mathematics) - Wikipedia](https://en.wikipedia.org/wiki/Mex_(mathematics)) 
-1. [SortedSet&lt;T&gt; クラス](https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
-1. [PriorityQueue&lt;TElement,TPriority&gt; クラス](https://learn.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)
+1. [SortedSet\<T\> クラス](https://learn.microsoft.com/dotnet/api/system.collections.generic.sortedset-1)
+1. [PriorityQueue\<TElement,TPriority\> クラス](https://learn.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2)
 1. [DebuggerDisplayAttribute クラス](https://learn.microsoft.com/dotnet/api/system.diagnostics.debuggerdisplayattribute)
+
+次回: [削除可能な優先度付きキュー](Removable-PQ.md)
