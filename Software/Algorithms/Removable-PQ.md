@@ -3,7 +3,7 @@
 // [競技プログラミング Advent Calendar 2023](https://qiita.com/advent-calendar/2023/kyopro) の 23 日目の記事として、あとから登録しました。
 
 ## はじめに
-前回投稿した [mex のライブラリ化](Mex-Multiset.md) で、「削除機能を持った優先度付きキュー」について触れました。
+前回投稿した [mex のライブラリ化](Mex-Multiset.md)で、「削除機能を持った優先度付きキュー」について触れました。
 前回の記事では、
 - キーは、範囲の制限された非負整数
 - .NET の [`PriorityQueue<TElement, TPriority>`](https://learn.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2) クラスを利用する
@@ -111,12 +111,15 @@ public class RemovableListHeapQueue<T>
 }
 ```
 
+`List<T>` で二分ヒープを構成し、番地は 0 から使っています。
 `Pop` や `Remove` が呼び出されたときに、最後に `EnsureMin` を呼び出すことで、先頭の要素がつねに未削除の要素となるように保ちます。
 時間計算量は、サイズを $n$ としたとき `First` は $O(1)$ 、`Push` は $O( \log n)$ 、そして `Pop` と `Remove` は最悪 $O(n \log n)$ ですが償却で $O( \log n)$ となります。
 
+## 実装 2
 ここで、`EnsureMin` メソッドをもう少し軽くできないかを考えてみます。
 
-## 実装 2
+例えば、先頭の要素のみ未削除で他の要素がすべて削除済のときに `Pop` を呼び出すと、計算量 $O(n \log n)$ で二分ヒープから要素が削除されていき、最終的に空になります。
+そこで `EnsureMin` メソッドを、末尾の要素が削除済の場合は先頭に移動させずにそのまま末尾を削除するという実装に変更することで、このような例で $O(n)$ にできます。
 
 ```csharp
 void EnsureFirst()
