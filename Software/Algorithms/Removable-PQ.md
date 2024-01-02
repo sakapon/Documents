@@ -1,6 +1,17 @@
 # 削除可能な優先度付きキュー
 
-// [競技プログラミング Advent Calendar 2023](https://qiita.com/advent-calendar/2023/kyopro) の 23 日目の記事です。
+// [競技プログラミング Advent Calendar 2023](https://qiita.com/advent-calendar/2023/kyopro) の 23 日目の記事として、あとから登録しました。
+
+前回投稿した [mex のライブラリ化](Mex-Multiset.md) で、「削除機能を持った優先度付きキュー」について触れました。
+前回の記事では、
+- キーは、範囲の制限された非負整数
+- .NET の [`PriorityQueue<TElement, TPriority>`](https://learn.microsoft.com/dotnet/api/system.collections.generic.priorityqueue-2) クラスを利用する
+
+という場合のソースコードを示しましたが、今回は、
+- キーは、任意の `T` 型の値
+- up-heap や down-heap を自作する
+
+という場合の実装を示します。
 
 ```csharp:RemovableListHeapQueue.cs
 // ImplicitUsings: enable
