@@ -111,7 +111,9 @@ public class RemovableListHeapQueue<T>
 }
 ```
 
-`List<T>` で二分ヒープを構成し、番地は 0 から使っています。
+`List<T>` で二分ヒープを構成し、インデックスは 0 から使っています。
+`Dictionary<T, int>` が重いという印象があるかもしれませんが、呼び出される回数が少ないため、性能にはほとんど影響ありません。
+
 `Pop` や `Remove` が呼び出されたときに、最後に `EnsureFirst` を呼び出すことで、先頭の要素がつねに未削除の要素となるように保ちます。
 時間計算量は、サイズを $n$ としたとき `First` は $O(1)$ 、`Push` は $O( \log n)$ 、そして `Pop` と `Remove` は最悪 $O(n \log n)$ ですが償却で $O( \log n)$ となります。
 
@@ -142,6 +144,8 @@ void EnsureFirst()
 https://atcoder.jp/contests/abc194/submissions/48987254
 
 https://atcoder.jp/contests/abc194/submissions/48987280
+
+また、連想配列を利用して各要素のインデックスを管理するなど、遅延評価せずに直接削除できる実装もありますが、こちらはかなり性能が落ちてしまいます。
 
 前回: [mex のライブラリ化](Mex-Multiset.md)
 
