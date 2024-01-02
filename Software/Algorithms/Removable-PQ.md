@@ -111,6 +111,11 @@ public class RemovableListHeapQueue<T>
 }
 ```
 
+`Pop` や `Remove` が呼び出されたときに、最後に `EnsureMin` を呼び出すことで、先頭の要素がつねに未削除の要素となるように保ちます。
+時間計算量は、サイズを $n$ としたとき `First` は $O(1)$ 、`Push` は $O( \log n)$ 、そして `Pop` と `Remove` は最悪 $O(n \log n)$ ですが償却で $O( \log n)$ となります。
+
+ここで、`EnsureMin` メソッドをもう少し軽くできないかを考えてみます。
+
 ## 実装 2
 
 ## 作成したサンプル
