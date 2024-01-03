@@ -27,8 +27,8 @@ public class RemovableListHeapQueue<T>
 {
 	readonly IComparer<T> c;
 	readonly List<T> l = new List<T>();
-	int n;
 	readonly Dictionary<T, int> counts = new Dictionary<T, int>();
+	int n;
 
 	public RemovableListHeapQueue(IEnumerable<T> items = null, IComparer<T> comparer = null)
 	{
@@ -43,8 +43,8 @@ public class RemovableListHeapQueue<T>
 	public void Clear()
 	{
 		l.Clear();
-		n = 0;
 		counts.Clear();
+		n = 0;
 	}
 
 	public int GetCount(T item) => counts.GetValueOrDefault(item);
@@ -78,8 +78,8 @@ public class RemovableListHeapQueue<T>
 	{
 		l.Add(item);
 		UpHeap();
-		++n;
 		counts[item] = counts.GetValueOrDefault(item) + 1;
+		++n;
 	}
 
 	public T Pop()
