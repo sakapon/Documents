@@ -137,6 +137,8 @@ void EnsureFirst()
 }
 ```
 
+`PriorityQueue<TElement, TPriority>` クラスを利用せずに二分ヒープを自作することで、このような処理も可能となります。
+
 ## 性能テスト
 最大 150 万件のデータを扱う [ABC 194 E - Mex Min](https://atcoder.jp/contests/abc194/tasks/abc194_e) で実行時間を比較してみます。
 最も重いテストケース `answer_n_00` が、実装 1 では 873 ms、実装 2 では 522 ms となりました。
