@@ -18,7 +18,7 @@
 基本的な方針は[前回](Mex-Multiset.md)と同様で、各要素の重複数を保持しておき、先頭の要素が削除済 (重複数が 0) になっていれば二分ヒープから削除します (遅延評価)。
 任意の `T` 型の各要素の重複数を管理するために、連想配列 (.NET では `Dictionary<T, int>`) を利用します。
 
-ソースコードは次のようになります。
+ソースコードは次のようになります (C#)。
 
 ```csharp:RemovableListHeapQueue.cs
 // ImplicitUsings: enable
