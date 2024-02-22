@@ -1,6 +1,8 @@
 # BFS と DFS の探索順を視覚化する
 2次元グリッド上の幅優先探索 (breadth-first search; BFS) および深さ優先探索 (depth-first search; DFS) について、どのような順序で探索が進行するのかを視覚化してみます。
 
+![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Rotation.gif)
+
 ```csharp
 public int[] ShortestByBFS(int n, int sv)
 {
@@ -35,3 +37,5 @@ IEnumerable<int> GetNexts(int v)
 	if (j + 1 < w) yield return v + 1;
 }
 ```
+
+![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Cross.gif)
