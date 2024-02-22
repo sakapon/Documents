@@ -15,10 +15,6 @@ DFS を実装するには主に、スタックを利用する方法と再帰関�
 キューを利用して**幅優先探索 (BFS)** を実装します。
 ここでは、同じ頂点をキューに二度入れない (既に探索済ならキューに入れない) ような実装としています。
 
-変数 `d` には、始点からの移動手数 (距離) が格納されます。
-BFS では最短経路が求められます。
-GetNexts メソッドでは、隣接する頂点を上、左、下、右の順に返しています。
-
 ```csharp
 // h: 高さ、w: 幅
 int h, w;
@@ -58,6 +54,10 @@ IEnumerable<int> GetNexts(int v)
 }
 ```
 
+変数 `d` には、始点からの移動手数 (距離) が格納されます。
+BFS では最短経路が求められます。
+`GetNexts` メソッドでは、隣接する頂点を上、左、下、右の順に返しています。
+
 ## 深さ優先探索 (スタック)
 前節のコードで、キューをスタックに変更するだけで**深さ優先探索 (DFS)** になります。
 今回の3種類の実装のうち、探索の様子が最も複雑となり予想しづらいのではないかと思います。
@@ -88,7 +88,7 @@ public int[] DFSByStack(int sv)
 ```
 
 DFS では始点からの最短経路を求めることができません。
-そのため `int[]` ではなく `bool[]` を用意し、障害物のあるグリッドや非連結なグラフにおいて、始点から到達可能かどうかを調べるために使われることが多いです。
+そのため実際には `int[]` ではなく `bool[]` を用意し、障害物のあるグリッドや非連結なグラフにおいて、始点から到達可能かどうかを調べるために使われることが多いです。
 
 ## 深さ優先探索 (再帰関数)
 
@@ -116,6 +116,17 @@ public int[] DFSByRec(int sv)
 
 ## 視覚化
 
+```csharp
+IEnumerable<int> GetNexts(int v)
+{
+	var (i, j) = (v / w, v % w);
+	if (i > 0) yield return v - w;
+	if (i + 1 < h) yield return v + w;
+	if (j > 0) yield return v - 1;
+	if (j + 1 < w) yield return v + 1;
+}
+```
+
 ![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Cross.gif)
 
 なお、このビューアーは .NET の WPF で作成されています。
@@ -123,7 +134,7 @@ public int[] DFSByRec(int sv)
 ## 作成したビューアー
 - [BfsDfsViewer (GitHub)](https://github.com/sakapon/Tools-2024/tree/main/BfsDfs)
 
-## バージョン情報
+## 利用したバージョン
 - C# 10, .NET 6
 
 ## 参照
