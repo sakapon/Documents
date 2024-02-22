@@ -60,6 +60,31 @@ IEnumerable<int> GetNexts(int v)
 前節のコードで、キューをスタックに変更するだけで**深さ優先探索 (DFS)** になります。
 今回の3種類の実装のうち、探索の様子が最も複雑となり予想しづらいのではないかと思います。
 
+```csharp
+public int[] DFSByStack(int sv)
+{
+	var d = new int[n];
+	Array.Fill(d, -1);
+	d[sv] = 0;
+
+	var q = new Stack<int>();
+	q.Push(sv);
+
+	while (q.Count > 0)
+	{
+		var v = q.Pop();
+
+		foreach (var nv in GetNexts(v))
+		{
+			if (d[nv] == -1) continue;
+			d[nv] = d[v] + 1;
+			q.Push(nv);
+		}
+	}
+	return d;
+}
+```
+
 DFS では始点からの最短経路を求めることができません。
 そのため `int[]` ではなく `bool[]` を用意し、障害物のあるグリッドや非連結なグラフにおいて、始点から到達可能かどうかを調べるために使われることが多いです。
 
