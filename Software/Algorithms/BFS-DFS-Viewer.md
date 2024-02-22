@@ -20,8 +20,10 @@ BFS では最短経路が求められます。
 GetNexts メソッドでは、隣接する頂点を上、左、下、右の順に返しています。
 
 ```csharp
-// h: 高さ、w: 幅、n: h * w
-int h, w, n;
+// h: 高さ、w: 幅
+int h, w;
+// n: h * w
+int n;
 
 public int[] BFSByQueue(int sv)
 {
@@ -38,7 +40,7 @@ public int[] BFSByQueue(int sv)
 
 		foreach (var nv in GetNexts(v))
 		{
-			if (d[nv] == -1) continue;
+			if (d[nv] != -1) continue;
 			d[nv] = d[v] + 1;
 			q.Enqueue(nv);
 		}
@@ -76,7 +78,7 @@ public int[] DFSByStack(int sv)
 
 		foreach (var nv in GetNexts(v))
 		{
-			if (d[nv] == -1) continue;
+			if (d[nv] != -1) continue;
 			d[nv] = d[v] + 1;
 			q.Push(nv);
 		}
@@ -89,6 +91,28 @@ DFS では始点からの最短経路を求めることができません。
 そのため `int[]` ではなく `bool[]` を用意し、障害物のあるグリッドや非連結なグラフにおいて、始点から到達可能かどうかを調べるために使われることが多いです。
 
 ## 深さ優先探索 (再帰関数)
+
+```csharp
+public int[] DFSByRec(int sv)
+{
+	var d = new int[n];
+	Array.Fill(d, -1);
+	d[sv] = 0;
+
+	Rec(sv);
+	return d;
+
+	void Rec(int v)
+	{
+		foreach (var nv in GetNexts(v))
+		{
+			if (d[nv] != -1) continue;
+			d[nv] = d[v] + 1;
+			Rec(nv);
+		}
+	}
+}
+```
 
 ## 視覚化
 
