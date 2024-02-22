@@ -6,9 +6,9 @@
 ```csharp
 public int[] ShortestByBFS(int n, int sv)
 {
-	var costs = new int[n];
-	Array.Fill(costs, -1);
-	costs[sv] = 0;
+	var d = new int[n];
+	Array.Fill(d, -1);
+	d[sv] = 0;
 
 	var q = new Queue<int>();
 	q.Enqueue(sv);
@@ -19,12 +19,12 @@ public int[] ShortestByBFS(int n, int sv)
 
 		foreach (var nv in GetNexts(v))
 		{
-			if (costs[nv] == -1) continue;
-			costs[nv] = costs[v] + 1;
+			if (d[nv] == -1) continue;
+			d[nv] = d[v] + 1;
 			q.Enqueue(nv);
 		}
 	}
-	return costs;
+	return d;
 }
 
 // h: 高さ、w: 幅
