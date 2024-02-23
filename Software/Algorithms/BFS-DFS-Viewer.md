@@ -2,13 +2,19 @@
 2次元グリッド上の**幅優先探索** (breadth-first search; **BFS**) および**深さ優先探索** (depth-first search; **DFS**) について、どのような順序で探索が進行するのかを視覚化してみます。
 
 最初に、視覚化した結果を載せておきます。
-マスの色は、赤は処理中、橙は保留中、緑は完了を表しています。
-3種類のアニメーションがありますが、それぞれどのような処理手順により実現されているのかを予想してみてください。
+グリッドの中央のマスを始点としており、マスの色は、赤は処理中、橙は保留中、緑は完了を表しています。
 
 ![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Rotation.gif)
 
-BFS を実装するには主にキューを利用しますが、
-DFS を実装するには主に、スタックを利用する方法と再帰関数を利用する方法の2つが挙げられます。
+3種類のアニメーションがあり、それぞれ
+
+- 左上： 幅優先探索 (キュー)
+- 左下： 深さ優先探索 (スタック)
+- 右下： 深さ優先探索 (再帰関数)
+
+を示しています。
+
+BFS を実装するには主にキューを利用しますが、DFS を実装するには主に、スタックを利用する方法と再帰関数を利用する方法の2つが挙げられます。
 以下では、これら3通りの実装方法を記述していきます。
 
 ## 幅優先探索 (キュー)
@@ -117,20 +123,22 @@ public int[] DFSByRec(int sv)
 
 ## 視覚化
 `GetNexts` メソッドにおいて隣接頂点の列挙順を変更すると、探索の様子も少し変わります。
+次の例では、隣接する頂点を左、右、上、下の順に返します。
 
 ```csharp
 IEnumerable<int> GetNexts(int v)
 {
 	var (i, j) = (v / w, v % w);
-	if (i > 0) yield return v - w;
-	if (i + 1 < h) yield return v + w;
 	if (j > 0) yield return v - 1;
 	if (j + 1 < w) yield return v + 1;
+	if (i > 0) yield return v - w;
+	if (i + 1 < h) yield return v + w;
 }
 ```
 
 ![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Cross.gif)
 
+以上のように、作成したコードが実際にどのように動くのかを視覚化して確認するのもよい練習となるでしょう。
 なお、このビューアーは .NET の WPF で作成されています。
 
 ## 作成したビューアー
