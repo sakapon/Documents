@@ -2,7 +2,13 @@
 2次元グリッド上の**幅優先探索** (breadth-first search; **BFS**) および**深さ優先探索** (depth-first search; **DFS**) について、どのような順序で探索が進行するのかを視覚化してみます。
 
 最初に、視覚化した結果を載せておきます。
-グリッドの中央のマスを始点とし、マスの色は、赤は探索処理中、橙は保留中、緑は完了を表しています。
+グリッドの中央のマスを始点とし、マスの色はそれぞれ
+
+- 赤： 探索処理中
+- 橙： 保留中
+- 緑： 完了
+
+を表しています。
 
 ![BfsDfsViewer-1.0.3-Rotation.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/9649/9b6db4ae-3b14-832d-9c54-354ab9d4d974.gif)
 
