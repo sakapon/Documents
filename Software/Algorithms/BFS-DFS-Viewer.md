@@ -4,7 +4,7 @@
 最初に、視覚化した結果を載せておきます。
 グリッドの中央のマスを始点としており、マスの色は、赤は探索処理中、橙は保留中、緑は完了を表しています。
 
-![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Rotation.gif)
+![BfsDfsViewer-1.0.3-Rotation.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/9649/9b6db4ae-3b14-832d-9c54-354ab9d4d974.gif)
 
 3種類のアニメーションがあり、それぞれ
 
@@ -23,7 +23,7 @@
 
 また、グリッドの高さを `h`、幅を `w` とし、左上の頂点を原点 $(0, 0)$ として、`i` 行目 `j` 列目の頂点の ID を `w * i + j` と定めます。
 
-```csharp
+```csharp:BFS_Queue.cs
 // h: 高さ、w: 幅
 int h, w;
 // n: マスの数 (h * w)
@@ -71,7 +71,7 @@ BFS では最短経路が求められます。
 前節のコードで、キューをスタックに変更するだけで**深さ優先探索 (DFS)** になります。
 今回の3種類の実装のうち、探索の様子が最も複雑となり予想しづらいのではないかと思います。
 
-```csharp
+```csharp:DFS_Stack.cs
 public int[] DFSByStack(int sv)
 {
 	var d = new int[n];
@@ -102,7 +102,7 @@ DFS では始点からの最短経路を求めることができません。
 ## 深さ優先探索 (再帰関数)
 再帰関数を利用した DFS では、各頂点において2個目以降の分岐を調べる前に次の頂点の処理を開始するため、遠く離れた頂点に早く到達することもあります。
 
-```csharp
+```csharp:DFS_Rec.cs
 public int[] DFSByRec(int sv)
 {
 	var d = new int[n];
@@ -139,7 +139,7 @@ IEnumerable<int> GetNexts(int v)
 }
 ```
 
-![](https://github.com/sakapon/Tools-2024/blob/main/Images/BfsDfs/BfsDfsViewer-1.0.3-Cross.gif)
+![BfsDfsViewer-1.0.3-Cross.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/9649/3c70f39e-3f8c-04cb-dd36-13a919696a3e.gif)
 
 以上のように、作成したコードが実際にどのように動くのかを視覚化して確認するのもよい練習となるでしょう。
 なお、このビューアーは .NET の WPF で作成されています。
