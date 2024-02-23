@@ -146,7 +146,7 @@ IEnumerable<int> GetNexts(int v)
 ![BfsDfsViewer-1.0.3-Cross.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/9649/3c70f39e-3f8c-04cb-dd36-13a919696a3e.gif)
 
 以上のように、作成したコードが実際にどのように動くのかを視覚化して確認するのもよい練習となるでしょう。
-なお、このビューアーは .NET の [WPF](https://learn.microsoft.com/ja-jp/dotnet/desktop/wpf/) で作成されています。
+なお、このビューアーは .NET の [WPF](https://learn.microsoft.com/dotnet/desktop/wpf/) で作成されています。
 
 ## 作成したビューアー
 - [BfsDfsViewer (GitHub)](https://github.com/sakapon/Tools-2024/tree/main/BfsDfs)
