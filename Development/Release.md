@@ -1,6 +1,7 @@
 ## How to Release
 
 ### Create a ZIP File (for .exe)
+- Update **Release Notes** (Optional)
 - Run `Zip Release`
 - Save the ZIP file to `Downloads` or `zip` folder
 
