@@ -1,10 +1,10 @@
-## WPF の Tips 集
+# WPF の Tips 集
 WPF についての Tips を集めたものです。
 
 ### その他
 - マウスなどのイベントを下の階層の UI 要素で発生させたい場合、[IsHitTestVisible プロパティ](https://learn.microsoft.com/dotnet/api/system.windows.uielement.ishittestvisible)を False に設定します。
 - XAML 上で null 参照は `{x:Null}` で表せます。
-  - [x:Null マークアップ拡張](https://learn.microsoft.com/ja-jp/dotnet/desktop/xaml-services/xnull-markup-extension)
+  - [x:Null マークアップ拡張](https://learn.microsoft.com/dotnet/desktop/xaml-services/xnull-markup-extension)
 - 同じプロパティに対して、データ バインディングとアニメーションの両方を設定してはいけません。
 - ClickOnce インストーラーは、そのままローカルのインストーラーとしても使えます。
   - `.application` または `setup.exe` をローカルで直接実行すればよいです。
