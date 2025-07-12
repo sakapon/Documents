@@ -8,7 +8,7 @@ WPF をはじめとする XAML 系のアプリを Visual Studio や Blend で開
 ただし、このメソッドでは引数に DependencyObject を受け付けるため、Model 層では使いづらいです。
 
 そこで、デザイン時のみ有効となる `d:` を使います。  
-例えば Model 層のクラスに bool 型の IsForDesign プロパティを用意しておき、Window などの DataContext に  
+例えば Model 層のクラスに bool 型の IsForDesign プロパティを用意しておき、XAML 上で  
 `<local:AppModel d:IsForDesign="True"/>`  
 と設定することで、挙動を切り替えることができます。  
 また、`d:` は UI 要素自体にも指定することができ、デザイン時のみ配置することができます。
