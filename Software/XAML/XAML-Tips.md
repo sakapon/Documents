@@ -17,5 +17,7 @@ WPF をはじめとする XAML 系技術についての Tips を集めたもの�
 - ClickOnce インストーラーは、そのままローカルのインストーラーとしても使えます。
   - `.application` または `setup.exe` をローカルで直接実行すればよいです。
 
+次回: [XAML のデザイン モード](XAML-Design-Mode.md)
+
 ### 参照
 - [たまに利用する .NET Tips 集](https://sakapon.wordpress.com/2011/05/23/tips/)
