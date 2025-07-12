@@ -1,6 +1,6 @@
 # XAML のデザイン モード
 WPF をはじめとする XAML 系のアプリを Visual Studio や Blend で開発するとき、  
-例えば、レイアウトの作業時はサンプルのデータを表示させたい、ということがあります。
+例えば「レイアウトの作業時はサンプルのデータを表示させたい」ということがあります。
 
 このような場合に、[DesignerProperties.GetIsInDesignMode メソッド](https://learn.microsoft.com/dotnet/api/system.componentmodel.designerproperties.getisindesignmode)を使うことが考えられます。  
 このメソッドは XAML の編集画面でアプリが実行されているときに戻り値が true となるため、  
