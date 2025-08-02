@@ -12,5 +12,13 @@
 - Office Professional Plus 2019
 
 ### Development Tools
-- Visual Studio Community 2022
-- Visual Studio Code
+- [Visual Studio Community 2022](https://visualstudio.microsoft.com/ja/vs/community/)
+  - Git グローバル設定 → メールアドレス
+  - キーボード → Visual C# 2005
+  - フォント → Fira Code Medium, 12
+  - テキスト エディター → タブ
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Sourcetree](https://www.sourcetreeapp.com/)
+  - `git config --global core.autocrlf false`
+- [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
+- [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
