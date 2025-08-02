@@ -34,6 +34,7 @@
 
 ### Development Tools
 - [Fira Code](https://fonts.google.com/specimen/Fira+Code)
+  - FiraCode-VariableFont_wght.ttf をインストール
 - [Visual Studio Community 2022](https://visualstudio.microsoft.com/ja/vs/community/)
   - Git グローバル設定 → メールアドレス
   - キーボード → Visual C# 2005
