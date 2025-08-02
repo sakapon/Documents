@@ -17,9 +17,13 @@
 - [Windows 10 メディア作成ツール](https://www.microsoft.com/ja-jp/software-download/windows10)
 
 ### Applications
-- Office Professional Plus 2019
-- [Dropbox](https://www.dropbox.com/)
+- OneDrive
+- [Dropbox](https://www.dropbox.com/desktop)
 - [Adobe Reader](https://get.adobe.com/jp/reader/)
+- LINE
+- Outlook
+- OneNote
+- Office Professional Plus 2019
 - [OBS Studio](https://obsproject.com/)
 - [Steam](https://store.steampowered.com/)
 
