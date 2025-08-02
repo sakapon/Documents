@@ -16,6 +16,7 @@
 * [Skype](http://www.skype.com/)
 * [Open Live Writer](https://www.microsoft.com/ja-jp/store/p/open-live-writer/9nblggh5279m)
   * Old: [Windows Essentials](http://windows.microsoft.com/ja-jp/windows-live/essentials)
+* [Dynamic Theme](https://apps.microsoft.com/detail/9nblggh1zbkw)
 
 ### Development Tools 1
 * Expression Studio 4 Ultimate (Expression Encoder 4 のみ)
