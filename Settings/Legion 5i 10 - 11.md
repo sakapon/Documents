@@ -1,4 +1,5 @@
-[ユーザー ガイド](https://support.lenovo.com/jp/ja/documentation/legion_5_15_x10)
+- [Lenovo Legion 5i Gen 10](https://www.lenovo.com/jp/ja/p/laptops/legion-laptops/legion-5-series/lenovo-legion-5i-gen-10-(15-inch-intel)/83lycto1wwjp4)
+- [ユーザー ガイド](https://support.lenovo.com/jp/ja/documentation/legion_5_15_x10)
 
 ### Settings
 - 最大充電量
