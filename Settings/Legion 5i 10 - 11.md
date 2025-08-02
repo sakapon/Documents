@@ -15,6 +15,7 @@
     - [Tampermonkey](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo): ユーザー スクリプトを許可する
   - [Flow Youtube Chat](https://greasyfork.org/ja/scripts/411442-flow-youtube-chat)
 - [Logicool G HUB](https://gaming.logicool.co.jp/ja-jp/innovation/g-hub.html)
+- [JoyToKey](https://joytokey.net/)
 - [NFCポートソフトウェア](https://www.sony.co.jp/Products/felica/consumer/support/download/nfcportsoftware.html)
 - [Windows 10 メディア作成ツール](https://www.microsoft.com/ja-jp/software-download/windows10)
 
