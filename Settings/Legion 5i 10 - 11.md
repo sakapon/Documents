@@ -9,7 +9,9 @@
 - スマートフォン連携
 - [Windows] + V
   - クリップボード機能をオン
-- IME 辞書登録
+- IME
+  - スペースの入力: 常に半角
+  - 辞書登録
 
 ### Infrastructure
 - Google Chrome
