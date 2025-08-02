@@ -1,3 +1,5 @@
+[ユーザー ガイド](https://support.lenovo.com/jp/ja/documentation/legion_5_15_x10)
+
 ### Settings
 - 最大充電量
   - Lenovo Vantage で保全モードに設定
