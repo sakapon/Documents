@@ -3,6 +3,8 @@
 
 ### Platforms
 - Google Chrome
+  - 拡張機能
+    - [Tampermonkey](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo): ユーザー スクリプトを許可する
   - [Flow Youtube Chat](https://greasyfork.org/ja/scripts/411442-flow-youtube-chat)
 - TeraPad
 - DF
