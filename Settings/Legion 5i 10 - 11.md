@@ -43,10 +43,10 @@
   - 環境変数に登録する
 - [Sourcetree](https://www.sourcetreeapp.com/)
   - `git config --global core.autocrlf false`
-- [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
-- [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
-- TeraPad
-- DF
+- [NuGet Package Explorer](https://apps.microsoft.com/detail/9wzdncrdmdm3)
+- [Azure Storage Explorer](https://azure.microsoft.com/ja-jp/products/storage/storage-explorer)
 
 ### Tools
+- TeraPad
+- DF
 - [Planet Clock](https://github.com/sakapon/Tools-2015/releases/tag/clock-v1.0.4)
