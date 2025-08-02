@@ -1,6 +1,8 @@
 ### Platforms
-* Google Chrome
-* TeraPad
+- Google Chrome
+  - [Flow Youtube Chat](https://greasyfork.org/ja/scripts/411442-flow-youtube-chat)
+- TeraPad
+- DF
 * [Adobe Reader](https://get.adobe.com/jp/reader/)
 * [Dropbox](https://www.dropbox.com/)
 * [NFCネットインストーラー](http://www.sony.co.jp/Products/felica/consumer/download/netinstaller.html)
