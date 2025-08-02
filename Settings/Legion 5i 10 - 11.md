@@ -1,5 +1,10 @@
 ### Settings
+- 最大充電量
+  - Lenovo Vantage で保全モードに設定
+- キーボードのライティング パターン
+  - Fn + Space
 - [Windows] + V
+  - クリップボード機能をオン
 
 ### Platforms
 - Google Chrome
@@ -10,6 +15,7 @@
 - DF
 - [Adobe Reader](https://get.adobe.com/jp/reader/)
 - [Dropbox](https://www.dropbox.com/)
+- [Steam](https://store.steampowered.com/)
 - [NFCポートソフトウェア](https://www.sony.co.jp/Products/felica/consumer/support/download/nfcportsoftware.html)
 - IME 辞書登録
 
