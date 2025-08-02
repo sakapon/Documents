@@ -3,6 +3,7 @@
   - Lenovo Vantage で保全モードに設定
 - キーボードのライティング パターン
   - Fn + Space
+- スマートフォン連携
 - [Windows] + V
   - クリップボード機能をオン
 - IME 辞書登録
@@ -18,12 +19,14 @@
 
 ### Applications
 - OneDrive
-- [Dropbox](https://www.dropbox.com/desktop)
-- [Adobe Reader](https://get.adobe.com/jp/reader/)
-- LINE
 - Outlook
 - OneNote
 - Office Professional Plus 2019
+- [Dropbox](https://www.dropbox.com/desktop)
+- [Adobe Reader](https://get.adobe.com/jp/reader/)
+- LINE
+- Teams
+- Zoom
 - [OBS Studio](https://obsproject.com/)
 - [Steam](https://store.steampowered.com/)
 
@@ -42,3 +45,6 @@
 - [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
 - TeraPad
 - DF
+
+### Tools
+- [Planet Clock](https://github.com/sakapon/Tools-2015/releases/tag/clock-v1.0.4)
