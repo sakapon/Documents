@@ -5,23 +5,23 @@
   - Fn + Space
 - [Windows] + V
   - クリップボード機能をオン
+- IME 辞書登録
 
-### Platforms
+### Infrastructure
 - Google Chrome
   - 拡張機能
     - [Tampermonkey](chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo): ユーザー スクリプトを許可する
   - [Flow Youtube Chat](https://greasyfork.org/ja/scripts/411442-flow-youtube-chat)
-- TeraPad
-- DF
-- [Adobe Reader](https://get.adobe.com/jp/reader/)
-- [Dropbox](https://www.dropbox.com/)
-- [Steam](https://store.steampowered.com/)
+- [Logicool G HUB](https://gaming.logicool.co.jp/ja-jp/innovation/g-hub.html)
 - [NFCポートソフトウェア](https://www.sony.co.jp/Products/felica/consumer/support/download/nfcportsoftware.html)
-- IME 辞書登録
-
-### Infrastructure
-- Office Professional Plus 2019
 - [Windows 10 メディア作成ツール](https://www.microsoft.com/ja-jp/software-download/windows10)
+
+### Applications
+- Office Professional Plus 2019
+- [Dropbox](https://www.dropbox.com/)
+- [Adobe Reader](https://get.adobe.com/jp/reader/)
+- [OBS Studio](https://obsproject.com/)
+- [Steam](https://store.steampowered.com/)
 
 ### Development Tools
 - [Visual Studio Community 2022](https://visualstudio.microsoft.com/ja/vs/community/)
@@ -30,7 +30,11 @@
   - フォント → Fira Code Medium, 12
   - テキスト エディター → タブ
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Python](https://www.python.org/downloads/)
+  - 環境変数に登録する
 - [Sourcetree](https://www.sourcetreeapp.com/)
   - `git config --global core.autocrlf false`
 - [NuGet Package Explorer 3.9](http://npe.codeplex.com/)
 - [Azure Storage Explorer 6](http://azurestorageexplorer.codeplex.com/)
+- TeraPad
+- DF
