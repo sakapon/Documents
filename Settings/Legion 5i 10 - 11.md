@@ -48,7 +48,7 @@
   - Git グローバル設定 → メールアドレス
   - キーボード → Visual C# 2005
   - フォント → Fira Code Medium, 12
-  - テキスト エディター → タブ
+  - テキスト エディター > C# → タブ
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Python](https://www.python.org/downloads/)
   - 環境変数に登録する
@@ -61,3 +61,9 @@
 - TeraPad
 - DF
 - [Planet Clock](https://github.com/sakapon/Tools-2015/releases/tag/clock-v1.0.4)
+- ターミナル
+  - [設定] > [スタートアップ] > [既定のターミナル アプリケーション]: Windows コンソール ホスト
+- Microsoft Visual Studio デバッグ コンソール
+  - サイズ 18
+  - フォント BIZ UD ゴシック
+  - 不透明度 70
