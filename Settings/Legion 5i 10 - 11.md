@@ -59,6 +59,7 @@
   - 環境変数に登録する
 - [Sourcetree](https://www.sourcetreeapp.com/)
   - `git config --global core.autocrlf false`
+  - または .gitconfig ファイルをユーザー フォルダーにコピー
 - [NuGet Package Explorer](https://apps.microsoft.com/detail/9wzdncrdmdm3)
 - [Azure Storage Explorer](https://azure.microsoft.com/ja-jp/products/storage/storage-explorer)
 
