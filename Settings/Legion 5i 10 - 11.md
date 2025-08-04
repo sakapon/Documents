@@ -67,6 +67,7 @@
 - TeraPad
 - DF
 - [Planet Clock](https://github.com/sakapon/Tools-2015/releases/tag/clock-v1.0.4)
+  - `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` に Planet Clock のショートカットを作成
 - ターミナル
   - [設定] > [スタートアップ] > [既定のターミナル アプリケーション]: Windows コンソール ホスト
 - Microsoft Visual Studio デバッグ コンソール
