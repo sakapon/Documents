@@ -57,6 +57,7 @@
 - .NET Tools
   - `dotnet tool install -g dotnet-script`
 - [Visual Studio Code](https://code.visualstudio.com/)
+  - Python
 - [Python](https://www.python.org/downloads/)
   - 環境変数に登録する
 - [Sourcetree](https://www.sourcetreeapp.com/)
