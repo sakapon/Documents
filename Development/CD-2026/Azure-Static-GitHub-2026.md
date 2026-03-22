@@ -1,4 +1,9 @@
 # Azure Static Web Apps と GitHub で継続的デプロイ
+Azure Static Web Apps (Azure 静的 Web アプリ) のコンテンツを、GitHub のリポジトリから継続的デプロイ (CD) するように構成する手順のメモです。
+
+## リポジトリの作成
+GitHub にリポジトリを新規作成し、トップページである `index.html` を追加します。  
+リポジトリのルートにこれを配置してもよいのですが、今回はあえて `root-dir` フォルダーを作成し、その下に置いてみましょう。
 
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-01.png)
 
