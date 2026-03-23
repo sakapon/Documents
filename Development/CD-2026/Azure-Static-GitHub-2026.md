@@ -41,9 +41,13 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-23.png)
 
+Azure Static Web Apps では、指定した名前が URL に使われるわけではありません。  
+`https://abcde-vwxyz.0.azurestaticapps.net/` のような URL がランダムで割り当てられる、ということに注意が必要です。  
+したがって、次回の記事で示すように、カスタムドメインで運用するのがよいでしょう。
+
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-33.png)
 
-なお、リポジトリに `index.html` が存在しない場合、ワークフロー ファイルは作成されますが、次のエラー メッセージとともにデプロイが失敗します。
+**注意:** リポジトリに `index.html` が存在しない場合、ワークフロー ファイルは作成されますが、次のエラー メッセージとともにデプロイが失敗します。
 この後でも `index.html` を追加すれば継続的デプロイは成功します。
 
 ```
