@@ -11,7 +11,7 @@ GitHub にリポジトリを新規作成し、トップページである `index
 Azure ポータルで Azure Static Web Apps を新規作成します。  
 名前やリソースグループなどを指定し、デプロイ元となるリポジトリを指定します。  
 すると、リポジトリから自動的に `index.html` の場所が検出されます。  
-この情報をもとに、GitHub Actions のワークフロー ファイル (YAML) が生成されることになります。
+この情報をもとに、継続的デプロイのための GitHub Actions ワークフロー ファイル (YAML) が生成されることになります。
 
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-11.png)
 
@@ -41,6 +41,9 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-23.png)
 
+なお、別の分岐 (ブランチ) からプルリクエストを出すとプレビュー環境が作られ、Web アプリをテストできます。  
+そのプルリクエストがマージされると、運用環境にデプロイされます。これは便利な機能だと思います。
+
 Azure Static Web Apps では、指定した名前が URL に使われるわけではありません。  
 `https://abcde-vwxyz.0.azurestaticapps.net/` のような URL がランダムで割り当てられる、ということに注意が必要です。  
 したがって、次回の記事で示すように、カスタムドメインで運用するのがよいでしょう。
@@ -55,8 +58,15 @@ Failed to find a default file in the app artifacts folder (/). Valid default fil
 If your application contains purely static content, please verify that the variable 'app_location' in your workflow file points to the root of your application.
 ```
 
+## 継続的デプロイ (CD)
+リポジトリでコンテンツを変更すると、GitHub Actions のワークフローが開始され、  
+新しいバージョンが Azure Static Web Apps にデプロイされます。
+
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-41.png)
 
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-42.png)
 
 ![](https://github.com/sakapon/Documents/blob/master/Development/CD-2026/Images-ASG/Azure-Static-43.png)
+
+**注意:** Azure Static Web Apps を削除しても、GitHub リポジトリのワークフロー ファイルおよびシークレットは削除されません。  
+この状態でリポジトリが変更されると、デプロイしようとして失敗します。
