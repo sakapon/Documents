@@ -1,5 +1,6 @@
 # Azure Static Web Apps と GitHub で継続的デプロイ
-Azure Static Web Apps (Azure 静的 Web アプリ) のコンテンツを、GitHub のリポジトリから継続的デプロイ (CD) するように構成する手順のメモです。
+Azure Static Web Apps (Azure 静的 Web アプリ) のコンテンツを、  
+GitHub のリポジトリから継続的デプロイ (CD) するように構成する手順のメモです。
 
 ## リポジトリの作成
 GitHub にリポジトリを新規作成し、トップページである `index.html` を追加します。  
@@ -29,6 +30,7 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 
 これで Web アプリが作られました。  
 このとき、GitHub のリポジトリでは次のものが保存されます：
+
 - GitHub Actions ワークフロー ファイル (YAML)
   - `index.html` のパスが `app_location` 変数に設定されます
 - Azure にデプロイするためのシークレット
@@ -45,12 +47,13 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 そのプルリクエストがマージされると、運用環境にデプロイされます。これは便利な機能だと思います。
 
 Azure Static Web Apps では、指定した名前が URL に使われるわけではありません。  
-`https://abcde-vwxyz.0.azurestaticapps.net/` のような URL がランダムで割り当てられる、ということに注意が必要です。  
+`abcde-vwxyz.0.azurestaticapps.net` のようなサブドメインがランダムで割り当てられる、ということに注意が必要です。  
 したがって、次回の記事で示すように、カスタムドメインで運用するのがよいでしょう。
 
 ![](https://raw.githubusercontent.com/sakapon/Documents/refs/heads/master/Development/CD-2026/Images-ASG/Azure-Static-33.png)
 
-**注意:** リポジトリに `index.html` が存在しない場合、ワークフロー ファイルは作成されますが、次のエラー メッセージとともにデプロイが失敗します。
+**注意:** リポジトリに `index.html` が存在しない場合、ワークフロー ファイルは作成されますが、  
+次のエラー メッセージとともにデプロイが失敗します。  
 この後でも `index.html` を追加すれば継続的デプロイは成功します。
 
 ```
