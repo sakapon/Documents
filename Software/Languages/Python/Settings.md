@@ -21,3 +21,9 @@
 そのままでは venv では実行できない  
 1回のみ、PowerShell を管理者権限で起動し、次を実行する
 - `Set-ExecutionPolicy RemoteSigned`
+
+```
+.\.venv\Scripts\activate.bat
+pip install -r requirements.txt
+pip install xyz.whl (Rust)
+```
