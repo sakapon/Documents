@@ -70,3 +70,6 @@ If your application contains purely static content, please verify that the varia
 
 **注意:** Azure Static Web Apps を削除しても、GitHub リポジトリのワークフロー ファイルおよびシークレットは削除されません。  
 この状態でリポジトリが変更されると、デプロイしようとして失敗します。
+
+## 参照
+- [クイック スタート: 静的 Web アプリを初めてビルドする](https://learn.microsoft.com/ja-jp/azure/static-web-apps/get-started-portal)
