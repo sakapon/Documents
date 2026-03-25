@@ -28,7 +28,7 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 
 ![](https://raw.githubusercontent.com/sakapon/Documents/refs/heads/master/Development/CD-2026/Images-ASG/Azure-Static-22.png)
 
-これで Web アプリが作られました。  
+これで Azure 上に Web アプリが作られました。  
 このとき、GitHub のリポジトリでは次のものが保存されます：
 
 - GitHub Actions ワークフロー ファイル (YAML)
