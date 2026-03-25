@@ -11,7 +11,7 @@ GitHub にリポジトリを新規作成し、トップページである `index
 ## Azure Static Web Apps の作成
 Azure ポータルで Azure Static Web Apps を新規作成します。  
 名前やリソースグループなどを指定し、デプロイ元となるリポジトリを指定します。  
-すると、リポジトリから自動的に `index.html` の場所が検出されます。  
+すると、リポジトリから自動的に `index.html` の場所が検出され、「アプリの場所」に設定されます。  
 この情報をもとに、継続的デプロイのための GitHub Actions ワークフロー ファイル (YAML) が生成されることになります。
 
 ![](https://raw.githubusercontent.com/sakapon/Documents/refs/heads/master/Development/CD-2026/Images-ASG/Azure-Static-11.png)
