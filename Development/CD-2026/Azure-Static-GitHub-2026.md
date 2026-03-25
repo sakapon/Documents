@@ -32,7 +32,7 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 このとき、GitHub のリポジトリでは次のものが保存されます：
 
 - GitHub Actions ワークフロー ファイル (YAML)
-  - `index.html` のパスが `app_location` 変数に設定されます
+  - `index.html` のパスが `app_location` 変数に設定される
 - Azure にデプロイするためのシークレット
 
 ![](https://raw.githubusercontent.com/sakapon/Documents/refs/heads/master/Development/CD-2026/Images-ASG/Azure-Static-31.png)
@@ -46,20 +46,22 @@ Azure ポータルで Azure Static Web Apps を新規作成します。
 なお、別の分岐 (ブランチ) からプルリクエストを出すとプレビュー環境が作られ、Web アプリをテストできます。  
 そのプルリクエストがマージされると、運用環境にデプロイされます。これは便利な機能だと思います。
 
-Azure Static Web Apps では、指定した名前が URL に使われるわけではありません。  
-`abcde-vwxyz.0.azurestaticapps.net` のようなサブドメインがランダムで割り当てられる、ということに注意が必要です。  
+Azure Static Web Apps では、指定した名前が URL に使われるわけではないことに注意が必要です。  
+`abcde-vwxyz.0.azurestaticapps.net` のようなサブドメインがランダムで割り当てられます。  
 したがって、次回の記事で示すように、カスタムドメインで運用するのがよいでしょう。
 
 ![](https://raw.githubusercontent.com/sakapon/Documents/refs/heads/master/Development/CD-2026/Images-ASG/Azure-Static-33.png)
 
-**注意:** リポジトリに `index.html` が存在しない場合、ワークフロー ファイルは作成されますが、  
-次のエラー メッセージとともにデプロイが失敗します。  
-この後でも `index.html` を追加すれば継続的デプロイは成功します。
+**注意**  
+リポジトリに `index.html` が存在しない場合、ワークフロー ファイルは作成されますが、  
+次のエラー メッセージとともにデプロイが失敗します。
 
 ```
 Failed to find a default file in the app artifacts folder (/). Valid default files: index.html,Index.html.
 If your application contains purely static content, please verify that the variable 'app_location' in your workflow file points to the root of your application.
 ```
+
+この後でも `index.html` を追加すれば継続的デプロイは成功します。
 
 ## 継続的デプロイ (CD)
 リポジトリでコンテンツを変更すると、GitHub Actions のワークフローが開始され、  
@@ -71,8 +73,10 @@ If your application contains purely static content, please verify that the varia
 
 ![](https://raw.githubusercontent.com/sakapon/Documents/refs/heads/master/Development/CD-2026/Images-ASG/Azure-Static-43.png)
 
-**注意:** Azure Static Web Apps を削除しても、GitHub リポジトリのワークフロー ファイルおよびシークレットは削除されません。  
+**注意**  
+Azure Static Web Apps を削除しても、GitHub リポジトリのワークフロー ファイルおよびシークレットは削除されません。  
 この状態でリポジトリが変更されると、デプロイしようとして失敗します。
 
 ## 参照
 - [クイック スタート: 静的 Web アプリを初めてビルドする](https://learn.microsoft.com/ja-jp/azure/static-web-apps/get-started-portal)
+- [Azure 静的 Web アプリへのデプロイ](https://docs.github.com/ja/actions/how-tos/deploy/deploy-to-third-party-platforms/azure-static-web-app)
