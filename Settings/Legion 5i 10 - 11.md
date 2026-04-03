@@ -54,6 +54,8 @@
   - キーボード → Visual C# 2005
   - フォント → Fira Code Medium, 12
   - テキスト エディター > C# → タブ
+- PowerShell
+  - `Set-ExecutionPolicy RemoteSigned`
 - .NET Tools
   - `dotnet tool install -g dotnet-script`
 - [Visual Studio Code](https://code.visualstudio.com/)
