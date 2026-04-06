@@ -54,6 +54,7 @@
   - キーボード → Visual C# 2005
   - フォント → Fira Code Medium, 12
   - テキスト エディター > C# → タブ
+  - [Build Release](https://sakapon.wordpress.com/2018/08/20/external-tools-build/)
 - PowerShell
   - `Set-ExecutionPolicy RemoteSigned` (管理者権限で)
 - .NET Tools
