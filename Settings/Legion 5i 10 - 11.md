@@ -55,7 +55,7 @@
   - フォント → Fira Code Medium, 12
   - テキスト エディター > C# → タブ
 - PowerShell
-  - `Set-ExecutionPolicy RemoteSigned`
+  - `Set-ExecutionPolicy RemoteSigned` (管理者権限で)
 - .NET Tools
   - `dotnet tool install -g dotnet-script`
 - [Visual Studio Code](https://code.visualstudio.com/)
