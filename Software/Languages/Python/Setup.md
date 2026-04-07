@@ -6,6 +6,13 @@ https://www.python.org/downloads/
 - Python 3.13 以前は Microsoft Store でもインストール可能
 - Python 3.14 の Python Install Manager は不明
 
+### PowerShell
+1回のみ、PowerShell を管理者権限で起動し、次を実行する
+
+```
+Set-ExecutionPolicy RemoteSigned
+```
+
 ### ワークスペース
 - ルート フォルダーに、ワークスペース ファイルおよびソース フォルダーを置く
 
@@ -25,12 +32,10 @@ https://www.python.org/downloads/
 ![](Images/venv-04.png)
 ![](Images/venv-05.png)
 
-### venv で実行する
-そのままでは venv では実行できない  
-1回のみ、PowerShell を管理者権限で起動し、次を実行する
-- `Set-ExecutionPolicy RemoteSigned`
+コマンドで venv を作成する方法：
 
 ```
+python -m venv .venv
 .\.venv\Scripts\activate.bat
 pip install -r requirements.txt
 pip install xyz.whl (Rust)
