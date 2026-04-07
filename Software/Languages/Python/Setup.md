@@ -1,7 +1,13 @@
 # Python セットアップ
 
 ### Python
-https://www.python.org/downloads/
+コマンド：
+
+```
+winget install Python.Python.3.14
+```
+
+インストーラー： https://www.python.org/downloads/
 - `Add python.exe to PATH` をチェックしてからインストールを開始する
 - Python 3.13 以前は Microsoft Store でもインストール可能
 - Python Install Manager の場合：
