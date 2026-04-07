@@ -1,9 +1,9 @@
 # Python セットアップ
 
 ### Python
-- 最新版の Python 3.14 は Install Manager でインストール
-- Python 3.13 以前は Microsoft Store でインストール
-  - 公式サイトにも、単独のインストーラーがあるかもしれない
+https://www.python.org/downloads/
+- Python 3.13 以前は Microsoft Store でもインストール可能
+- Python 3.14 の Python Install Manager は不明
 
 ### ワークスペース
 - ルート フォルダーに、ワークスペース ファイルおよびソース フォルダーを置く
