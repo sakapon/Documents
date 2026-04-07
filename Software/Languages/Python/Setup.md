@@ -4,7 +4,8 @@
 https://www.python.org/downloads/
 - `Add python.exe to PATH` をチェックしてからインストールを開始する
 - Python 3.13 以前は Microsoft Store でもインストール可能
-- Python 3.14 の Python Install Manager は不明
+- Python Install Manager の場合：
+  - `py install 3.14`
 
 ### PowerShell
 1回のみ、PowerShell を管理者権限で起動し、次を実行する
