@@ -14,10 +14,16 @@ winget install Python.Python.3.14
   - `py install 3.14`
 
 ### PowerShell
-1回のみ、PowerShell を管理者権限で起動し、次を実行する
+1回のみ、PowerShell を管理者権限で起動し、次を実行する：
 
 ```
 Set-ExecutionPolicy RemoteSigned
+```
+
+Visual Studio Code で使われる PowerShell を更新する (pwsh にする)
+
+```
+winget install Microsoft.PowerShell
 ```
 
 ### ワークスペース
