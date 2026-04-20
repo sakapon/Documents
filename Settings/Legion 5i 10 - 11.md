@@ -39,6 +39,7 @@
 - LINE
 - Teams
 - [Zoom](https://support.zoom.com/hc/ja/article?id=zm_kb&sysparm_article=KB0060418)
+  - 64 ビット用の ZoomInstaller.exe
 - [OBS Studio](https://obsproject.com/)
 - [Steam](https://store.steampowered.com/)
 
