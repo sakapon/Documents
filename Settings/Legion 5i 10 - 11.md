@@ -33,12 +33,12 @@
 - OneDrive
 - Outlook
 - OneNote
-- Office Professional Plus 2019
+- Microsoft 365 Personal
 - [Dropbox](https://www.dropbox.com/desktop)
 - [Adobe Reader](https://get.adobe.com/jp/reader/)
 - LINE
 - Teams
-- Zoom
+- [Zoom](https://support.zoom.com/hc/ja/article?id=zm_kb&sysparm_article=KB0060418)
 - [OBS Studio](https://obsproject.com/)
 - [Steam](https://store.steampowered.com/)
 
