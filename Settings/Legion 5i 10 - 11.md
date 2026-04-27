@@ -76,6 +76,7 @@
 - [ScreenToGif 2.42.1](https://www.screentogif.com/)
 - [Planet Clock](https://github.com/sakapon/Tools-2015/releases/tag/clock-v1.0.4)
   - `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` に Planet Clock のショートカットを作成
+  - `Windows + R` の場合は `shell:startup`
 - ターミナル
   - [設定] > [スタートアップ] > [既定のターミナル アプリケーション]: Windows コンソール ホスト
 - Microsoft Visual Studio デバッグ コンソール
