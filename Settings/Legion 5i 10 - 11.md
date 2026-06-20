@@ -46,10 +46,11 @@
 ### Development Tools
 - [Fira Code](https://fonts.google.com/specimen/Fira+Code)
   - FiraCode-VariableFont_wght.ttf をインストール
-- [Visual Studio Community 2022](https://visualstudio.microsoft.com/ja/vs/community/)
+- [Visual Studio Community 2022, 2026](https://visualstudio.microsoft.com/ja/vs/community/)
   - Visual Studio Installer
-    - ASP.NET と Web 開発
     - .NET デスクトップ開発
+    - ASP.NET と Web 開発
+    - WinUI アプリケーション開発
     - .NET 6.0 ランタイム (8.0, 9.0 は上に含まれる)
   - Git グローバル設定 → Git 用メールアドレス
   - キーボード → Visual C# 2005
