@@ -48,6 +48,8 @@
     - WinUI アプリケーション開発
     - 2022: .NET 6.0 ランタイム (8.0, 9.0 は上に含まれる)
     - 2026: .NET 6.0 ランタイム (8.0, 10.0 は上に含まれる)
+  - Microsoft アカウントでサインイン
+  - GitHub アカウントでサインイン
   - Git グローバル設定 → Git 用メールアドレス
   - キーボード → Visual C# 2005
   - フォント → Fira Code Medium, 12
@@ -58,6 +60,7 @@
 - .NET Tools
   - `dotnet tool install -g dotnet-script`
 - [Visual Studio Code](https://code.visualstudio.com/)
+  - GitHub アカウントでサインイン
   - [Git](https://git-scm.com/install/windows)
   - Python
 - [Python](https://www.python.org/downloads/)
