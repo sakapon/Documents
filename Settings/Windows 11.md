@@ -1,3 +1,4 @@
+- [Microsoft アカウント | デバイス](https://account.microsoft.com/devices)
 - Windows Update
 - バッテリーを最大 80% に
 - システム > 詳細設定 > 開発者モード
