@@ -52,6 +52,7 @@
   - 拡張機能
     - [OpenSilver](https://opensilver.net/)
     - Uno Platform
+      - その他にも手順が必要
   - Microsoft アカウントでサインイン
   - GitHub アカウントでサインイン
   - Git グローバル設定 → Git 用メールアドレス
