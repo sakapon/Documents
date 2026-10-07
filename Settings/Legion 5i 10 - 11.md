@@ -75,6 +75,11 @@
   - または既存の `.gitconfig` ファイルをユーザー フォルダーにコピー
 - [NuGet Package Explorer](https://apps.microsoft.com/detail/9wzdncrdmdm3)
 - [Azure Storage Explorer](https://azure.microsoft.com/ja-jp/products/storage/storage-explorer)
+- Microsoft ストア
+  - WPF Gallery
+  - WPF UI (ギャラリー)
+  - WinUI 3 Gallery
+  - Windows Community Toolkit Gallery
 
 ### Tools
 - TeraPad
