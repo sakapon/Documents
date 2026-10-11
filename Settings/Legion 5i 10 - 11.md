@@ -29,6 +29,7 @@
 - Outlook
 - OneNote
 - Microsoft 365 Personal
+- [Claude Code](https://claude.ai/downloads)
 - [Dropbox](https://www.dropbox.com/desktop)
 - [Adobe Reader](https://get.adobe.com/jp/reader/)
 - LINE
