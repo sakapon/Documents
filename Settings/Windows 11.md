@@ -17,3 +17,8 @@
 - IME
   - スペースの入力: 常に半角
   - 辞書登録
+
+## HP の BIOS (F10)
+- Action Keys Mode: Disabled
+- Adaptive Battery Optimizer: Enabled
+- Power on when Lid is opened: Disabled
