@@ -62,6 +62,7 @@
   - テキスト エディター > C# → タブ
   - CodeLens: 無効
   - 垂直スクロールバー モード: マップモード
+  - ソースの概要の幅: ナロー
   - [Build Release](https://sakapon.wordpress.com/2018/08/20/external-tools-build/)
 - PowerShell
   - `Set-ExecutionPolicy RemoteSigned` (管理者権限で)
