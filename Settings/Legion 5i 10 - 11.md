@@ -71,6 +71,10 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
   - GitHub アカウントでサインイン
   - [Git](https://git-scm.com/install/windows)
+  - Claude Code
+  - C# Dev Kit
+  - Markdown All in One
+  - SQLite Viewer
   - Python
 - [Python](https://www.python.org/downloads/)
   - 環境変数に登録する
